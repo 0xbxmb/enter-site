@@ -1,0 +1,269 @@
+/*http://www.bootply.com/79859*/
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeueCyr-Light.otf');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueItalic';
+    src: url('../fonts/HelveticaNeueCyr-LightItalic.otf');
+}
+
+
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../fonts/HelveticaNeueCyr-Heavy.otf');
+}
+
+body {
+    font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;
+}
+
+/*===================================================common==========================================================*/
+#logo{
+
+}
+
+.caption,
+.sub-caption{
+    color: #030303;
+}
+
+
+.caption{
+    font-size: 60px;
+}
+
+.sub-caption{
+    font-size: 15px;
+    font-family: 'HelveticaNeueItalic';
+}
+
+.link,
+.link:hover{
+   color: #ff7200;
+}
+.link{
+    text-decoration: underline;
+}
+.link:hover{
+    text-decoration: none;
+}
+
+.carousel-item-active{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 15px 15px 0px;
+
+}
+
+carousel-item .active{
+    border: solid #ff7200 1px;
+}
+
+carousel-item .active:before{
+
+}
+
+.selected img {
+    opacity:0.5;
+}
+
+/*========================================================header=======================================================*/
+.logo{
+    background: url("../img/menu-logo.png") center center no-repeat;
+    display: block;
+    width: 79px;
+    height: 29px;
+}
+.navbar-inverse .logo{
+    background: url("../img/menu-logo-inverted.png") center center no-repeat;
+    display: block;
+    width: 79px;
+    height: 29px;
+}
+
+.phone-number{
+    font-family: 'HelveticaNeueBold';
+    font-size: 18px;
+    display: block;
+    padding: 5px;
+}
+
+.navbar-inverse .phone-number{
+    color: #ffffff;
+}
+
+.login{
+    background: url("../img/login.png") center center no-repeat;
+    width: 34px;
+    height: 32px;
+    border: none !important;
+}
+
+.navbar-inverse .login{
+    background: url("../img/login-inverted.png") center center no-repeat;
+}
+
+/*================================================0 index==============================================================*/
+
+.intro{
+    font-size: 32px;
+    margin-top: 20px
+}
+
+.intro-images {
+    margin-top: 80px;
+    padding-bottom: 32px;
+    background: url("../img/intro-room-bg.png") bottom no-repeat;
+}
+
+.intro-tune-menu-wrapper{
+
+}
+
+.intro-tune-menu{
+    width: 192px;
+    height: 320px;
+    margin-top: 20px;
+    margin-left: -45px;
+    background: url("../img/intro-1.png") no-repeat center center;
+}
+
+.intro-interfaces-wrapper{
+    margin-left: 80px;
+}
+
+.intro-interfaces{
+    width: 78px;
+    height: 331px;
+    background: url("../img/intro-2.png") no-repeat center center;
+}
+
+.intro-devices-wrapper{
+
+}
+
+.intro-devices{
+    width: 191px;
+    height: 105px;
+    background: url("../img/intro-3.png") no-repeat center center;
+}
+
+.intro-algorithms-wrapper{
+    margin-left: 80px;
+}
+.intro-algorithms{
+    width: 173px;
+    height: 247px;
+    background: url("../img/intro-4.png") no-repeat center center;
+}
+
+.intro-cloud-wrapper{
+    width: 290px;
+}
+.intro-cloud{
+    margin-top: -45px;
+    width: 177px;
+    height: 120px;
+    background: url("../img/intro-5.png") no-repeat center center;
+}
+
+.intro-survey-wrapper{
+    width: 520px;
+}
+.intro-survey{
+    width: 329px;
+    height: 530px;
+    margin: 0 auto;
+    background: url("../img/intro-6.png") no-repeat center center;
+}
+
+
+
+
+.main-logo{
+    width: 123px;
+    height: 46px;
+    background: url("../img/main-logo.png") no-repeat;
+}
+
+.intro-definition{
+    font-size: 14px;
+    margin-top: -8px;
+}
+
+.intro-feature-item{
+    font-size: 14px;
+}
+
+#index{
+    background: url("../img/intro-bg.png");
+    min-height: 100px;
+}
+
+/*================================================1 interface==========================================================*/
+
+
+.interface-arrow-1{
+
+}
+/*images and thumbnails*/
+
+/*...
+.interface-arrow-8{
+}
+
+*/
+
+/*================================================2 hardware===========================================================*/
+.hardware-caption-info{
+    font-family: 'HelveticaNeue';
+    font-weight: bold;
+    font-size: 24px;
+}
+.hardware-main-info{
+    font-size: 18px;
+}
+.hardware-additional-info{
+    font-size: 13px;
+}
+/*================================================3 settings===========================================================*/
+
+
+/*================================================4 technology=========================================================*/
+
+.tech-block{
+    color: #ffffff;
+    background: #000000;
+    opacity: 0.8;
+}
+
+.tech-caption{
+    font-size: 48px;
+}
+
+.tech-description{
+    font-size: 24px;
+}
+
+.tech-additional-info{
+    font-size: 18px;
+}
+/*================================================5 implementations====================================================*/
+
+/*================================================6 solutions=========================================================*/
+
+.solution-item{
+    font-size: 15px;
+}
+
+.solution-item-caption{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.enter-is-using-in{
+
+}
