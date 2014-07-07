@@ -12,7 +12,7 @@ $(function () {
         $(".landing > section").css("minHeight",((blockHeight + headerHeight)) + "px");
     },
 
-    elementInViewport = function (el) {
+        elementInViewport = function (el) {
             var top = el.offsetTop;
             var left = el.offsetLeft;
             var width = el.offsetWidth;
@@ -38,8 +38,10 @@ $(function () {
     });
 
     $(window).scroll(function(){
-        if(true){
-
+        if(elementInViewport($("#index").get(0))){
+            $("header").removeClass("navbar-fixed-top").addClass("navbar-fixed-bottom");
+        }else{
+            $("header").removeClass("navbar-fixed-bottom").addClass("navbar-fixed-top");
         }
     });
 
@@ -55,6 +57,10 @@ $(function () {
     });
 
 
+
+    $("#temp-img").click(function(){
+
+    });
 
 
     $('#myCarousel').carousel({

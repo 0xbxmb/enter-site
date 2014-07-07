@@ -32,10 +32,14 @@ body {
 
 
 .caption{
+    margin-top: 110px;
     font-size: 60px;
+    display: inline-block;
 }
 
 .sub-caption{
+    display: inline-block;
+    margin-left: 30px;
     font-size: 15px;
     font-family: 'HelveticaNeueItalic';
 }
@@ -218,14 +222,25 @@ carousel-item .active:before{
 */
 
 /*================================================2 hardware===========================================================*/
+
+.hardware-main-content{
+    margin-left: 90px;
+}
+
 .hardware-caption-info{
     font-family: 'HelveticaNeue';
     font-weight: bold;
     font-size: 24px;
+    margin-bottom: 20px;
 }
 .hardware-main-info{
     font-size: 18px;
 }
+
+.hardware-main-info p{
+    margin-bottom: 15px;
+}
+
 .hardware-additional-info{
     font-size: 13px;
 }

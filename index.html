@@ -59,8 +59,6 @@
               </ul>
           </div>
 
-
-
       </div>
     </header>
 
@@ -116,8 +114,6 @@
                 </div>
               </div>
 
-
-
               <div class="intro-survey-wrapper pos-rlt v-bottom inline" style="width: 450px; margin-bottom: -30px;">
 
                   <div class="v-top pos-abt" style="top: 85px; left: -20px">
@@ -136,13 +132,7 @@
                   </div>
 
               </div>
-
-
-
-
           </div>
-
-
       </div>
     </section>
 
@@ -150,27 +140,78 @@
     <section id="interface">
         <div class="container">
 
-            <h2 class="caption inline">Интерфейс</h2>
-            <div class="sub-caption inline">
+            <h2 class="caption">Интерфейс</h2>
+            <div class="sub-caption">
                 наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени
+            </div>
+
+            <div class="m-t-lg">
+                <img src="temp.png" id="temp-img">
             </div>
         </div>
     </section>
 
     <section id="devices">
         <div class="container">
+
+
+            <h2 class="caption">Оборудование</h2>
+            <div class="sub-caption">
+                установим собственное, от проверенных поставщиков,<br>или запустим очередь на вашем существующем
+            </div>
+
+            <style>
+                .carousel-fade .item {-webkit-transition: opacity 1s; -moz-transition: opacity 1s; -ms-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s;}
+                .carousel-fade .active.left {left:0;opacity:0;z-index:2;}
+                .carousel-fade .next {left:0;opacity:1;z-index:1;}
+            </style>
+
             <!-- main slider carousel -->
-            <div class="row">
+            <div class="row m-t-lg">
                 <div class="col-md-12" id="slider">
 
                     <div class="col-md-12" id="carousel-bounding-box">
-                        <div id="myCarousel" class="carousel slide">
+                        <div id="myCarousel" class="carousel slide carousel-fade ">
                             <!-- main slider carousel items -->
                             <div class="carousel-inner">
                                 <div class="active item" data-slide-number="0">
-                                    <img src="http://placehold.it/1200x480&amp;text=one" class="img-responsive">
+
+                                    <div style="width:1200px; height: 380px ">
+
+                                        <img src="img/survey-panel-big-img.png" class="img-responsive inline v-bottom">
+
+                                        <div class=" v-bottom inline hardware-main-content">
+                                            <h3 class="hardware-caption-info">Опросник для сбора отзывов</h3>
+                                            <div class="hardware-main-info">
+                                                <p>
+                                                    Система позволяет загружать вопрос<br>
+                                                    с разными типами ответов: выбором одного<br>
+                                                    или нескольких вариантов, да/нет, шкалой<br>
+                                                    заполнения или свободным ответом.<br>
+                                                </p>
+                                                <p>
+                                                    Разные опросники могут быть показаны<br>
+                                                    в зависимости от выбранной услуги, окна<br>
+                                                    или времени дня.<br>
+                                                </p>
+                                                <p>
+                                                    Опрос запускается на любом дисплее<br>
+                                                    с сенсорным управлением: планшете, терминале.<br>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="inline hardware-additional-info v-middle m-l">
+                                            Оборудование<br>
+                                            подключается по вайфаю.<br>
+                                            Это облегчает монтаж<br>
+                                            и не портит интерьер<br>
+                                            отделения<br>
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <div class="item" data-slide-number="1">
+  <!--                              <div class="item" data-slide-number="1">
                                     <img src="http://placehold.it/1200x480/888/FFF" class="img-responsive">
                                 </div>
                                 <div class="item" data-slide-number="2">
@@ -190,11 +231,13 @@
                                 </div>
                                 <div class="item" data-slide-number="7">
                                     <img src="http://placehold.it/1200x480&amp;text=eight" class="img-responsive">
-                                </div>
+                                </div>-->
                             </div>
-                            <!-- main slider carousel nav controls --> <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+                            <!-- main slider carousel nav controls -->
 
-                            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+<!--                            <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+
+                            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>-->
                         </div>
                     </div>
 
@@ -205,31 +248,45 @@
             <div class="col-md-12 hidden-sm hidden-xs m-t-xs" id="slider-thumbs">
 
                 <!-- thumb navigation carousel items -->
-                <ul class="list-inline">
-                    <li> <a id="carousel-selector-0" class="selected">
-                        <img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-1">
-                        <img src="http://placehold.it/80x60&amp;text=two" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-2">
-                        <img src="http://placehold.it/80x60&amp;text=three" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-3">
-                        <img src="http://placehold.it/80x60&amp;text=four" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-4">
-                        <img src="http://placehold.it/80x60&amp;text=five" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-5">
-                        <img src="http://placehold.it/80x60&amp;text=six" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-6">
-                        <img src="http://placehold.it/80x60&amp;text=seven" class="img-responsive">
-                    </a></li>
-                    <li> <a id="carousel-selector-7">
-                        <img src="http://placehold.it/80x60&amp;text=eight" class="img-responsive">
-                    </a></li>
+                <ul class="list-inline thumbnails" >
+                    <li>
+                        <a id="carousel-selector-0" class="selected">
+                            Терминал<br>выдачи талонов
+                            <img src="img/terminal-img.png" class="img-responsive">
+                        </a>
+                    </li>
+                    <li>
+                        <a id="carousel-selector-1">
+                            Табло и звуковое<br>оповещение
+                            <img src="img/indication-panel-img.png" class="img-responsive">
+                        </a>
+                    </li>
+                    <li>
+                        <a id="carousel-selector-2">
+                            Персональные<br>табло оператора
+                            <img src="img/personal-panel-img.png" class="img-responsive">
+                        </a>
+                    </li>
+                    <li>
+                        <a id="carousel-selector-3">
+                            Пульт<br>
+                            оператора
+                            <img src="img/operator-panel-img.png" class="img-responsive">
+                        </a>
+                    </li>
+                    <li>
+                        <a id="carousel-selector-4">
+                            Пульт<br>
+                            администратора
+                            <img src="img/admin-panel-img.png" class="img-responsive">
+                        </a>
+                    </li>
+                    <li>
+                        <a id="carousel-selector-5">
+                            Опросники<br>для сбора отзывов
+                            <img src="img/survey-panel-img.png" class="img-responsive">
+                        </a>
+                    </li>
                 </ul>
 
             </div>
