@@ -1,67 +1,80 @@
 /**
  * Created by i.sungurov on 04.07.14.
  */
+
 $(function () {
 
     var
+        pages = {
+            index: 1,
+            interface: 2,
+            devices: 3,
+            technologies: 4,
+            implementation: 5,
+            solutions: 6,
+            costs: 7,
+            contacts: 8
+        },
 
-    setSizes = function () {
-        var blockHeight = $(window).height(),
-            headerHeight = $(".header").height();
+        scroller = $(".pages").onepage_scroll({
+            animationTime: 700,
+            keyboard: true,
+            beforeMove: function(index) {
 
-        $(".landing > section").css("minHeight",((blockHeight + headerHeight)) + "px");
-    },
-
-        elementInViewport = function (el) {
-            var top = el.offsetTop;
-            var left = el.offsetLeft;
-            var width = el.offsetWidth;
-            var height = el.offsetHeight;
-
-            while(el.offsetParent) {
-                el = el.offsetParent;
-                top += el.offsetTop;
-                left += el.offsetLeft;
             }
-
-            return (
-                top < (window.pageYOffset + window.innerHeight) &&
-                    left < (window.pageXOffset + window.innerWidth) &&
-                    (top + height) > window.pageYOffset &&
-                    (left + width) > window.pageXOffset
-                );
-        };
+        });
 
 
-    $(window).resize(function () {
-        setSizes();
-    });
 
-    $(window).scroll(function(){
-        if(elementInViewport($("#index").get(0))){
-            $("header").removeClass("navbar-fixed-top").addClass("navbar-fixed-bottom");
-        }else{
-            $("header").removeClass("navbar-fixed-bottom").addClass("navbar-fixed-top");
+    /*
+
+    $(function() {
+
+     var $el, leftPos, newWidth,
+     $mainNav = $("#example-one");
+
+     $mainNav.append("<li id='magic-line'></li>");
+     var $magicLine = $("#magic-line");
+
+     $magicLine
+     .width($(".current_page_item").width())
+     .css("left", $(".current_page_item a").position().left)
+     .data("origLeft", $magicLine.position().left)
+     .data("origWidth", $magicLine.width());
+
+     $("#example-one li a").hover(function() {
+     $el = $(this);
+     leftPos = $el.position().left;
+     newWidth = $el.parent().width();
+     $magicLine.stop().animate({
+     left: leftPos,
+     width: newWidth
+     });
+     }, function() {
+     $magicLine.stop().animate({
+     left: $magicLine.data("origLeft"),
+     width: $magicLine.data("origWidth")
+     });
+     });
+     });
+
+     */
+
+    $('.arrow').viewportChecker({
+        offset: 200,
+        classToAdd: 'animated',
+        callbackFunction: function(elem){
+            setTimeout(function(){
+                elem.removeClass("hidden").addClass("animated");
+            },2000);
         }
     });
 
 
-    setSizes();
-
-
-    $(".action-link").click(function () {
-        var that = $(this);
-        $('html, body').animate({
-            scrollTop: $("#" + that.data("related")).offset().top
-        }, 1000);
+    $("[data-link]").click(function(e){
+        $(".pages").moveTo(pages[$(this).data("link")]);
+        e.preventDefault();
     });
-
-
-
-    $("#temp-img").click(function(){
-
-    });
-
 
     $('#myCarousel').carousel({
         interval: 4000

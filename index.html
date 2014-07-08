@@ -16,6 +16,8 @@
 
         <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="pkg/onpage-scroll-master/onepage-scroll.css">
+        <link rel="stylesheet" href="pkg/animate-css/animate.css">
 
 
         <link rel="stylesheet" href="css/main.css">
@@ -39,19 +41,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="logo m-r-sm" href="#"></a>
+            <a class="logo m-r-sm" href="" data-link="index"></a>
         </div>
 
           <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Интерфейс</a></li>
-                  <li><a href="#about">Оборудывание</a></li>
-                  <li><a href="#contact">Технологии</a></li>
-                  <li><a href="#contact">Внедрение</a></li>
-                  <li><a href="#contact">Решения</a></li>
-                  <li><a href="#contact">Стоимость</a></li>
-                  <li><a href="#contact">Контакты</a></li>
-
+                  <li class="active"><a data-link="interface">Интерфейс</a></li>
+                  <li><a href="" data-link="devices">Оборудование</a></li>
+                  <li><a href="" data-link="technologies">Технологии</a></li>
+                  <li><a href="" data-link="implementation">Внедрение</a></li>
+                  <li><a href="" data-link="solutions">Решения</a></li>
+                  <li><a href="" data-link="costs">Стоимость</a></li>
+                  <li><a href="" data-link="contacts">Контакты</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                   <li><span class="phone-number"> +7 495 555-55-55</span></li>
@@ -63,269 +64,390 @@
     </header>
 
 
-    <section id="index">
-      <div class="container">
+    <div class="pages">
+        <!---->
+        <section id="index">
+            <div class="container">
 
-          <div class="intro text-center">
-             <a href="" class="inline main-logo"></a>
-             <span class="inline v-top"> — умная и надёжная электронная очередь</span>
-          </div>
-          <div class="intro-definition text-center">
-              для центров госуслуг, банков, предприятий общепита, больниц и других организаций
-          </div>
-
-
-          <div class="intro-images clearfix pos-rlt">
-
-              <div class="intro-tune-menu-wrapper inline v-bottom">
-                  Настраиваем<br><a href="" class="link">меню услуг<br>любой сложности</a>
-                  <div class="intro-tune-menu"></div>
-              </div>
-
-              <div class="intro-interfaces-wrapper inline  v-bottom">
-                  <div class="inline v-middle">
-                      <a href="" class="link">Наглядно<br>показываем<br></a>ситуацию в зале<br>и управляем ей<br>в реальном<br>времени
-                  </div>
-                  <div class="intro-interfaces inline v-middle"></div>
-              </div>
-
-              <div class="intro-devices-wrapper inline pos-abt" style="top: 10px; left: 150px">
-                  <div class="intro-devices inline v-middle"></div>
-                  <div class="inline v-middle m-l">Устанавливаем<br>проверенное оборудование<br><a href="" class="link">или работаем на вашем</a></div>
-              </div>
-
-              <div class="intro-algorithms-wrapper inline">
-                  <div>
-                      Формируем очередь<br>
-                      и уменьшаем ожидание<br>
-                      <a href="" class="link">умными алгоритмами</a>
-                  </div>
-                  <div class="intro-algorithms m-t"></div>
-              </div>
-
-              <div class="intro-cloud-wrapper clearfix pos-abt" style="top: 15px; right: -40px;" >
-                <div class="pull-left">
-                    Собираем полную<br>
-                    статистику и храним<br>
-                    <a href="" class="link">данные в облаке</a>
+                <div class="intro text-center">
+                    <a href="" class="inline main-logo"></a>
+                    <span class="inline v-top"> — умная и надёжная электронная очередь</span>
                 </div>
-                <div class="pull-right">
-                    <div class="intro-cloud"></div>
+                <div class="intro-definition text-center">
+                    для центров госуслуг, банков, предприятий общепита, больниц и других организаций
                 </div>
-              </div>
-
-              <div class="intro-survey-wrapper pos-rlt v-bottom inline" style="width: 450px; margin-bottom: -30px;">
-
-                  <div class="v-top pos-abt" style="top: 85px; left: -20px">
-                      Собираем<br>
-                      <a href="" class="link">подробные отзывы</a><br>
-                      о качестве услуг<br>
-                  </div>
-
-                  <div class="intro-survey"></div>
-
-                  <div class="pos-abt" style="top: 150px; right: -25px">
-                      Устанавливаем<br>
-                      оборудование<br>
-                      и обучаем персонал<br>
-                      <a href="" class="link">за 2 дня</a>
-                  </div>
-
-              </div>
-          </div>
-      </div>
-    </section>
 
 
-    <section id="interface">
-        <div class="container">
+                <div class="intro-images clearfix pos-rlt">
 
-            <h2 class="caption">Интерфейс</h2>
-            <div class="sub-caption">
-                наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени
-            </div>
+                    <div class="intro-tune-menu-wrapper inline v-bottom">
+                        Настраиваем<br><a href="" class="link" data-link="interface">меню услуг<br>любой сложности</a><!--interfaces.menuTuning-->
+                        <div class="intro-tune-menu"></div>
+                    </div>
 
-            <div class="m-t-lg">
-                <img src="temp.png" id="temp-img">
-            </div>
-        </div>
-    </section>
+                    <div class="intro-interfaces-wrapper inline  v-bottom">
+                        <div class="inline v-middle">
+                            <a href="" class="link" data-link="interface">Наглядно<br>показываем<br></a>ситуацию в зале<br>и управляем ей<br>в реальном<br>времени
+                        </div>
+                        <div class="intro-interfaces inline v-middle"></div>
+                    </div>
 
-    <section id="devices">
-        <div class="container">
+                    <div class="intro-devices-wrapper inline pos-abt" style="top: 10px; left: 150px">
+                        <div class="intro-devices inline v-middle"></div>
+                        <div class="inline v-middle m-l">Устанавливаем<br>проверенное оборудование<br><a href="" class="link" data-link="devices">или работаем на вашем</a></div><!--devices.terminal-->
+                    </div>
 
+                    <div class="intro-algorithms-wrapper inline">
+                        <div>
+                            Формируем очередь<br>
+                            и уменьшаем ожидание<br>
+                            <a href="" class="link" data-link="technologies">умными алгоритмами</a><!--technologies.algorithms-->
+                        </div>
+                        <div class="intro-algorithms m-t"></div>
+                    </div>
 
-            <h2 class="caption">Оборудование</h2>
-            <div class="sub-caption">
-                установим собственное, от проверенных поставщиков,<br>или запустим очередь на вашем существующем
-            </div>
-
-            <style>
-                .carousel-fade .item {-webkit-transition: opacity 1s; -moz-transition: opacity 1s; -ms-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s;}
-                .carousel-fade .active.left {left:0;opacity:0;z-index:2;}
-                .carousel-fade .next {left:0;opacity:1;z-index:1;}
-            </style>
-
-            <!-- main slider carousel -->
-            <div class="row m-t-lg">
-                <div class="col-md-12" id="slider">
-
-                    <div class="col-md-12" id="carousel-bounding-box">
-                        <div id="myCarousel" class="carousel slide carousel-fade ">
-                            <!-- main slider carousel items -->
-                            <div class="carousel-inner">
-                                <div class="active item" data-slide-number="0">
-
-                                    <div style="width:1200px; height: 380px ">
-
-                                        <img src="img/survey-panel-big-img.png" class="img-responsive inline v-bottom">
-
-                                        <div class=" v-bottom inline hardware-main-content">
-                                            <h3 class="hardware-caption-info">Опросник для сбора отзывов</h3>
-                                            <div class="hardware-main-info">
-                                                <p>
-                                                    Система позволяет загружать вопрос<br>
-                                                    с разными типами ответов: выбором одного<br>
-                                                    или нескольких вариантов, да/нет, шкалой<br>
-                                                    заполнения или свободным ответом.<br>
-                                                </p>
-                                                <p>
-                                                    Разные опросники могут быть показаны<br>
-                                                    в зависимости от выбранной услуги, окна<br>
-                                                    или времени дня.<br>
-                                                </p>
-                                                <p>
-                                                    Опрос запускается на любом дисплее<br>
-                                                    с сенсорным управлением: планшете, терминале.<br>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="inline hardware-additional-info v-middle m-l">
-                                            Оборудование<br>
-                                            подключается по вайфаю.<br>
-                                            Это облегчает монтаж<br>
-                                            и не портит интерьер<br>
-                                            отделения<br>
-                                        </div>
-
-                                    </div>
-                                </div>
-  <!--                              <div class="item" data-slide-number="1">
-                                    <img src="http://placehold.it/1200x480/888/FFF" class="img-responsive">
-                                </div>
-                                <div class="item" data-slide-number="2">
-                                    <img src="http://placehold.it/1200x480&amp;text=three" class="img-responsive">
-                                </div>
-                                <div class="item" data-slide-number="3">
-                                    <img src="http://placehold.it/1200x480&amp;text=four" class="img-responsive">
-                                </div>
-                                <div class="item" data-slide-number="4">
-                                    <img src="http://placehold.it/1200x480&amp;text=five" class="img-responsive">
-                                </div>
-                                <div class="item" data-slide-number="5">
-                                    <img src="http://placehold.it/1200x480&amp;text=six" class="img-responsive">
-                                </div>
-                                <div class="item" data-slide-number="6">
-                                    <img src="http://placehold.it/1200x480&amp;text=seven" class="img-responsive">
-                                </div>
-                                <div class="item" data-slide-number="7">
-                                    <img src="http://placehold.it/1200x480&amp;text=eight" class="img-responsive">
-                                </div>-->
-                            </div>
-                            <!-- main slider carousel nav controls -->
-
-<!--                            <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
-
-                            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>-->
+                    <div class="intro-cloud-wrapper clearfix pos-abt" style="top: 15px; right: -40px; z-index: 45" >
+                        <div class="pull-left">
+                            Собираем полную<br>
+                            статистику и храним<br>
+                            <a href="" class="link" data-link="technologies">данные в облаке</a><!--technologies.cloud-->
+                        </div>
+                        <div class="pull-right">
+                            <div class="intro-cloud"></div>
                         </div>
                     </div>
 
+                    <div class="intro-survey-wrapper pos-rlt v-bottom inline" style="width: 450px; margin-bottom: -30px;">
+
+                        <div class="v-top pos-abt" style="top: 85px; left: -20px">
+                            Собираем<br>
+                            <a href="" class="link" data-link="devices" >подробные отзывы</a><br> <!--devices.survey-->
+                            о качестве услуг<br>
+                        </div>
+
+                        <div class="intro-survey"></div>
+
+                        <div class="pos-abt" style="top: 150px; right: -25px">
+                            Устанавливаем<br>
+                            оборудование<br>
+                            и обучаем персонал<br>
+                            <a href="" data-link="implementation" class="link">за 2 дня</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="interface">
+            <div class="container">
+
+                <h2 class="caption">Интерфейс</h2>
+                <div class="sub-caption">
+                    наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени
+                </div>
+
+                <div class="m-t-lg">
+                    <img src="temp.png" id="temp-img">
                 </div>
             </div>
 
-            <!-- thumb navigation carousel -->
-            <div class="col-md-12 hidden-sm hidden-xs m-t-xs" id="slider-thumbs">
 
-                <!-- thumb navigation carousel items -->
-                <ul class="list-inline thumbnails" >
-                    <li>
-                        <a id="carousel-selector-0" class="selected">
-                            Терминал<br>выдачи талонов
-                            <img src="img/terminal-img.png" class="img-responsive">
-                        </a>
-                    </li>
-                    <li>
-                        <a id="carousel-selector-1">
-                            Табло и звуковое<br>оповещение
-                            <img src="img/indication-panel-img.png" class="img-responsive">
-                        </a>
-                    </li>
-                    <li>
-                        <a id="carousel-selector-2">
-                            Персональные<br>табло оператора
-                            <img src="img/personal-panel-img.png" class="img-responsive">
-                        </a>
-                    </li>
-                    <li>
-                        <a id="carousel-selector-3">
-                            Пульт<br>
-                            оператора
-                            <img src="img/operator-panel-img.png" class="img-responsive">
-                        </a>
-                    </li>
-                    <li>
-                        <a id="carousel-selector-4">
-                            Пульт<br>
-                            администратора
-                            <img src="img/admin-panel-img.png" class="img-responsive">
-                        </a>
-                    </li>
-                    <li>
-                        <a id="carousel-selector-5">
-                            Опросники<br>для сбора отзывов
-                            <img src="img/survey-panel-img.png" class="img-responsive">
-                        </a>
-                    </li>
-                </ul>
+            <div style="background: red; width: 100px; height: 100px" class="fadeIn arrow hidden">
 
             </div>
+        </section>
 
-        </div>
-    </section>
+        <section id="devices">
+            <div class="container">
+
+                <h2 class="caption">Оборудование</h2>
+                <div class="sub-caption">
+                    установим собственное, от проверенных поставщиков,<br>или запустим очередь на вашем существующем
+                </div>
+
+                <!-- main slider carousel -->
+                <div class="row m-t-lg">
+                    <div class="col-md-12" id="slider">
+
+                        <div class="col-md-12" id="carousel-bounding-box">
+                            <div id="myCarousel" class="carousel slide carousel-fade ">
+                                <!-- main slider carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                        <div style=" height: 380px ">
+
+                                            <img src="img/terminal-big-img.png" class="img-responsive inline v-bottom">
+
+                                            <div class="v-top inline hardware-main-content">
+                                                <h3 class="hardware-caption-info">Терминал выдачи талонов</h3>
+                                                <div class="hardware-main-info">
+                                                    <p>
+                                                        В терминал интегрируются считыватели магнитных<br>
+                                                        карт, карт УЭК, сканеры штрих-кодов. Для небольших<br>
+                                                        учреждений возможно установить локальный<br>
+                                                        сервер системы в терминал.
+                                                    </p>
+                                                    <p>
+                                                        Виды терминалов
+
+                                                        <ul class="terminal-types">
+                                                            <li>
+                                                                <img src="img/on-wall-terminal-img.png">
+                                                                <div>настенные</div>
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/on-floor-terminal-img.png">
+                                                                <div>напольные</div>
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/vandal-proof-terminal-img.png">
+                                                                <div>анти-вандальные</div>
+                                                            </li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item" data-slide-number="1">
+
+                                        <div style=" height: 380px ">
+
+                                            <img src="img/indication-panel-big-img.png" class="img-responsive inline v-bottom">
+
+                                            <div class="v-top inline hardware-main-content">
+                                                <h3 class="hardware-caption-info">Табло и звуковое оповещение</h3>
+                                                <div class="hardware-main-info">
+                                                    <p>
+                                                        В небольших операционных залах в качестве<br>
+                                                        системы звукового или голосового оповещения<br>
+                                                        используются динамики главного табло.
+                                                    </p>
+                                                    <p>
+                                                        Для крупных филиалов мы разворачиваем<br>
+                                                        собственную систему звукового оповещения,<br>
+                                                        либо подключаемся к имеющейся системе<br>
+                                                        пожарного оповещения.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" item" data-slide-number="2">
+                                        <div style="height: 380px ">
+
+                                            <img src="img/personal-panel-big-img.png" class="img-responsive inline v-bottom">
+
+                                            <div class="v-top inline hardware-main-content">
+                                                <h3 class="hardware-caption-info">Персональные табло оператора</h3>
+                                                <div class="hardware-main-info">
+                                                    <p>
+                                                        Мы используем компактные широкоформатные<br>
+                                                        телевизоры в связке с микрокомпьютерами<br>
+                                                        Raspberry PI.
+                                                    </p>
+                                                    <p>
+                                                        Микрокомпьютер позволяет отображать<br>
+                                                        информацию для клиентов: номера<br>
+                                                        вызываемых талонов и служебные сообщения.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class=" item" data-slide-number="3">
+                                        <div style="height: 380px ">
+
+                                            <img src="img/operator-panel-big-img.png" class="img-responsive inline v-bottom">
+
+                                            <div class="v-top inline hardware-main-content">
+                                                <h3 class="hardware-caption-info">Пульт оператора</h3>
+                                                <div class="hardware-main-info">
+                                                    <p>
+                                                        С его помощью оператор приглашает,<br>
+                                                        перенаправляет клиентов, меняет порядок<br>
+                                                        очереди в нестандартных ситуациях.
+                                                    </p>
+                                                    <p>
+                                                        Интерфейс всегда отображает только<br>
+                                                        необходимую информацию и не меняется<br>
+                                                        на разных устройствах.
+                                                    </p>
+                                                    <p>
+                                                        Пульт оператора запускается на планшете,<br>
+                                                        в браузере или интегрирован с ПО клиента.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class=" item" data-slide-number="4">
+                                        <div style="height: 380px ">
+
+                                            <img src="img/admin-panel-big-img.png" class="img-responsive inline v-bottom">
+
+                                            <div class="v-top inline hardware-main-content">
+                                                <h3 class="hardware-caption-info">Пульт администратора</h3>
+                                                <div class="hardware-main-info">
+                                                    <p>
+                                                        Единая точка мониторинга и управления<br>
+                                                        ситуацией в зале. Позволяет оперативно<br>
+                                                        управлять очередью в нестандартных ситуациях:<br>
+                                                        пропускать инвалидов без очереди, «подменять»<br>
+                                                        заболевших операторов.<br>
+                                                    </p>
+                                                    <p>
+                                                        Запускается на рабочем месте администратора<br>
+                                                        или на любом планшете.<br>
+                                                    </p>
+                                                </div>
+                                            </div>
 
 
-    <section id="technologies">
-        <div class="container">
+                                        </div>
+                                    </div>
+                                    <div class=" item" data-slide-number="5">
 
-            technologies
-        </div>
-    </section>
+                                        <div style=" height: 380px ">
+
+                                            <img src="img/survey-panel-big-img.png" class="img-responsive inline v-bottom">
+
+                                            <div class="v-top inline hardware-main-content">
+                                                <h3 class="hardware-caption-info">Опросник для сбора отзывов</h3>
+                                                <div class="hardware-main-info">
+                                                    <p>
+                                                        Система позволяет загружать вопрос<br>
+                                                        с разными типами ответов: выбором одного<br>
+                                                        или нескольких вариантов, да/нет, шкалой<br>
+                                                        заполнения или свободным ответом.<br>
+                                                    </p>
+                                                    <p>
+                                                        Разные опросники могут быть показаны<br>
+                                                        в зависимости от выбранной услуги, окна<br>
+                                                        или времени дня.<br>
+                                                    </p>
+                                                    <p>
+                                                        Опрос запускается на любом дисплее<br>
+                                                        с сенсорным управлением: планшете, терминале.<br>
+                                                    </p>
+                                                </div>
+                                            </div>
 
 
-    <section id="solutions">
-        <div class="container">
 
-            solutions
-        </div>
-    </section>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inline hardware-additional-info v-middle m-l hidden">
+                                    Оборудование<br>
+                                    подключается по вайфаю.<br>
+                                    Это облегчает монтаж<br>
+                                    и не портит интерьер<br>
+                                    отделения<br>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- thumb navigation carousel -->
+                <div class="col-md-12 hidden-sm hidden-xs m-t-xs">
+
+                    <!-- thumb navigation carousel items -->
+                    <ul class="list-inline slider-thumbs" >
+                        <li id="carousel-selector-0" class="selected">
+                            <a>
+                                <div class="thumbnail-desc">Терминал<br>выдачи талонов</div>
+                                <img src="img/terminal-img.png" class="img-responsive">
+                            </a>
+                        </li>
+                        <li id="carousel-selector-1">
+                            <a>
+                                <div class="thumbnail-desc">Табло и звуковое<br>оповещение</div>
+                                <img src="img/indication-panel-img.png" class="img-responsive">
+                            </a>
+                        </li>
+                        <li id="carousel-selector-2">
+                            <a>
+                                <div class="thumbnail-desc">Персональные<br>табло оператора</div>
+                                <img src="img/personal-panel-img.png" class="img-responsive">
+                            </a>
+                        </li>
+                        <li id="carousel-selector-3">
+                            <a>
+                                <div class="thumbnail-desc">Пульт<br>оператора</div>
+
+                                <img src="img/operator-panel-img.png" class="img-responsive">
+                            </a>
+                        </li>
+                        <li  id="carousel-selector-4">
+                            <a>
+                                <div class="thumbnail-desc">Пульт<br>администратора</div>
+                                <img src="img/admin-panel-img.png" class="img-responsive">
+                            </a>
+                        </li>
+                        <li id="carousel-selector-5">
+                            <a>
+                                <div class="thumbnail-desc">Опросники<br>для сбора отзывов</div>
+                                <img src="img/survey-panel-img.png" class="img-responsive">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </section>
 
 
-    <section id="costs">
-        <div class="container">
+        <section id="technologies">
+            <div class="container">
 
-            costs
-        </div>
-    </section>
+                technologies
+            </div>
+        </section>
 
 
-    <section id="contacts">
-        <div class="container">
+        <section id="implementation">
+            <div class="container">
 
-            contacts
-        </div>
-    </section>
+                imp
+            </div>
+        </section>
 
+
+
+        <section id="solutions">
+            <div class="container">
+
+                solutions
+            </div>
+        </section>
+
+
+        <section id="costs">
+            <div class="container">
+
+                costs
+            </div>
+        </section>
+
+
+        <section id="contacts">
+            <div class="container">
+
+                contacts
+            </div>
+        </section>
+
+    </div>
 
 
       <footer>
@@ -340,6 +462,8 @@
         <!--<script>window.jQuery || document.write('<script src="pkg/jquery/jquery-2.1.1.min.js"><\/script>')</script>-->
 
         <script src="pkg/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+        <script src="pkg/onpage-scroll-master/jquery.onepage-scroll.min.js"></script>
+        <script src="pkg/viewport-checker/viewportchecker.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
