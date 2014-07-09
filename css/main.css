@@ -266,6 +266,7 @@ body {
 .terminal-types li{
     margin-right: 30px;
     display: inline-block;
+    vertical-align: top;
 }
 
 
@@ -304,6 +305,15 @@ body {
     font-weight: bold;
 }
 
-.enter-is-using-in{
+.solution-enter-is-using-in {
+    font-size: 15px;
+    text-align: center;
+    background: #f5f5f5;
+    width: 100%;
+    padding: 10px;
+}
 
+.solution-companies li{
+    display: inline-block;
+    margin-right: 40px;
 }

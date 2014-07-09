@@ -4,6 +4,10 @@
     padding-bottom: 12px;
 }
 
+.navbar{
+    transition:  background 0.7s, color 0.7s, opacity 0.7s ;
+}
+
 .navbar-default {
     background: #f5f5f5;
 }
@@ -37,7 +41,7 @@
 
 .navbar-inverse {
     background: #000000;
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .navbar-inverse .navbar-brand,

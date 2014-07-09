@@ -17,10 +17,24 @@ $(function () {
         },
 
         scroller = $(".pages").onepage_scroll({
-            animationTime: 700,
-            keyboard: true,
-            beforeMove: function(index) {
 
+            animationTime: 700,
+
+            keyboard: true,
+
+            beforeMove: function(pageIndex) {
+
+                if(pageIndex == pages.index){
+                    $("header").removeClass("navbar-fixed-top").addClass("navbar-fixed-bottom");
+                }else{
+                    $("header").removeClass("navbar-fixed-bottom").addClass("navbar-fixed-top");
+                }
+
+                if(pageIndex == pages.technologies){
+                    $("header").removeClass("navbar-navbar-default").addClass("navbar-inverse");
+                }else{
+                    $("header").removeClass("navbar-inverse").addClass("navbar-navbar-default");
+                }
             }
         });
 
