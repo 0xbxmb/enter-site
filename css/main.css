@@ -59,17 +59,79 @@ body {
     opacity:0.5;
 }
 
+
+
+.navbar-default .navbar-nav > .marker {
+
+    width: 0px;
+    height: 0px;
+
+    border-radius: 2px;
+    position: absolute;
+    border: solid #ff6600 1px;
+    color: #ff6600 !important;
+    background: transparent;
+    transition: left 0.7s, width 0.7s, height 0.7s;
+}
+
+.navbar-inverse .navbar-nav > .marker {
+    position: absolute;
+    border-radius: 2px;
+    border: solid #ffffff 1px;
+    color: #ffffff !important;
+    transition: left 0.7s, width 0.7s, height 0.7s;
+}
+
+
+
+
+
 .carousel-fade .item {-webkit-transition: opacity 0.7s; -moz-transition: opacity 0.7s; -ms-transition: opacity 0.7s; -o-transition: opacity 0.7s; transition: opacity 0.7s;}
 .carousel-fade .active.left {left:0;opacity:0;z-index:2;}
 .carousel-fade .next {left:0;opacity:1;z-index:1;}
 .carousel-inner .item{ width: 100%}
 
+.slider-thumbs{
+    position: relative;
+}
 .slider-thumbs li{cursor: pointer; vertical-align: top; margin-right: 35px; padding: 10px}
 .slider-thumbs a{ font-size: 15px; color: #000000; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-weight: bold}
 .slider-thumbs a:hover{ text-decoration: none;}
-.slider-thumbs .selected{ border: solid 1px #fe923b; position: relative }
+
+/*.slider-thumbs .selected{ border: solid 1px #fe923b; position: relative }
 .slider-thumbs .selected:before{
     position: absolute;
+    width: 20px;
+    height: 20px;
+    content: " ";
+    top: -11px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: solid 1px #fe923b;
+    border-bottom: 0px;
+    border-right: 0px;
+    background: #ffffff;
+    -moz-transform: rotate(45deg); *//* Для Firefox *//*
+    -ms-transform: rotate(45deg); *//* Для IE *//*
+    -webkit-transform: rotate(45deg); *//* Для Safari, Chrome, iOS *//*
+    -o-transform: rotate(45deg); *//* Для Opera *//*
+    transform: rotate(45deg);
+}*/
+
+.slider-thumbs li{ border: solid 1px transparent; }
+.slider-thumbs .thumbnail-desc{ margin-bottom: 10px}
+
+.slider-thumbs .marker{
+    border: solid 1px #fe923b;
+    position: absolute;
+    transition: left 0.5s, width 0.5s, height 0.5s;
+
+}
+
+.slider-thumbs .marker:before{
+    position: absolute;
+    display: block;
     width: 20px;
     height: 20px;
     content: " ";
@@ -87,8 +149,8 @@ body {
     -o-transform: rotate(45deg); /* Для Opera */
     transform: rotate(45deg);
 }
-.slider-thumbs li{ border: solid 1px transparent; }
-.slider-thumbs .thumbnail-desc{ margin-bottom: 10px}
+
+
 
 /*========================================================header=======================================================*/
 .logo{
@@ -200,9 +262,6 @@ body {
     background: url("../img/intro-6.png") no-repeat center center;
 }
 
-
-
-
 .main-logo{
     width: 123px;
     height: 46px;
@@ -275,33 +334,105 @@ body {
 
 /*================================================4 technology=========================================================*/
 
-.tech-block{
-    color: #ffffff;
-    background: #000000;
-    opacity: 0.8;
+.grey-block {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
 }
 
 .tech-caption{
+    top: 110px;
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
     font-size: 48px;
+    left: 0px;
 }
+
+.section-tech-caption{
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 
 .tech-description{
     font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .tech-additional-info{
     font-size: 18px;
 }
+
+.tech-content{
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.implementation-item,
 .tech-item{
     width: 100%;
     height: 100%;
-}
-.citizen-universal-card {
-    background: url("../img/citizen-universal-card-bg.png") no-repeat;
-    background-size:100%;
+    position: relative;
 }
 
+.it-systems-integration,
+.citizen-universal-card,
+.integration-gov-services,
+.multiticket,
+.algorithms,
+.cloud{
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.it-systems-integration{
+    background: url("../img/it-systems-integration-img.png") no-repeat ;
+}
+
+.citizen-universal-card {
+    background: url("../img/citizen-universal-card-bg.png") no-repeat ;
+}
+
+.integration-gov-services {
+    background: url("../img/integration-gov-services-bg.png") no-repeat ;
+}
+
+.multiticket{
+    background: url("../img/multiticket-bg.png") no-repeat ;
+}
+
+.algorithms {
+    background: url("../img/algorithms-bg.png") no-repeat ;
+}
+
+.cloud {
+    background: url("../img/cloud-bg.png") no-repeat ;
+}
 /*================================================5 implementations====================================================*/
+.implentation-video-temp{
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background: url("../img/implementation-video-temp.png") no-repeat ;
+}
+
+.implentation-features{
+
+    position: absolute;
+    width: 220px;
+    top: 140px;
+    right: 0;
+    padding: 0px;
+}
+
+.implentation-features li{
+    list-style: none;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
 
 /*================================================6 solutions=========================================================*/
 

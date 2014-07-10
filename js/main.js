@@ -30,7 +30,7 @@ $(function () {
                     $("header").removeClass("navbar-fixed-bottom").addClass("navbar-fixed-top");
                 }
 
-                if(pageIndex == pages.technologies){
+                if(pageIndex == pages.technologies || pageIndex == pages.implementation){
                     $("header").removeClass("navbar-navbar-default").addClass("navbar-inverse");
                 }else{
                     $("header").removeClass("navbar-inverse").addClass("navbar-navbar-default");
@@ -39,6 +39,47 @@ $(function () {
         });
 
 
+    $(".slider-thumbs li").click(function(){
+
+        var element = $(this);
+        var parent = element.parents(".slider-thumbs");
+        var marker = parent.find("li.marker");
+
+/*        marker.stop().animate({
+            left: element.position().left,
+            width: element.outerWidth(),
+            height: element.outerHeight()
+        }, 700);*/
+
+        marker.css("left", element.position().left+"px")
+            .width(element.outerWidth())
+            .height( element.outerHeight());
+    });
+
+    /*copy paste*/
+    $(".navbar-nav li").click(function(){
+
+        var element = $(this);
+
+        var parent = element.parents(".navbar-nav");
+        parent.find(".active").removeClass("active");
+
+        var marker = parent.find("li.marker");
+
+        /*        marker.stop().animate({
+         left: element.position().left,
+         width: element.outerWidth(),
+         height: element.outerHeight()
+         }, 700);*/
+
+        element.addClass("active");
+
+        marker.css("left", element.position().left+"px")
+            .width(element.outerWidth())
+            .height( element.outerHeight());
+
+
+    });
 
     /*
 

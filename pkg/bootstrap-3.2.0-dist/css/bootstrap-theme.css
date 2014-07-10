@@ -5,7 +5,11 @@
 }
 
 .navbar{
-    transition:  background 0.7s, color 0.7s, opacity 0.7s ;
+    transition:
+        background 0.7s,
+        color 0.7s,
+        opacity 0.7s,
+        border 0.7s;
 }
 
 .navbar-default {
@@ -14,10 +18,12 @@
 
 .navbar-brand,
 .navbar-nav > li > a {
+
     font-size: 15px ;
     padding: 5px 0px;
     margin-right: 15px ;
     margin-left: 15px ;
+
     border-bottom: #000000 dotted 1px ;
     color: #000000 !important;
 }
@@ -25,11 +31,15 @@
     border-bottom: transparent dotted 1px ;
 }
 
-
 .navbar-default .navbar-nav > .active > a {
-    border-radius: 2px;
-    border: solid #ff6600 1px;
-    padding: 5px 10px;
+    /*border-radius: 2px;*/
+    /*border: solid #ff6600 1px;*/
+
+    border-bottom: transparent dotted 1px ;
+    padding: 5px 0px;
+    margin-right: 15px ;
+    margin-left: 15px ;
+
     color: #ff6600 !important;
     background: transparent;
 }
@@ -40,8 +50,8 @@
 
 
 .navbar-inverse {
-    background: #000000;
-    opacity: 0.4;
+    background: rgba( 0, 0, 0, 0.4);
+    border-color: transparent;
 }
 
 .navbar-inverse .navbar-brand,
@@ -56,13 +66,13 @@
 
 
 .navbar-inverse .navbar-nav > .active > a {
-    padding: 5px 10px;
-    border-radius: 2px;
-    border: solid #ffffff 1px;
+    padding: 5px 0px;
+    /*border-radius: 2px;*/
+    /*border: solid #ffffff 1px;*/
     color: #ffffff !important;
 }
 .navbar-inverse .navbar-nav > .active > a:hover{
-    border: solid #ffffff 1px;
+    /*border: solid #ffffff 1px;*/
     color: #ffffff !important;
 }
 
