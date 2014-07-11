@@ -26,6 +26,7 @@
 
     border-bottom: #000000 dotted 1px ;
     color: #000000 !important;
+    outline: none !important;
 }
 .navbar-nav > li > a:hover{
     border-bottom: transparent dotted 1px ;
@@ -39,9 +40,9 @@
     padding: 5px 0px;
     margin-right: 15px ;
     margin-left: 15px ;
-
+background: none;
     color: #ff6600 !important;
-    background: transparent;
+
 }
 .navbar-default .navbar-nav > .active > a:hover{
     background: transparent;

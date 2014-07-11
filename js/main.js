@@ -10,10 +10,10 @@ $(function () {
             interface: 2,
             devices: 3,
             technologies: 4,
-            implementation: 5,
-            solutions: 6,
-            costs: 7,
-            contacts: 8
+            implementation: 10,
+            solutions: 11,
+            costs: 12,
+            contacts: 13
         },
 
         scroller = $(".pages").onepage_scroll({
@@ -21,6 +21,14 @@ $(function () {
             animationTime: 700,
 
             keyboard: true,
+
+            afterMove:function(){
+                $(".arrow").parents("section").each(function(){
+                    if($(this).offset().top === 0){
+                        $(this).find(".arrow").removeClass("hidden").addClass("animated")
+                    }
+                })
+            },
 
             beforeMove: function(pageIndex) {
 
@@ -30,13 +38,31 @@ $(function () {
                     $("header").removeClass("navbar-fixed-bottom").addClass("navbar-fixed-top");
                 }
 
-                if(pageIndex == pages.technologies || pageIndex == pages.implementation){
+                if(pageIndex >= pages.technologies && pageIndex < pages.solutions){
                     $("header").removeClass("navbar-navbar-default").addClass("navbar-inverse");
                 }else{
                     $("header").removeClass("navbar-inverse").addClass("navbar-navbar-default");
                 }
+
+
+
             }
-        });
+        }),
+
+
+        detectPage = function(){
+
+
+
+            if($("#interface").offset().top == 0){
+
+            }
+
+/*            if(){
+
+            }*/
+        }
+
 
 
     $(".slider-thumbs li").click(function(){
@@ -52,8 +78,8 @@ $(function () {
         }, 700);*/
 
         marker.css("left", element.position().left+"px")
-            .width(element.outerWidth())
-            .height( element.outerHeight());
+            .width(element.width())
+            .height( element.height());
     });
 
     /*copy paste*/
@@ -77,8 +103,6 @@ $(function () {
         marker.css("left", element.position().left+"px")
             .width(element.outerWidth())
             .height( element.outerHeight());
-
-
     });
 
     /*
@@ -115,29 +139,17 @@ $(function () {
 
      */
 
-    $('.arrow').viewportChecker({
-        offset: 200,
-        classToAdd: 'animated',
-        callbackFunction: function(elem){
-            setTimeout(function(){
-                elem.removeClass("hidden").addClass("animated");
-            },2000);
-        }
-    });
-
-
     $("[data-link]").click(function(e){
         $(".pages").moveTo(pages[$(this).data("link")]);
         e.preventDefault();
     });
 
+
     $('#myCarousel').carousel({
-        interval: 4000
+        interval: 100000
     });
 
-
-
-// handles the carousel thumbnails
+    // handles the carousel thumbnails
     $('[id^=carousel-selector-]').click( function(){
         var id_selector = $(this).attr("id");
         var id = id_selector.substr(id_selector.length -1);
@@ -147,7 +159,7 @@ $(function () {
         $(this).addClass('selected');
     });
 
-// when the carousel slides, auto update
+    // when the carousel slides, auto update
     $('#myCarousel').on('slid', function (e) {
         var id = $('.item.active').data('slide-number');
         id = parseInt(id);

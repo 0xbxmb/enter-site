@@ -286,7 +286,10 @@ body {
 
 
 .interface-arrow-1{
-
+    background: url("../img/arrow-r-l-bg.png") left bottom no-repeat;
+    width: 56px;
+    height: 23px;
+    display: block;
 }
 /*images and thumbnails*/
 
