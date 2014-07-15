@@ -293,11 +293,42 @@ body {
 /*================================================1 interface==========================================================*/
 
 
+
 .interface-arrow-1{
     background: url("../img/arrow-r-l-bg.png") left bottom no-repeat;
     width: 56px;
     height: 23px;
     display: block;
+    position: absolute;
+    top: 10px;
+    left: -50px;
+}
+
+.interface-details-item{
+    font-size: 15px;
+    padding-top: 100px;
+}
+
+.interface-details-image {
+    height: 100px;
+}
+
+
+.interface-details-item .interface-details-caption{
+    font-weight: bold;
+}
+
+.on-map{
+    background: url("../img/on-map-img.png") left 8px no-repeat;
+}
+.hourly-diagram{
+    background: url("../img/hourly-diagram-img.png") left 10px no-repeat;
+}
+.instant-diagram{
+    background: url("../img/instant-diagram-img.png") left 30px no-repeat;
+}
+.detailed-statistics-diagram{
+    background: url("../img/detailed-statistics-diagram-img.png") left top no-repeat;
 }
 /*images and thumbnails*/
 
@@ -306,6 +337,8 @@ body {
 }
 
 */
+
+
 
 /*================================================2 hardware===========================================================*/
 
@@ -454,8 +487,57 @@ body {
 
 /*================================================6 solutions=========================================================*/
 
+#solutions{
+    position: relative;
+}
+
 .solution-item{
     font-size: 15px;
+}
+
+.solutions-mfc{
+    background: url("../img/mfc-img.png") left center no-repeat;
+    padding-left: 100px;
+    height: 190px;
+}
+
+.solutions-banks{
+    background: url("../img/banks-img.png") left center no-repeat;
+    padding-left: 115px;
+    height: 190px;
+}
+
+.solutions-public-catering{
+    background: url("../img/public-catering-img.png") left center no-repeat;
+    padding-left: 90px;
+    height: 190px;
+}
+
+.solutions-logistics{
+    background: url("../img/transport-and-logistics-img.png") right center no-repeat;
+    height: 190px;
+    padding-top: 100px;
+}
+
+.solutions-other-solutions{
+    background: url("../img/other-solutions-img.png")  right center no-repeat;
+    height: 190px;
+    padding-top: 100px;
+}
+
+.solutions-clinics{
+    background: url("../img/clinics-img.png")  right center no-repeat;
+    height: 190px;
+    padding-top: 100px;
+}
+
+
+
+
+
+.spacer{
+    width: 25px;
+    display: inline-block;
 }
 
 .solution-item-caption{
@@ -463,16 +545,88 @@ body {
     font-weight: bold;
 }
 
+.solutions-footer{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
 .solution-enter-is-using-in {
     font-size: 15px;
     text-align: center;
     background: #f5f5f5;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
+}
+
+
+.solution-companies{
+    padding: 0;
+    max-width: 1165px;
+    margin: 0 auto;
 }
 
 .solution-companies li{
     display: inline-block;
     margin-right: 40px;
+    vertical-align: middle;
 }
 
+.visa-center{
+    background: url("../img/visa-center-img.png") center center no-repeat;
+    display: block;
+    width: 138px;
+    height: 33px;
+}
+
+.sberbank{
+    background: url("../img/sberbank-img.png") center center no-repeat;
+    display: block;
+    width: 134px;
+    height: 26px;
+}
+
+.zapsibcombank{
+    background: url("../img/zapsibcombank-img.png") center center no-repeat;
+    display: block;
+    width: 123px;
+    height: 25px;
+}
+
+.mdmbank{
+    background: url("../img/mdmbank-img.png") center center no-repeat;
+    display: block;
+    width: 97px;
+    height: 28px;
+}
+
+
+.fareast-administarion{
+    background: url("../img/fareastern-img.png") center center no-repeat;
+    display: block;
+    width: 78px;
+    height: 33px;
+}
+
+.kroshka-kartoshka{
+    background: url("../img/kroshka-kartoshka-img.png") center center no-repeat;
+    display: block;
+    width: 76px;
+    height: 31px;
+}
+
+
+.m{
+    background: url("../img/m-img.png") center center no-repeat;
+    display: block;
+    width: 56px;
+    height: 42px;
+}
+
+.legion-bank{
+    background: url("../img/legion-bank-img.png") center center no-repeat;
+    display: block;
+    width: 114px;
+    height: 26px;
+}

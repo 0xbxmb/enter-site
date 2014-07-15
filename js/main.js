@@ -8,12 +8,12 @@ $(function () {
         pages = {
             index: 1,
             interface: 2,
-            devices: 3,
-            technologies: 4,
-            implementation: 10,
-            solutions: 11,
-            costs: 12,
-            contacts: 13
+            devices: 4,
+            technologies: 5,
+            implementation: 11,
+            solutions: 12,
+            costs: 13,
+            contacts: 14
         },
 
         scroller = $(".pages").onepage_scroll({
@@ -56,17 +56,11 @@ $(function () {
             }
         }),
 
-
         detectPage = function(){
-
-
-
             if($("#interface").offset().top == 0){
 
             }
-
 /*            if(){
-
             }*/
         }
 
@@ -112,39 +106,7 @@ $(function () {
             .height( element.outerHeight());
     });
 
-    /*
 
-    $(function() {
-
-     var $el, leftPos, newWidth,
-     $mainNav = $("#example-one");
-
-     $mainNav.append("<li id='magic-line'></li>");
-     var $magicLine = $("#magic-line");
-
-     $magicLine
-     .width($(".current_page_item").width())
-     .css("left", $(".current_page_item a").position().left)
-     .data("origLeft", $magicLine.position().left)
-     .data("origWidth", $magicLine.width());
-
-     $("#example-one li a").hover(function() {
-     $el = $(this);
-     leftPos = $el.position().left;
-     newWidth = $el.parent().width();
-     $magicLine.stop().animate({
-     left: leftPos,
-     width: newWidth
-     });
-     }, function() {
-     $magicLine.stop().animate({
-     left: $magicLine.data("origLeft"),
-     width: $magicLine.data("origWidth")
-     });
-     });
-     });
-
-     */
 
     $("[data-link]").click(function(e){
         $(".pages").moveTo(pages[$(this).data("link")]);
@@ -154,6 +116,27 @@ $(function () {
 
     $('#myCarousel').carousel({
         interval: 100000
+    });
+    // handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click( function(){
+        var id_selector = $(this).attr("id");
+        var id = id_selector.substr(id_selector.length -1);
+        id = parseInt(id);
+        $('#myCarousel').carousel(id);
+        $('[id^=carousel-selector-]').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    // when the carousel slides, auto update
+    $('#myCarousel').on('slid', function (e) {
+        var id = $('.item.active').data('slide-number');
+        id = parseInt(id);
+        $('[id^=carousel-selector-]').removeClass('selected');
+        $('[id^=carousel-selector-'+id+']').addClass('selected');
+    });
+
+    $('#myCarousel2').carousel({
+        interval: 5000
     });
 
     // handles the carousel thumbnails
@@ -173,6 +156,5 @@ $(function () {
         $('[id^=carousel-selector-]').removeClass('selected');
         $('[id^=carousel-selector-'+id+']').addClass('selected');
     });
-
 
 });
