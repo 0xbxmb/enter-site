@@ -1,0 +1,11 @@
+{
+  "name": "enter-site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bombinmybag/enter-site.git"
+  },
+  "dependencies": {
+    "express": "~4.6.1",
+    "vid-streamer": "~0.1.4"
+  }
+}

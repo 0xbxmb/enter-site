@@ -22,12 +22,19 @@ $(function () {
 
             keyboard: true,
 
-            afterMove:function(){
+            afterMove:function(pageIndex){
                 $(".arrow").parents("section").each(function(){
                     if($(this).offset().top === 0){
                         $(this).find(".arrow").removeClass("hidden").addClass("animated")
                     }
                 })
+
+                if (pageIndex == pages.implementation) {
+                    var video = document.getElementById("implementation-video");
+                    setTimeout(function () {
+                        video.play();
+                    }, 700);
+                }
             },
 
             beforeMove: function(pageIndex) {
