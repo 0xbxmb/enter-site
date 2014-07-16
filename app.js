@@ -5,10 +5,15 @@
 var express = require("express"),
     app = express(),
     vidStreamer = require("vid-streamer"),
-    port = process.env.PORT || 3000;
+    port = process.env.PORT || 3000,
+    settings = {
+        "forceDownload": false,
+        "rootPath": "videos/",
+        "server": 'app.js'
+    };
 
 app.use(express.static(__dirname));
 
-app.get("/videos/", vidStreamer);
+app.get("/videos/", vidStreamer.settings(settings));
 app.listen(port);
-console.log("VidStreamer.js up and running on port 3000");
+console.log("app.js up and running on port " + port);
