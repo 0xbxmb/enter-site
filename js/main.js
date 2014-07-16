@@ -30,7 +30,6 @@ $(function () {
                         $(this).find(".arrow").removeClass("hidden").addClass("animated")
                     }
                 });
-
                 if (pageIndex == pages.implementation) {
                     setTimeout(function () {
                         video.play();
