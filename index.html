@@ -71,7 +71,7 @@
 
 <div class="pages">
 
-<section id="index">
+<section data-menu-item-index="0" id="index">
     <div class="container">
 
         <div class="intro text-center">
@@ -146,9 +146,7 @@
         </div>
     </div>
 </section>
-
-
-<section id="interface">
+<section data-menu-item-index="1" id="interface">
     <div class="container">
 
         <h2 class="caption">Интерфейс</h2>
@@ -203,9 +201,7 @@
 
 
 </section>
-
-
-<section id="interface-1">
+<section data-menu-item-index="1" id="interface-1">
     <div class="container">
 
         <h2 class="caption">Настройка</h2>
@@ -219,7 +215,7 @@
             <div class="col-md-12" id="slider2">
 
                 <div class="col-md-12" id="carousel-bounding-box">
-                    <div id="myCarousel2" class="carousel slide carousel-fade ">
+                    <div id="settings-carousel" class="carousel slide carousel-fade ">
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item" data-slide-number="0">
@@ -232,15 +228,12 @@
                                     <img src="img/holiday-schedule-big-img.png" class="img-responsive inline v-bottom">
                                 </div>
                             </div>
-
-                            <div class=" item" data-slide-number="2">
+                            <div class="item" data-slide-number="2">
                                 <div style="height: 380px ">
                                     <img src="img/terminal-menu-big-img.png" class="img-responsive inline v-bottom">
                                 </div>
                             </div>
-
-
-                            <div class=" item" data-slide-number="3">
+                            <div class="item" data-slide-number="3">
                                 <div style="height: 380px ">
                                     <img src="img/services-menu-big-img.png" class="img-responsive inline v-bottom">
                                     <div class="inline v-top m-l" style="font-size: 13px">
@@ -251,30 +244,30 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class=" item" data-slide-number="4">
+                            <div class="item" data-slide-number="4">
                                 <div style="height: 380px ">
                                     <img src="img/device-managment-big-img.png" class="img-responsive inline v-bottom">
-                                </div>
-                                <div class="inline v-top m-l" >
-                                    <div>
-                                        Не отходя от рабочего<br>
-                                        места можно перезагружать,<br>
-                                        переподключать, задавать адрес<br>
-                                        или идентификатор устройства.
-                                    </div>
+                                    <div class="inline v-top m-l" >
+                                        <div>
+                                            Не отходя от рабочего<br>
+                                            места можно перезагружать,<br>
+                                            переподключать, задавать адрес<br>
+                                            или идентификатор устройства.
+                                        </div>
 
-                                    <div class="m-t-lg">
-                                        <div class="bounceInLeft arrow hidden m-l-lg">
-                                            <div class="inline interface-arrow-1"></div>
-                                            <div class="m-l inline">
-                                                Все устройства на одном экране.<br>
-                                                Легко отследить какое оборудование<br>
-                                                работает, выключено или неисправно
+                                        <div class="m-t-lg">
+                                            <div class="bounceInLeft arrow hidden m-l-lg">
+                                                <div class="inline interface-arrow-1"></div>
+                                                <div class="m-l inline">
+                                                    Все устройства на одном экране.<br>
+                                                    Легко отследить какое оборудование<br>
+                                                    работает, выключено или неисправно
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -292,7 +285,7 @@
             <!-- thumb navigation carousel items -->
             <ul class="list-inline slider-thumbs">
 
-                <li id="carousel2-selector-0" class="selected">
+                <li id="settings-carousel-selector-0" class="selected">
                     <a>
                         <img src="img/schedule-img.png" class="img-responsive">
                         <div class="thumbnail-desc m-t-sm">
@@ -304,7 +297,7 @@
                     </a>
                 </li>
 
-                <li id="carousel2-selector-1">
+                <li id="settings-carousel-selector-1">
                     <a>
                         <img src="img/holiday-schedule-img.png" class="img-responsive">
                         <div class=" m-t-sm">
@@ -316,7 +309,7 @@
                     </a>
                 </li>
 
-                <li id="carousel2-selector-2">
+                <li id="settings-carousel-selector-2">
                     <a>
                         <img src="img/terminal-menu-img.png" class="img-responsive">
                         <div class="thumbnail-desc m-t-sm">
@@ -327,7 +320,7 @@
                     </a>
                 </li>
 
-                <li id="carousel2-selector-3">
+                <li id="settings-carousel-selector-3">
                     <a>
                         <img src="img/services-menu-img.png" class="img-responsive">
                         <div class="m-t-sm">
@@ -338,7 +331,7 @@
                         </div>
                     </a>
                 </li>
-                <li id="carousel2-selector-4">
+                <li id="settings-carousel-selector-4">
                     <a>
                         <img src="img/device-managment-img.png" class="img-responsive">
                         <div class="thumbnail-desc m-t-sm">
@@ -357,9 +350,7 @@
 
     </div>
 </section>
-
-
-<section id="devices">
+<section data-menu-item-index="2" id="devices">
 <div class="container">
 
 <h2 class="caption">Оборудование</h2>
@@ -372,8 +363,8 @@
 <div class="row m-t-lg">
 <div class="col-md-12" id="slider">
 
-<div class="col-md-12" id="carousel-bounding-box">
-    <div id="myCarousel" class="carousel slide carousel-fade ">
+<div class="col-md-12" >
+    <div id="devices-carousel" class="carousel slide carousel-fade ">
         <!-- main slider carousel items -->
         <div class="carousel-inner">
             <div class="active item" data-slide-number="0">
@@ -579,38 +570,38 @@
 
     <!-- thumb navigation carousel items -->
     <ul class="list-inline slider-thumbs">
-        <li id="carousel-selector-0" class="selected">
+        <li id="devices-carousel-selector-0" class="selected">
             <a>
                 <div class="thumbnail-desc"><b>Терминал<br>выдачи талонов</b></div>
                 <img src="img/terminal-img.png" class="img-responsive">
             </a>
         </li>
-        <li id="carousel-selector-1">
+        <li id="devices-carousel-selector-1">
             <a>
                 <div class="thumbnail-desc"><b>Табло и звуковое<br>оповещение</b></div>
                 <img src="img/indication-panel-img.png" class="img-responsive">
             </a>
         </li>
-        <li id="carousel-selector-2">
+        <li id="devices-carousel-selector-2">
             <a>
                 <div class="thumbnail-desc"><b>Персональные<br>табло оператора</b></div>
                 <img src="img/personal-panel-img.png" class="img-responsive">
             </a>
         </li>
-        <li id="carousel-selector-3">
+        <li id="devices-carousel-selector-3">
             <a>
                 <div class="thumbnail-desc"><b>Пульт<br>оператора</b></div>
 
                 <img src="img/operator-panel-img.png" class="img-responsive">
             </a>
         </li>
-        <li id="carousel-selector-4">
+        <li id="devices-carousel-selector-4">
             <a>
                 <div class="thumbnail-desc"><b>Пульт<br>администратора</b></div>
                 <img src="img/admin-panel-img.png" class="img-responsive">
             </a>
         </li>
-        <li id="carousel-selector-5">
+        <li id="devices-carousel-selector-5">
             <a>
                 <div class="thumbnail-desc"><b>Опросники<br>для сбора отзывов</b></div>
                 <img src="img/survey-panel-img.png" class="img-responsive">
@@ -618,7 +609,6 @@
         </li>
 
         <li class="marker">
-
         </li>
 
     </ul>
@@ -627,9 +617,7 @@
 
 </div>
 </section>
-
-
-<section id="technologies">
+<section data-menu-item-index="3" id="technologies">
     <div class="tech-item cloud">
         <div class="container full-height  pos-rlt">
 
@@ -649,8 +637,7 @@
         </div>
     </div>
 </section>
-
-<section id="technologies-1">
+<section data-menu-item-index="3" id="technologies-1">
     <div class="tech-item it-systems-integration">
         <div class="container full-height  pos-rlt">
 
@@ -672,8 +659,7 @@
         </div>
     </div>
 </section>
-
-<section id="technologies-2">
+<section data-menu-item-index="3" id="technologies-2">
     <div class="tech-item citizen-universal-card">
         <div class="container full-height  pos-rlt">
 
@@ -693,7 +679,7 @@
         </div>
     </div>
 </section>
-<section id="technologies-3">
+<section data-menu-item-index="3" id="technologies-3">
     <div class="tech-item integration-gov-services">
         <div class="container full-height  pos-rlt">
 
@@ -713,8 +699,7 @@
         </div>
     </div>
 </section>
-
-<section id="technologies-4">
+<section data-menu-item-index="3" id="technologies-4">
     <div class="tech-item multiticket">
         <div class="container full-height  pos-rlt">
 
@@ -734,8 +719,7 @@
         </div>
     </div>
 </section>
-
-<section id="technologies-5">
+<section data-menu-item-index="3" id="technologies-5">
     <div class="tech-item algorithms">
         <div class="container full-height  pos-rlt">
 
@@ -755,9 +739,7 @@
         </div>
     </div>
 </section>
-
-
-<section id="implementation">
+<section data-menu-item-index="4" id="implementation">
 
     <div class="implementation-item">
         <video class="video-bg" id="implementation-video" loop preload="auto" poster="img/transparent.png">
@@ -791,9 +773,7 @@
         </div>
     </div>
 </section>
-
-
-<section id="solutions">
+<section data-menu-item-index="5" id="solutions">
     <div class="container">
 
         <div class="table">
@@ -932,17 +912,13 @@
     </div>
 
 </section>
-
-
-<section id="costs">
+<section data-menu-item-index="6" id="costs">
     <div class="container">
 
         цены
     </div>
 </section>
-
-
-<section id="contacts">
+<section data-menu-item-index="7" id="contacts">
     <div class="container">
 
         Контакты
