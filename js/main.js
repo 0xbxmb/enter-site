@@ -16,6 +16,8 @@ $(function () {
             contacts: 14
         },
 
+        video = document.getElementById("implementation-video"),
+
         scroller = $(".pages").onepage_scroll({
 
             animationTime: 700,
@@ -27,10 +29,9 @@ $(function () {
                     if($(this).offset().top === 0){
                         $(this).find(".arrow").removeClass("hidden").addClass("animated")
                     }
-                })
+                });
 
                 if (pageIndex == pages.implementation) {
-                    var video = document.getElementById("implementation-video");
                     setTimeout(function () {
                         video.play();
                     }, 700);
@@ -64,7 +65,10 @@ $(function () {
             }*/
         }
 
-
+    video.oncanplay = function() {
+        video.style.width = 'auto';
+        video.style.height = 'auto';
+    };
 
     $(".slider-thumbs li").click(function(){
 
