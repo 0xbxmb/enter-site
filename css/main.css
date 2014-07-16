@@ -133,11 +133,9 @@ body {
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
-
-
 
 /*========================================================header=======================================================*/
 .logo{
@@ -438,14 +436,12 @@ body {
     background-color: #000;
     opacity: 0.3;
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 #implementation-video {
-    background: url("../img/implementation-poster.png") no-repeat;
+    background: #000 url("../img/implementation-poster.png") no-repeat;
     background-size: cover;
 }
 
