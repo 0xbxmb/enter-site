@@ -5,8 +5,8 @@
 <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="ru"> <!--<![endif]-->
+
+<html class="no-js" lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -57,7 +57,7 @@
                 <li data-link="solutions"><a href="">Решения</a></li>
                 <li data-link="costs"><a href="">Стоимость</a></li>
                 <li data-link="contacts"><a href="">Контакты</a></li>
-                <li class="marker"></li>
+                <li class="marker" style="display: none"></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><span class="phone-number"> +7 495 555-55-55</span></li>
@@ -71,7 +71,7 @@
 
 <div class="pages">
 
-<section data-menu-item-index="0" id="index">
+<section data-menu-item-index="-1" id="index">
     <div class="container">
 
         <div class="intro text-center">
@@ -86,7 +86,7 @@
         <div class="intro-images clearfix pos-rlt">
 
             <div class="intro-tune-menu-wrapper inline fadeInLeft animated v-bottom">
-                Настраиваем<br><a href="" class="link" data-link="interface">меню услуг<br>любой сложности</a><!--interfaces.menuTuning-->
+                Настраиваем<br><a href="" class="link" data-link="menutuning">меню услуг<br>любой сложности</a>
                 <div class="intro-tune-menu"></div>
             </div>
 
@@ -109,7 +109,7 @@
                 <div>
                     Формируем очередь<br>
                     и уменьшаем ожидание<br>
-                    <a href="" class="link" data-link="technologies">умными алгоритмами</a><!--technologies.algorithms-->
+                    <a href="" class="link" data-link="algorithms">умными алгоритмами</a>
                 </div>
                 <div class="intro-algorithms m-t"></div>
             </div>
@@ -118,7 +118,7 @@
                 <div class="pull-left">
                     Собираем полную<br>
                     статистику и храним<br>
-                    <a href="" class="link" data-link="technologies">данные в облаке</a><!--technologies.cloud-->
+                    <a href="" class="link" data-link="technologies">данные в облаке</a>
                 </div>
                 <div class="pull-right">
                     <div class="intro-cloud"></div>
@@ -146,7 +146,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="1" id="interface">
+<section data-menu-item-index="0" id="interface">
     <div class="container">
 
         <h2 class="caption">Интерфейс</h2>
@@ -201,7 +201,7 @@
 
 
 </section>
-<section data-menu-item-index="1" id="interface-1">
+<section data-menu-item-index="0" id="interface-1">
     <div class="container">
 
         <h2 class="caption">Настройка</h2>
@@ -210,7 +210,6 @@
             удобное и гибкое управление очередью<br>в процессе эксплуатации
         </div>
 
-        <!-- main slider carousel -->
         <div class="row m-t-lg">
             <div class="col-md-12" id="slider2">
 
@@ -219,8 +218,30 @@
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item" data-slide-number="0">
-                                <div style=" height: 380px ">
+                                <div style=" height: 380px; position: relative">
                                     <img src="img/schedule-big-mg.png" class="img-responsive inline v-bottom">
+
+                                    <div class="bounceInUp arrow hidden" style="position: absolute; top: 200px; font-size: 13px; left: 0;">
+                                        <div class="pos-rlt">
+                                            <div class="inline work-in-intervals-arrow"></div>
+
+                                            <div class="m-l inline">
+                                                Рабочие интервалы<br>
+                                                задаются в 2 клика
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="bounceInRight arrow hidden" style="position: absolute; top: 0px; font-size: 13px; left: 690px;">
+                                        <div class="inline days-combinations-arrow"></div>
+                                        <div class="m-l inline">
+                                            Любые комбинации<br>
+                                            рабочих и выходных
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="item" data-slide-number="1">
@@ -229,14 +250,36 @@
                                 </div>
                             </div>
                             <div class="item" data-slide-number="2">
-                                <div style="height: 380px ">
+                                <div style="height: 380px " class="pos-rlt">
                                     <img src="img/terminal-menu-big-img.png" class="img-responsive inline v-bottom">
+
+
+                                    <div class="bounceInUp arrow hidden m-l-lg" style="position: absolute; top: 230px; left: 730px; font-size: 13px">
+                                        <div class="inline grouping-menu-item-arrow"></div>
+                                        <div class="m-l inline">
+                                            Пункты меню<br>
+                                            объединяются<br>
+                                            в группы
+                                        </div>
+                                    </div>
+
+
+                                    <div class="bounceInRight arrow hidden m-l-lg" style="position: absolute;top: 0px; left: 760px; font-size: 13px">
+                                        <div class="inline style-menu-item-arrow"></div>
+                                        <div class="m-l inline menu-styles menu-styles-palette">
+                                            Любому пункту меню<br>
+                                            назначается свой цвет,<br>
+                                            фоновое изображение<br>
+                                            или иконка<br>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="item" data-slide-number="3">
                                 <div style="height: 380px ">
                                     <img src="img/services-menu-big-img.png" class="img-responsive inline v-bottom">
-                                    <div class="inline v-top m-l" style="font-size: 13px">
+                                    <div class="inline v-top m-l animated bounceInDown" style="font-size: 13px">
                                         Все действия<br>
                                         с услугами<br>
                                         производятся<br>
@@ -245,27 +288,27 @@
                                 </div>
                             </div>
                             <div class="item" data-slide-number="4">
-                                <div style="height: 380px ">
+                                <div style="height: 380px" class="pos-rlt">
                                     <img src="img/device-managment-big-img.png" class="img-responsive inline v-bottom">
-                                    <div class="inline v-top m-l" >
-                                        <div>
-                                            Не отходя от рабочего<br>
-                                            места можно перезагружать,<br>
-                                            переподключать, задавать адрес<br>
-                                            или идентификатор устройства.
-                                        </div>
 
-                                        <div class="m-t-lg">
-                                            <div class="bounceInLeft arrow hidden m-l-lg">
-                                                <div class="inline interface-arrow-1"></div>
+                                    <div class="bounceInDown arrow hidden" style="position: absolute; left: 730px; top: 0px">
+                                        Не отходя от рабочего<br>
+                                        места можно перезагружать,<br>
+                                        переподключать, задавать адрес<br>
+                                        или идентификатор устройства.
+                                    </div>
+
+
+                                            <div class="bounceInRight arrow hidden" style="position: absolute; left: 715px; top: 130px">
+                                                <div class="inline devices-arrow"></div>
                                                 <div class="m-l inline">
                                                     Все устройства на одном экране.<br>
                                                     Легко отследить какое оборудование<br>
                                                     работает, выключено или неисправно
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
+
+
                                 </div>
 
                             </div>
@@ -287,8 +330,7 @@
 
                 <li id="settings-carousel-selector-0" class="selected">
                     <a>
-                        <img src="img/schedule-img.png" class="img-responsive">
-                        <div class="thumbnail-desc m-t-sm">
+                        <div class="thumbnail-desc m-t-sm schedule-thumbnail">
                             <b>Разные расписания</b><br>
                             для разных режимов<br>
                             работы и смен<br>
@@ -299,8 +341,7 @@
 
                 <li id="settings-carousel-selector-1">
                     <a>
-                        <img src="img/holiday-schedule-img.png" class="img-responsive">
-                        <div class=" m-t-sm">
+                        <div class=" m-t-sm holiday-schedule-thumbnail">
                             <b class="thumbnail-desc">Календарь выходных<br>
                                 и праздников</b><br>
                             задает короткие<br>
@@ -311,8 +352,7 @@
 
                 <li id="settings-carousel-selector-2">
                     <a>
-                        <img src="img/terminal-menu-img.png" class="img-responsive">
-                        <div class="thumbnail-desc m-t-sm">
+                        <div class="thumbnail-desc terminal-menu-thumbnail m-t-sm">
                             <b>Меню терминала</b><br>
                             при настройке выглядит<br>
                             так же, как в терминале
@@ -322,8 +362,7 @@
 
                 <li id="settings-carousel-selector-3">
                     <a>
-                        <img src="img/services-menu-img.png" class="img-responsive">
-                        <div class="m-t-sm">
+                        <div class="m-t-sm service-menu-thumbnail">
                             <b>Структура услуг<br>
                                 настраивается<br>
                                 максимально<br></b>
@@ -333,8 +372,7 @@
                 </li>
                 <li id="settings-carousel-selector-4">
                     <a>
-                        <img src="img/device-managment-img.png" class="img-responsive">
-                        <div class="thumbnail-desc m-t-sm">
+                        <div class="thumbnail-desc m-t-sm device-management-thumbnail">
                             <b>Управление всеми<br>
                                 устройствами<br></b>
                             на одном экране
@@ -350,7 +388,7 @@
 
     </div>
 </section>
-<section data-menu-item-index="2" id="devices">
+<section data-menu-item-index="1" id="devices">
 <div class="container">
 
 <h2 class="caption">Оборудование</h2>
@@ -572,39 +610,32 @@
     <ul class="list-inline slider-thumbs">
         <li id="devices-carousel-selector-0" class="selected">
             <a>
-                <div class="thumbnail-desc"><b>Терминал<br>выдачи талонов</b></div>
-                <img src="img/terminal-img.png" class="img-responsive">
+                <div class="thumbnail-desc terminal-thumbnail"><b>Терминал<br>выдачи талонов</b></div>
             </a>
         </li>
         <li id="devices-carousel-selector-1">
             <a>
-                <div class="thumbnail-desc"><b>Табло и звуковое<br>оповещение</b></div>
-                <img src="img/indication-panel-img.png" class="img-responsive">
+                <div class="thumbnail-desc indication-panel-thumbnail"><b>Табло и звуковое<br>оповещение</b></div>
             </a>
         </li>
         <li id="devices-carousel-selector-2">
             <a>
-                <div class="thumbnail-desc"><b>Персональные<br>табло оператора</b></div>
-                <img src="img/personal-panel-img.png" class="img-responsive">
+                <div class="thumbnail-desc personal-panel-thumbnail"><b>Персональные<br>табло оператора</b></div>
             </a>
         </li>
         <li id="devices-carousel-selector-3">
             <a>
-                <div class="thumbnail-desc"><b>Пульт<br>оператора</b></div>
-
-                <img src="img/operator-panel-img.png" class="img-responsive">
+                <div class="thumbnail-desc operator-panel-thumbnail"><b>Пульт<br>оператора</b></div>
             </a>
         </li>
         <li id="devices-carousel-selector-4">
             <a>
-                <div class="thumbnail-desc"><b>Пульт<br>администратора</b></div>
-                <img src="img/admin-panel-img.png" class="img-responsive">
+                <div class="thumbnail-desc admin-panel-thumbnail"><b>Пульт<br>администратора</b></div>
             </a>
         </li>
         <li id="devices-carousel-selector-5">
             <a>
-                <div class="thumbnail-desc"><b>Опросники<br>для сбора отзывов</b></div>
-                <img src="img/survey-panel-img.png" class="img-responsive">
+                <div class="thumbnail-desc survey-panel-thumbnail"><b>Опросники<br>для сбора отзывов</b></div>
             </a>
         </li>
 
@@ -617,7 +648,7 @@
 
 </div>
 </section>
-<section data-menu-item-index="3" id="technologies">
+<section data-menu-item-index="2" id="technologies">
     <div class="tech-item cloud">
         <div class="container full-height  pos-rlt">
 
@@ -637,7 +668,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="3" id="technologies-1">
+<section data-menu-item-index="2" id="technologies-1">
     <div class="tech-item it-systems-integration">
         <div class="container full-height  pos-rlt">
 
@@ -659,7 +690,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="3" id="technologies-2">
+<section data-menu-item-index="2" id="technologies-2">
     <div class="tech-item citizen-universal-card">
         <div class="container full-height  pos-rlt">
 
@@ -679,7 +710,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="3" id="technologies-3">
+<section data-menu-item-index="2" id="technologies-3">
     <div class="tech-item integration-gov-services">
         <div class="container full-height  pos-rlt">
 
@@ -699,7 +730,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="3" id="technologies-4">
+<section data-menu-item-index="2" id="technologies-4">
     <div class="tech-item multiticket">
         <div class="container full-height  pos-rlt">
 
@@ -719,7 +750,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="3" id="technologies-5">
+<section data-menu-item-index="2" id="technologies-5">
     <div class="tech-item algorithms">
         <div class="container full-height  pos-rlt">
 
@@ -739,7 +770,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="4" id="implementation">
+<section data-menu-item-index="3" id="implementation">
 
     <div class="implementation-item">
         <video class="video-bg" id="implementation-video" loop preload="auto" poster="img/transparent.png">
@@ -773,7 +804,7 @@
         </div>
     </div>
 </section>
-<section data-menu-item-index="5" id="solutions">
+<section data-menu-item-index="4" id="solutions">
     <div class="container">
 
         <div class="table">
@@ -912,13 +943,13 @@
     </div>
 
 </section>
-<section data-menu-item-index="6" id="costs">
+<section data-menu-item-index="5" id="costs">
     <div class="container">
 
         цены
     </div>
 </section>
-<section data-menu-item-index="7" id="contacts">
+<section data-menu-item-index="6" id="contacts">
     <div class="container">
 
         Контакты
@@ -941,14 +972,5 @@
 <script src="pkg/viewport-checker/viewportchecker.js"></script>
 <script src="js/main.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>-->
 </body>
 </html>
