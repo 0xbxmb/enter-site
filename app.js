@@ -5,7 +5,7 @@
 var express = require("express"),
     app = express(),
     vidStreamer = require("vid-streamer"),
-    port = process.env.PORT || 80,
+    port = process.env.PORT || 3000,
     settings = {
         "forceDownload": false,
         "rootPath": "videos/",
