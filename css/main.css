@@ -779,6 +779,10 @@ body {
     vertical-align: baseline;
 }
 
+.set-part img.bell {
+    margin: 3px 0;
+}
+
 .set-part img.mic,
 .set-part img.bell {
     vertical-align: middle;
@@ -818,6 +822,7 @@ body {
 
 .cost-option .infinity {
     font-size: 38px;
+    line-height: 22px;
 }
 
 span.rur {
