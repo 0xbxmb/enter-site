@@ -30,7 +30,6 @@ body {
     color: #030303;
 }
 
-
 .caption{
     margin-top: 110px;
     font-size: 60px;
@@ -59,13 +58,9 @@ body {
     opacity:0.5;
 }
 
-
-
 .navbar-default .navbar-nav > .marker {
-
     width: 0px;
     height: 0px;
-
     border-radius: 2px;
     position: absolute;
     border: solid #ff6600 1px;
@@ -82,9 +77,9 @@ body {
     transition: left 0.7s, width 0.7s, height 0.7s;
 }
 
-
-
-
+.onepage-pagination{
+    top: 35%;
+}
 
 .carousel-fade .item {-webkit-transition: opacity 0.7s; -moz-transition: opacity 0.7s; -ms-transition: opacity 0.7s; -o-transition: opacity 0.7s; transition: opacity 0.7s;}
 .carousel-fade .active.left {left:0;opacity:0;z-index:2;}
@@ -174,6 +169,9 @@ body {
 }
 
 /*================================================0 index==============================================================*/
+.index-wrapper{
+    background: url('../img/room-floor-bg.png') repeat-x bottom;
+}
 
 .intro{
     font-size: 32px;
@@ -183,7 +181,6 @@ body {
 .intro-images {
     margin-top: 80px;
     padding-bottom: 32px;
-    background: url("../img/intro-room-bg.png") bottom no-repeat;
 }
 
 .intro-tune-menu-wrapper{
@@ -269,9 +266,7 @@ body {
 
 /*================================================1 interface==========================================================*/
 
-
-
-.interface-arrow-1{
+.devices-arrow {
     background: url("../img/arrow-r-l-bg.png") left bottom no-repeat;
     width: 56px;
     height: 23px;
@@ -280,6 +275,54 @@ body {
     top: 10px;
     left: -50px;
 }
+
+.days-combinations-arrow{
+    background: url("../img/days-combinations-arrow-img.png") left bottom no-repeat;
+    width: 58px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -50px;
+}
+
+.work-in-intervals-arrow{
+    background: url("../img/work-in-intervals-arrow-img.png") left bottom no-repeat;
+    width: 42px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -50px;
+}
+
+.style-menu-item-arrow{
+    background: url("../img/style-menu-item-arrow-img.png") left bottom no-repeat;
+    width: 58px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    left: -55px;
+}
+
+.grouping-menu-item-arrow{
+    background: url("../img/grouping-menu-item-arrow-img.png") left bottom no-repeat;
+    width: 42px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+}
+
+.menu-styles-palette{
+    background: url("../img/menu-styles-palette-img.png") top left no-repeat;
+    padding-top: 70px;
+    padding-right: 20px;
+}
+
+
+
 
 .interface-details-item{
     font-size: 15px;
@@ -346,12 +389,67 @@ body {
 .terminal-types li{
     margin-right: 30px;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
+.terminal-thumbnail,
+.indication-panel-thumbnail,
+.indication-panel-thumbnail,
+.personal-panel-thumbnail,
+.operator-panel-thumbnail,
+.admin-panel-thumbnail,
+.survey-panel-thumbnail{
+    padding-bottom: 100px;
+}
+
+.terminal-thumbnail{
+    background: url("../img/terminal-img.png") bottom left no-repeat;
+}
+.indication-panel-thumbnail{
+    background: url("../img/indication-panel-img.png") bottom left no-repeat;
+    padding-right: 12px;
+}
+.personal-panel-thumbnail{
+    background: url("../img/personal-panel-img.png") bottom left no-repeat;
+}
+.operator-panel-thumbnail{
+    background: url("../img/operator-panel-img.png") bottom left no-repeat;
+    padding-right: 32px;
+}
+.admin-panel-thumbnail{
+    background: url("../img/admin-panel-img.png") bottom left no-repeat;
+    padding-right: 5px;
+}
+.survey-panel-thumbnail{
+    background: url("../img/survey-panel-img.png") bottom left no-repeat;
+}
 
 /*================================================3 settings===========================================================*/
+.schedule-thumbnail,
+.holiday-schedule-thumbnail,
+.terminal-menu-thumbnail,
+.service-menu-thumbnail,
+.device-management-thumbnail{
+    padding-top: 95px;
+}
 
+.schedule-thumbnail{
+    background: url("../img/schedule-img.png") top left no-repeat;
+}
+.holiday-schedule-thumbnail{
+    background: url("../img/holiday-schedule-img.png") top left no-repeat;
+}
+.terminal-menu-thumbnail{
+    background: url("../img/terminal-menu-img.png") top left no-repeat;
+}
+.service-menu-thumbnail{
+    background: url("../img/services-menu-img.png") top left no-repeat;
+    padding-right: 10px;
+}
+.device-management-thumbnail{
+    background: url("../img/device-management-img.png") top left no-repeat;
+    padding-right: 10px;
+}
 
 /*================================================4 technology=========================================================*/
 
@@ -506,10 +604,6 @@ body {
     padding-top: 100px;
 }
 
-
-
-
-
 .spacer{
     width: 25px;
     display: inline-block;
@@ -534,7 +628,6 @@ body {
     width: 100%;
     padding: 15px;
 }
-
 
 .solution-companies{
     padding: 0;
@@ -590,7 +683,6 @@ body {
     width: 76px;
     height: 31px;
 }
-
 
 .m{
     background: url("../img/m-img.png") center center no-repeat;

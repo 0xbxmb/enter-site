@@ -8,8 +8,10 @@ $(function () {
         pages = {
             index: 1,
             interface: 2,
+            menutuning: 3,
             devices: 4,
             technologies: 5,
+            algorithms: 10,
             implementation: 11,
             solutions: 12,
             costs: 13,
@@ -51,32 +53,33 @@ $(function () {
                     $("header").removeClass("navbar-inverse").addClass("navbar-navbar-default");
                 }
 
-                var t = $($(".landing section")[pageIndex - 1]).data("menuItemIndex");
+                var index = $($(".landing section")[pageIndex - 1]).data("menuItemIndex"),
+                    menuElements = $(".navbar-nav li"),
+                    parent = menuElements.parents(".navbar-nav"),
+                    marker = parent.find("li.marker");
 
-                debugger;
+                if(index >= 0){
+                    var element = $(menuElements[index]);
+                    parent.find(".active").removeClass("active");
+                    element.addClass("active");
 
-                var element = $($(".navbar-nav li")[t]);
-                var parent = element.parents(".navbar-nav");
-                parent.find(".active").removeClass("active");
-                var marker = parent.find("li.marker");
+                    marker.show().css("left", element.position().left+"px")
+                        .width(element.outerWidth())
+                        .height( element.outerHeight());
+                }else{
+                    marker.hide();
+                    parent.find(".active").removeClass("active");
+                }
 
                 /*        marker.stop().animate({
                  left: element.position().left,
                  width: element.outerWidth(),
                  height: element.outerHeight()
                  }, 700);*/
-
-                element.addClass("active");
-                marker.css("left", element.position().left+"px")
-                    .width(element.outerWidth())
-                    .height( element.outerHeight());
-
-
             }
         }),
 
         initCarousel = function(el){
-
 
             el.carousel({
                 interval: false
@@ -97,10 +100,6 @@ $(function () {
                 $('[id^='+ el.attr("id") +'-selector-]').removeClass('selected');
                 $('[id^='+ el.attr("id") +'-selector-'+id+']').addClass('selected');
             });*/
-        },
-
-        detectPage = function(){
-
         };
 
     initCarousel($("#settings-carousel"));
@@ -111,27 +110,8 @@ $(function () {
         video.style.height = 'auto';
     };
 
-    $(".slider-thumbs li").click(function(){
-
-        var element = $(this);
+    var selectSliderItem = function(element){
         var parent = element.parents(".slider-thumbs");
-        var marker = parent.find("li.marker");
-
-/*        marker.stop().animate({
-            left: element.position().left,
-            width: element.outerWidth(),
-            height: element.outerHeight()
-        }, 700);*/
-        marker.css("left", element.position().left+"px")
-            .width(element.width())
-            .height( element.height());
-    });
-
-    /*copy paste*/
-    $(".navbar-nav li").click(function(){
-        var element = $(this);
-        var parent = element.parents(".navbar-nav");
-        parent.find(".active").removeClass("active");
         var marker = parent.find("li.marker");
 
         /*        marker.stop().animate({
@@ -139,11 +119,35 @@ $(function () {
          width: element.outerWidth(),
          height: element.outerHeight()
          }, 700);*/
-
-        element.addClass("active");
         marker.css("left", element.position().left+"px")
-            .width(element.outerWidth())
-            .height( element.outerHeight());
+            .width(element.width())
+            .height( element.height());
+    };
+
+    $(".slider-thumbs li").click(function(){
+        if(!$(this).hasClass("marker")){
+            selectSliderItem($(this));
+        }
+    });
+
+    $(".navbar-nav li").click(function(){
+        var element = $(this);
+        if(!$(this).hasClass("marker")){
+            var parent = element.parents(".navbar-nav");
+            parent.find(".active").removeClass("active");
+            var marker = parent.find("li.marker");
+
+            /*        marker.stop().animate({
+             left: element.position().left,
+             width: element.outerWidth(),
+             height: element.outerHeight()
+             }, 700);*/
+
+            element.addClass("active");
+            marker.css("left", element.position().left+"px")
+                .width(element.outerWidth())
+                .height( element.outerHeight());
+        }
     });
 
     $("[data-link]").click(function(e){
@@ -151,26 +155,8 @@ $(function () {
         e.preventDefault();
     });
 
-/*    $('#myCarousel2').carousel({
-        interval: 5000
+    $(".slider-thumbs .selected").each(function(index, item){
+        selectSliderItem($(item));
     });
-
-    // handles the carousel thumbnails
-    $('[id^=carousel-selector-]').click( function(){
-        var id_selector = $(this).attr("id");
-        var id = id_selector.substr(id_selector.length -1);
-        id = parseInt(id);
-        $('#myCarousel').carousel(id);
-        $('[id^=carousel-selector-]').removeClass('selected');
-        $(this).addClass('selected');
-    });
-
-    // when the carousel slides, auto update
-    $('#myCarousel').on('slid', function (e) {
-        var id = $('.item.active').data('slide-number');
-        id = parseInt(id);
-        $('[id^=carousel-selector-]').removeClass('selected');
-        $('[id^=carousel-selector-'+id+']').addClass('selected');
-    });*/
 
 });
