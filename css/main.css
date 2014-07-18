@@ -40,7 +40,7 @@ body {
     display: inline-block;
     margin-left: 30px;
     font-size: 15px;
-    font-family: 'HelveticaNeueItalic';
+    font-family: 'HelveticaNeueItalic', Helvetica, Arial, sans-serif;
 }
 
 .link,
@@ -839,4 +839,27 @@ span.rur span {
 
 span.rur span:before {
     content: '\2013';
+}
+
+
+/*================================================8 contacts====================================================*/
+.contacts{
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background: url("../img/contacts-bg.png") no-repeat ;
+}
+
+.contacts-caption{
+    font-size: 48px;
+    line-height: 46px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.contacts-text{
+    padding: 5px 10px;
+    line-height: 37px;
 }
