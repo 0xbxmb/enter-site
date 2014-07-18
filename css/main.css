@@ -605,3 +605,141 @@ body {
     width: 114px;
     height: 26px;
 }
+
+/*==================================================7 costs===========================================================*/
+
+.cost-contact {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+.cost-contact-info,
+.cost-contact-number {
+    vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+}
+
+.cost-contact-number {
+    font-size: 32px;
+    margin-left: 55px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.cost-option {
+    border: 1px #e1e1e1 solid;
+    border-radius: 2px;
+    padding: 20px 24px;
+    font-size: 15px;
+    min-height: 450px;
+    position: relative;
+}
+
+.cost-option h3 {
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: 30px;
+}
+
+.option-header {
+    margin-bottom: 20px;
+}
+
+.option-set {
+    border-bottom: 1px #e1e1e1 solid;
+    padding-bottom: 15px;
+}
+
+.option-set .parts {
+    text-align: justify;
+    width: 100%;
+    line-height: 0;
+    text-align-last: justify;
+}
+
+.option-set .cloud-option {
+    margin-top: 10px;
+}
+
+.option-set .parts:after {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+}
+
+.set-part {
+    line-height: normal;
+    display: inline-block;
+    text-align: left;
+}
+
+.set-part strong {
+    font-size: 24px;
+}
+
+.set-part img {
+    vertical-align: baseline;
+}
+
+.set-part img.mic,
+.set-part img.bell {
+    vertical-align: middle;
+}
+
+.option-list {
+    padding-top: 5px;
+}
+
+.option-list li{
+    padding-top: 10px;
+}
+
+.option-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.cost-option .cost {
+    font-size: 30px;
+    color: #ff6600;
+    margin-right: 10px;
+}
+
+.cost-option .cost-desc {
+    font-size: 13px;
+}
+
+.cost-option .cost,
+.cost-option .cost-desc {
+    vertical-align: top;
+    display: inline-block;
+    line-height: normal;
+}
+
+.cost-option .infinity {
+    font-size: 38px;
+}
+
+span.rur {
+    text-transform: uppercase;
+}
+
+span.rur span {
+    position: absolute;
+    overflow: hidden;
+    width: .45em;
+    height: 1em;
+    margin: .1ex 0 0 -.55em;
+}
+
+span.rur span:before {
+    content: '\2013';
+}
