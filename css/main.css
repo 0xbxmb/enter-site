@@ -39,6 +39,16 @@ body {
     color: #030303;
 }
 
+
+::selection{
+    color: #ffffff;
+    background: #FFAC79;
+}
+::-moz-selection {
+    color: #ffffff;
+    background:  #FFAC79;
+}
+
 .caption{
     margin-top: 110px;
     font-size: 60px;
@@ -75,7 +85,7 @@ body {
     border: solid #ff6600 1px;
     color: #ff6600 !important;
     background: transparent;
-    transition: left 0.7s, width 0.7s, height 0.7s;
+    transition: left 0.5s, width 0.5s, height 0.5s;
 }
 
 .navbar-inverse .navbar-nav > .marker {
@@ -83,14 +93,15 @@ body {
     border-radius: 2px;
     border: solid #ffffff 1px;
     color: #ffffff !important;
-    transition: left 0.7s, width 0.7s, height 0.7s;
+    transition: left 0.5s, width 0.5s, height 0.5s;
 }
 
 .onepage-pagination{
-    top: 35%;
+    top: 40%;
+    display: none;
 }
 
-.carousel-fade .item {-webkit-transition: opacity 0.7s; -moz-transition: opacity 0.7s; -ms-transition: opacity 0.7s; -o-transition: opacity 0.7s; transition: opacity 0.7s;}
+.carousel-fade .item {-webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -ms-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s;}
 .carousel-fade .active.left {left:0;opacity:0;z-index:2;}
 .carousel-fade .next {left:0;opacity:1;z-index:1;}
 .carousel-inner .item{ width: 100%}
@@ -141,6 +152,27 @@ body {
     height: 100%;
 }
 
+.owl-carousel{
+    height: 100%;
+}
+.owl-carousel .owl-wrapper-outer{
+    height: 100%;
+}
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item{
+    height: 100%;
+}
+.owl-theme .owl-controls{
+    bottom: 50px;
+    position: absolute;
+    margin: 0 auto;
+    max-width: 200px;
+    left: 0;
+    right: 0;
+}
+.owl-theme .owl-controls .owl-page span{
+    background: #FFF;
+}
 /*========================================================header=======================================================*/
 .logo{
     background: url("../img/menu-logo.png") center center no-repeat;
@@ -342,7 +374,6 @@ body {
     height: 100px;
 }
 
-
 .interface-details-item .interface-details-caption{
     font-weight: bold;
 }
@@ -359,16 +390,6 @@ body {
 .detailed-statistics-diagram{
     background: url("../img/detailed-statistics-diagram-img.png") left top no-repeat;
 }
-/*images and thumbnails*/
-
-/*...
-.interface-arrow-8{
-}
-
-*/
-
-
-
 /*================================================2 hardware===========================================================*/
 
 .hardware-main-content{
@@ -474,6 +495,7 @@ body {
     position: absolute;
     font-size: 48px;
     left: 0px;
+    z-index: 900;
 }
 
 .section-tech-caption{

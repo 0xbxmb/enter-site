@@ -11,20 +11,24 @@ $(function () {
             menutuning: 3,
             devices: 4,
             technologies: 5,
-            algorithms: 10,
-            implementation: 11,
-            solutions: 12,
-            costs: 13,
-            contacts: 14
+
+//            algorithms: 10,
+            implementation: 6,
+
+
+            solutions: 7,
+            costs: 8,
+            contacts: 9
         },
 
         video = document.getElementById("implementation-video"),
 
         scroller = $(".pages").onepage_scroll({
 
-            animationTime: 700,
+            animationTime: 500,
 
             keyboard: true,
+            loop: false,
 
             afterMove:function(pageIndex){
                 $(".arrow").parents("section").each(function(){
@@ -35,7 +39,7 @@ $(function () {
                 if (pageIndex == pages.implementation) {
                     setTimeout(function () {
                         video.play();
-                    }, 700);
+                    }, 500);
                 }
             },
 
@@ -47,7 +51,7 @@ $(function () {
                     $("header").removeClass("navbar-fixed-bottom").addClass("navbar-fixed-top");
                 }
 
-                if(pageIndex >= pages.technologies && pageIndex < pages.solutions){
+                if(pageIndex >= pages.technologies && pageIndex < pages.solutions ){
                     $("header").removeClass("navbar-navbar-default").addClass("navbar-inverse");
                 }else{
                     $("header").removeClass("navbar-inverse").addClass("navbar-navbar-default");
@@ -157,6 +161,24 @@ $(function () {
 
     $(".slider-thumbs .selected").each(function(index, item){
         selectSliderItem($(item));
+    });
+
+
+    $("#owl-demo").owlCarousel({
+
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        pagination: true,
+        items : 1
+
+        // "singleItem:true" is a shortcut for:
+        // ,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+
     });
 
 });
