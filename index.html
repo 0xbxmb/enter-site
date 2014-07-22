@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="pkg/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="pkg/onpage-scroll-master/onepage-scroll.css">
     <link rel="stylesheet" href="pkg/animate-css/animate.css">
 
@@ -157,8 +158,8 @@
             наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени
         </div>
 
-        <div class="m-t-lg">
-            <img src="temp.png" id="temp-img">
+        <div class="m-t-lg" data-ng-app="enter">
+            <current-queue-info active-workplaces="items"></current-queue-info>
         </div>
     </div>
 
@@ -1115,12 +1116,26 @@
 <!-- /container -->
 
 <script src="pkg/jquery/jquery-2.1.1.min.js"></script>
+<script src="pkg/dreamerslab-jquery-actual/jquery.actual.min.js"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 <!--<script>window.jQuery || document.write('<script src="pkg/jquery/jquery-2.1.1.min.js"><\/script>')</script>-->
 
 <script src="pkg/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 <script src="pkg/onpage-scroll-master/jquery.onepage-scroll.min.js"></script>
 <script src="pkg/viewport-checker/viewportchecker.js"></script>
+<script src="pkg/d3js/d3.min.js"></script>
+<script src="pkg/angularjs/angular.min.js"></script>
+<script src="pkg/angular-timer/angular-timer.js"></script>
+
+<script src="js/app/position.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/d3.v3.js"></script>
+<script src="js/app/dictionaries.js"></script>
+<script src="js/app/timeConverter.js"></script>
+<script src="js/app/extPopover.js"></script>
+<script src="js/app/onFinishRepeat.js"></script>
+<script src="js/app/svgQueue.js"></script>
+<script src="js/app/currentQueueInfo.js"></script>
 <script src="js/main.js"></script>
 
 </body>
