@@ -881,3 +881,177 @@ span.rur {
     padding: 5px 10px;
     line-height: 37px;
 }
+
+/*===================================================angular==========================================================*/
+
+.ext-popover {
+    box-shadow: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    z-index: 1500;
+}
+
+.no-point-events {
+    pointer-events: none;
+}
+
+.workplace-wrapper{
+    margin-bottom: 20px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div.workplace-wrapper section.workplace {
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+
+.workplace {
+    width: 200px;
+    position: relative;
+    color: #000;
+}
+
+.wrapper {
+    padding: 15px;
+}
+
+.panel {
+    border-radius: 2px;
+    border-color: #ebeff6;
+}
+
+.workplace .workplace-label {
+    position: absolute;
+    top: -10px;
+    background: white;
+}
+
+.workplace h5,
+.popular-products-list-panel h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.workplace .people-total-proceed,
+.workplace .time-approx {
+    font-size: 15px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+*[svg-queue] g text {
+    text-anchor: middle;
+}
+
+g.ticket {
+    cursor: pointer;
+}
+
+g.current text {
+    font-size: 16px;
+}
+
+svg.workplace-queue path.line,
+svg.workplace-queue line.line {
+    fill: none;
+    stroke: #e1e1e1;
+    stroke-width: 1;
+}
+
+[svg-queue] {
+    max-height: 98px;
+}
+
+*[svg-queue] {
+    margin-left: -8px;
+}
+
+[svg-queue] {
+    position: relative;
+}
+
+[svg-queue]:before {
+    content:'';
+    display:block;
+    background: -moz-linear-gradient(right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, right top, left top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height:100%;
+}
+
+*[svg-queue] timer {
+    position: absolute;
+    left: 0;
+}
+
+*[svg-queue] timer.current span {
+    display: inline-block;
+    width: 54px;
+    text-align: center;
+}
+
+*[svg-queue] timer.warning {
+    color: #fd2424;
+}
+
+*[svg-queue] text {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popular-products-list-panel {
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.popular-products-list .list-group-item:before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+    font-size: 25px;
+    line-height: 20px;
+}
+
+.popular-products-list .list-group-item span {
+    color: #000000;
+}
+
+.popular-products-list .list-group-item {
+    padding-left: 35px;
+    position: relative;
+}
+
+.popular-products-list .list-group-item:hover {
+    background: #DEF2F9;
+}
+
+.panel > .list-group .list-group-item {
+    border-width: 1px 0;
+}
+.popular-products-list :first-child {
+    border-top: none;
+}
+
+.queue-container {
+    min-height: 250px;
+    padding-right: 275px;
+    position: relative;
+}
