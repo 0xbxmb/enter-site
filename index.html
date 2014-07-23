@@ -158,8 +158,30 @@
             наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени
         </div>
 
-        <div class="m-t-lg" data-ng-app="enter">
-            <current-queue-info active-workplaces="items"></current-queue-info>
+        <div class="m-t-lg clearfix" data-ng-app="enter">
+            <div class="queue-container">
+                <current-queue-info active-workplaces="items"></current-queue-info>
+                <div class="popular-products-list-panel">
+                    <div class="panel">
+                        <div class="wrapper">
+                            <h5>Популярные услуги</h5>
+                        </div>
+
+                        <div class="list-group list-group-flush no-radius alt popular-products-list" id="p-p-list" style="display: block;">
+                            <a href class="list-group-item" ng-style="{color: product.Color}"
+                               data-ng-repeat="product in products"
+                               data-ng-mouseover="over(product.Id)"
+                               data-ng-mouseleave="leave()">
+                            <span>
+                                <div>
+                                    {{product.Name}}
+                                </div>
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1129,6 +1151,7 @@
 
 <script src="js/app/position.js"></script>
 <script src="js/app/app.js"></script>
+<script src="js/app/tickets.js"></script>
 <script src="js/app/d3.v3.js"></script>
 <script src="js/app/dictionaries.js"></script>
 <script src="js/app/timeConverter.js"></script>

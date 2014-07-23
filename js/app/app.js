@@ -2,62 +2,47 @@
     'use strict';
 
     angular.module('enter', ['ui.bootstrap.position', 'timer'])
-        .run(['$rootScope', function ($rootScope) {
-            $rootScope.items = [
-                {
-                    "User": "Иван Сергеев",
-                    "Ticket": {
-                        "Id": "9c0b4fb8-a44f-4120-9bce-c4ceab4db752",
-                        "TicketId": "4fb8f071-dfec-4be4-84d7-01bc67ee00fd",
-                        "ProductId": "aacf2c02-7dbf-4bdc-9774-5ba72d0e3abe",
-                        "Number": [
-                            "П",
-                            350
-                        ],
-                        "IsMulti": false,
-                        "IsPending": false,
-                        "State": 5,
-                        "StartSeconds": 42077,
-                        "Seconds": 42793
-                    },
-                    "Future": [
+        .run(['$rootScope', 'dictionaries', 'tickets', function ($rootScope, dictionaries, tickets) {
+
+            var getWorkplaces = function () {
+                    var workplaces = [
                         {
-                            "Id": "08897e66-380c-4062-9ca5-5eafd489fb30",
-                            "TicketId": "b8af7e3f-c359-4362-8842-c2520d98b951",
-                            "ProductId": "86c93615-7fca-4ebf-b3cb-8963dab93384",
-                            "Number": [
-                                "П",
-                                361
-                            ],
-                            "IsMulti": false,
-                            "IsPending": false,
-                            "State": 3,
-                            "StartSeconds": 42423,
-                            "Seconds": 43993
+                            User: "Иван Сергеев",
+                            Id: 1,
+                            Name: "Окно 1"
                         },
                         {
-                            "Id": "eff226be-c44d-4635-b199-72b468430cdf",
-                            "TicketId": "d1dbf757-d927-4981-9ffe-077f022f4dac",
-                            "ProductId": "500988d3-b027-4217-a99b-c9585b53df48",
-                            "Number": [
-                                "П",
-                                370
-                            ],
-                            "IsMulti": false,
-                            "IsPending": false,
-                            "State": 3,
-                            "StartSeconds": 42722,
-                            "Seconds": 44893
+                            User: "Евгения Колобова",
+                            Id: 2,
+                            Name: "Окно 2"
+                        },
+                        {
+                            User: "Валентин Маклаков",
+                            Id: 3,
+                            Name: "Окно 3"
                         }
-                    ],
-                    "QueueEndSeconds": 46093,
-                    "Id": "19d23aca-958a-459e-8fb6-0bc57b6700c8",
-                    "Name": "Окно 4",
-                    "CompletedCount": 26,
-                    "AverageOperating": 519
-                }
-            ];
+                    ];
+
+                    workplaces.forEach(function (workplace) {
+                        workplace.Ticket = tickets.getTicket().process();
+                        workplace.Future = tickets.getTickets(tickets.random(3, 18));
+                        workplace.QueueEndSeconds = workplace.Future[workplace.Future.length - 1].Seconds;
+                        workplace.CompletedCount = tickets.random(30);
+                        workplace.AverageOperating = tickets.random(300, 800);
+                    });
+
+                    return workplaces;
+                };
+
+            $rootScope.items = getWorkplaces();
+            $rootScope.products = dictionaries.products;
+            $rootScope.over = function (id) {
+                $rootScope.$broadcast("svg-queue.highlight-product", id);
+            };
+            $rootScope.leave = function () {
+                $rootScope.$broadcast("svg-queue.clear-highlighting");
+            };
+
+
         }]);
-
-
 })();
