@@ -37,9 +37,7 @@ $(function () {
                     }
                 });
                 if (pageIndex == pages.implementation) {
-                    setTimeout(function () {
-                        video.play();
-                    }, 500);
+                    video.play();
                 }
             },
 
@@ -109,10 +107,10 @@ $(function () {
     initCarousel($("#settings-carousel"));
     initCarousel($("#devices-carousel"));
 
-    video.oncanplay = function() {
+    video.addEventListener('canplay', function() {
         video.style.width = 'auto';
         video.style.height = 'auto';
-    };
+    });
 
     var selectSliderItem = function(element){
         var parent = element.parents(".slider-thumbs");
