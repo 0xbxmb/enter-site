@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="pkg/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="pkg/onpage-scroll-master/onepage-scroll.css">
     <link rel="stylesheet" href="pkg/owl.carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="pkg/owl.carousel/owl-carousel/owl.theme.css">
@@ -161,8 +162,30 @@
             наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени
         </div>
 
-        <div class="m-t-lg">
-            <img src="temp.png" id="temp-img">
+        <div class="m-t-lg clearfix" data-ng-app="enter">
+            <div class="queue-container">
+                <current-queue-info active-workplaces="items"></current-queue-info>
+                <div class="popular-products-list-panel">
+                    <div class="panel">
+                        <div class="wrapper">
+                            <h5>Популярные услуги</h5>
+                        </div>
+
+                        <div class="list-group list-group-flush no-radius alt popular-products-list" id="p-p-list" style="display: block;">
+                            <a href class="list-group-item" ng-style="{color: product.Color}"
+                               data-ng-repeat="product in products"
+                               data-ng-mouseover="over(product.Id)"
+                               data-ng-mouseleave="leave()">
+                            <span>
+                                <div>
+                                    {{product.Name}}
+                                </div>
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1109,6 +1132,7 @@
 <!-- /container -->
 
 <script src="pkg/jquery/jquery-2.1.1.min.js"></script>
+<script src="pkg/dreamerslab-jquery-actual/jquery.actual.min.js"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 <!--<script>window.jQuery || document.write('<script src="pkg/jquery/jquery-2.1.1.min.js"><\/script>')</script>-->
 
@@ -1116,6 +1140,20 @@
 <script src="pkg/onpage-scroll-master/jquery.onepage-scroll.js"></script>
 <script src="pkg/viewport-checker/viewportchecker.js"></script>
 <script src="pkg/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
+<script src="pkg/d3js/d3.min.js"></script>
+<script src="pkg/angularjs/angular.min.js"></script>
+<script src="pkg/angular-timer/angular-timer.js"></script>
+
+<script src="js/app/position.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/tickets.js"></script>
+<script src="js/app/d3.v3.js"></script>
+<script src="js/app/dictionaries.js"></script>
+<script src="js/app/timeConverter.js"></script>
+<script src="js/app/extPopover.js"></script>
+<script src="js/app/onFinishRepeat.js"></script>
+<script src="js/app/svgQueue.js"></script>
+<script src="js/app/currentQueueInfo.js"></script>
 <script src="js/main.js"></script>
 
 </body>

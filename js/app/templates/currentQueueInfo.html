@@ -1,0 +1,24 @@
+<div class="workplace-wrapper clearfix"
+     data-ng-repeat="workplace in activeWorkplaces track by workplace.Id"
+     data-on-finish-repeat>
+    <div class="pull-left">
+        <div class="panel wrapper workplace" data-ng-class="isInRest(workplace)">
+            <div class="workplace-label">{{workplace.Name}}</div>
+            <h5>{{getName(workplace)}}</h5>
+                        <span class="inline people-total-proceed">
+                            <i class="icon-ok-sign"></i> {{workplace.CompletedCount}}
+                        </span>
+                        <span class="m-l-sm inline time-approx">
+                            <i class="icon-time"></i> {{getTime(workplace.AverageOperating)}}
+                        </span>
+        </div>
+    </div>
+
+    <div class="pull-left">
+        <div svg-queue
+             data-model="workplace"
+             data-width="width"
+             data-height="98">
+        </div>
+    </div>
+</div>
