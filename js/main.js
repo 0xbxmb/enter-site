@@ -107,9 +107,9 @@ $(function () {
     initCarousel($("#settings-carousel"));
     initCarousel($("#devices-carousel"));
 
-    video.addEventListener('canplay', function() {
-        video.style.width = 'auto';
-        video.style.height = 'auto';
+    video.addEventListener('error', function() {
+        video.style.width = '100$';
+        video.style.height = '100$';
     });
 
     var selectSliderItem = function(element){
