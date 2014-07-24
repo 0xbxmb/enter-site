@@ -179,4 +179,9 @@ $(function () {
 
     });
 
+    $(".owl-item").click(function(){
+        $(".owl-carousel").data('owlCarousel').next();
+    });
+
+
 });

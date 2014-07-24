@@ -166,6 +166,10 @@ body {
 .owl-carousel .owl-item{
     height: 100%;
 }
+
+.owl-item{
+    cursor: pointer;
+}
 .owl-theme .owl-controls{
     bottom: 50px;
     position: absolute;
