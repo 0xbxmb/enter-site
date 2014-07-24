@@ -88,6 +88,10 @@ body {
     transition: left 0.5s, width 0.5s, height 0.5s;
 }
 
+.navbar-default .navbar-nav > a{
+    outline: none;
+}
+
 .navbar-inverse .navbar-nav > .marker {
     position: absolute;
     border-radius: 2px;

@@ -26,8 +26,9 @@
 
     border-bottom: #000000 dotted 1px ;
     color: #000000 !important;
-    outline: none !important;
+    outline: thin none  !important;
 }
+
 .navbar-nav > li > a:hover{
     border-bottom: transparent dotted 1px ;
 }
