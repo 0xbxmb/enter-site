@@ -899,6 +899,7 @@ span.rur {
 .workplace-wrapper{
     margin-bottom: 20px;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 98px;
 }
 
 div.workplace-wrapper div.workplace {

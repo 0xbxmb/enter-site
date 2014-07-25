@@ -5,18 +5,16 @@
     'use strict';
     angular.module('enter').service('tickets', ['dictionaries', function (dictionaries) {
         var length = dictionaries.products.length,
-            avgServiceSeconds = 420,
-            avgNewTicketApearing = 60,
+            avgServiceSeconds = 3,
+            avgNewTicketApearing = 6,
             idCounter = 1,
             getRandomProduct = function () {
                 return dictionaries.products[Math.floor(Math.random() * length)];
             },
-            self = this;
-
-        function getCurrentSecond() {
-            var date = new Date();
-            return date.getHours() * 60 * 60 + date.getMinutes() * 60 + date.getSeconds();
-        }
+            getCurrentSecond = function () {
+                var date = new Date();
+                return date.getHours() * 60 * 60 + date.getMinutes() * 60 + date.getSeconds();
+            };
 
         function Ticket() {
 
@@ -34,6 +32,7 @@
             this.ProductId = product.Id.toString();
             this.Number = [product.prefix, product.count];
             this.State = 3;
+            this.StartSeconds = getCurrentSecond();
 
             idCounter += 1;
             product.count += 1;
@@ -50,9 +49,16 @@
             return this;
         };
 
-        Ticket.prototype.setSeconds = function (current, startTime, index) {
-            this.StartSeconds = startTime + avgNewTicketApearing * index;
-            this.Seconds = current + avgServiceSeconds * index;
+        Ticket.prototype.isInvited = function () {
+            return this.State === 4;
+        };
+
+        Ticket.prototype.isProcessed = function () {
+            return this.State === 5;
+        };
+
+        Ticket.prototype.updateProcessTime = function (index) {
+            this.Seconds = getCurrentSecond() + avgServiceSeconds * (index + 1);
             return this;
         };
 
@@ -69,12 +75,27 @@
 
         this.getTickets = function (count) {
             var result = [],
-                startSeconds = getCurrentSecond() - avgNewTicketApearing * count,
-                current = getCurrentSecond();
+                current = getCurrentSecond(),
+                startSeconds = current - avgNewTicketApearing * count;
+
             for (var i = 0; i < count; i += 1) {
-                result.push(this.getTicket().setSeconds(current, startSeconds, i));
+                var ticket = this.getTicket();
+                ticket.StartSeconds = startSeconds + avgNewTicketApearing * i;
+                ticket.Seconds = current + avgServiceSeconds * (i + 1);
+
+                result.push(ticket);
             }
             return result;
         };
+
+        this.getAvgServiceSecond = function () {
+            return avgServiceSeconds;
+        };
+
+        this.getAvgApearingSeconds = function () {
+            return avgNewTicketApearing;
+        };
+
+        this.getCurrentSecond = getCurrentSecond;
     }]);
 })();

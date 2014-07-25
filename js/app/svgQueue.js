@@ -700,7 +700,7 @@
                         drawCurrent(tools, scope);
                         drawQueue(tools, scope);
                     }
-                });
+                }, true);
 
                 scope.ticketById = function (id) {
                     var result = {};
