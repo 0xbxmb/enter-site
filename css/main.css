@@ -88,6 +88,10 @@ body {
     transition: left 0.5s, width 0.5s, height 0.5s;
 }
 
+.navbar-default .navbar-nav > a{
+    outline: none;
+}
+
 .navbar-inverse .navbar-nav > .marker {
     position: absolute;
     border-radius: 2px;
@@ -161,6 +165,10 @@ body {
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item{
     height: 100%;
+}
+
+.owl-item{
+    cursor: pointer;
 }
 .owl-theme .owl-controls{
     bottom: 50px;
