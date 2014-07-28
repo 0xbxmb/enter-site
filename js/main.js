@@ -184,19 +184,11 @@ $(function () {
     });
 
 
+
+
+
     var width = 960,
         height = 500;
-
-    // Setting color domains(intervals of values) for our map
-
-    var color_domain = [0, 700]
-    var color = d3.scale.threshold()
-        .domain(color_domain)
-        .range(["#4092ff", "#ff4e40"]);
-
-    var div = d3.select("#map-wrapper").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
 
     var svg = d3.select("#map-wrapper").append("svg")
         .attr("width", width)
@@ -212,23 +204,13 @@ $(function () {
 
     var path = d3.geo.path().projection(projection);
 
-    //Reading map file and data
-
     queue()
-        .defer(d3.json, "russia_1e-7sr.json")
+        .defer(d3.json, "map/russian-map.json")
+        .defer(d3.json, "map/offices.json")
         .await(ready);
 
-    //Start of Choropleth drawing
 
     function ready(error, map, data) {
-
-        debugger;
-
-        var rateById = {};
-        var nameById = {};
-
-
-        //Drawing Choropleth
 
         svg.append("g")
             .attr("class", "region")
@@ -240,30 +222,9 @@ $(function () {
             .style("fill", "#FFF")
             .style("opacity", 0.8)
 
-/*
-            //Adding mouseevents
-            .on("mouseover", function(d) {
-                d3.select(this).transition().duration(300).style("opacity", 1);
-                div.transition().duration(300)
-                    .style("opacity", 1)
-                div.text(nameById[d.properties.region] + " : " + rateById[d.properties.region])
-                    .style("left", (d3.event.pageX) + "px")
-                    .style("top", (d3.event.pageY -30) + "px");
-            })
-            .on("mouseout", function() {
-                d3.select(this)
-                    .transition().duration(300)
-                    .style("opacity", 0.8);
-                div.transition().duration(300)
-                    .style("opacity", 0);
-            })
-*/
 
+        d3.tsv("map/cities.tsv", function(error, data) {
 
-
-        // Adding cities on the map
-
-        d3.tsv("cities.tsv", function(error, data) {
             var city = svg.selectAll("g.city")
                 .data(data)
                 .enter()
@@ -271,7 +232,8 @@ $(function () {
                 .attr("class", "city")
                 .attr("transform", function(d) { return "translate(" + projection([d.lon, d.lat]) + ")"; })
                 .on("click", function(d){
-                    alert(d);
+
+                    alert(data[d.id]);
                 });
 
             city.append("circle")
@@ -284,6 +246,6 @@ $(function () {
                 .text(function(d) { return d.City; });
         });
 
-    }; // <-- End of Choropleth drawing
+    };
 
 });
