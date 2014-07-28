@@ -1,13 +1,12 @@
-<div class="popover ext-popover no-point-events {{placement}}"
-     data-ng-class="{ in: isOpen(), fade: animation() }"
-     data-ng-style="{ 'border-color': borderColor }">
+<div class="popover ext-popover no-point-events"
+     data-ng-style="{ 'border-color': color }">
     <div class="arrow"
-         data-ng-style="{ 'border-bottom-color': borderColor }"></div>
+         data-ng-style="{ 'border-bottom-color': color }"></div>
 
     <div class="popover-inner">
         <div class="popover-content">
             <div class="m-b-sm"
-                 data-ng-style="{ 'color': borderColor }"
+                 data-ng-style="{ 'color': color }"
                  data-ng-show="content.IsMulti">
                 Мультиталон
             </div>

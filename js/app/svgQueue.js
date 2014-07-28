@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('enter').directive('svgQueue', function ($compile, $rootScope, dictionaries, $d3) {
+    angular.module('enter').directive('svgQueue', function ($compile, $rootScope, dictionaries) {
         var radius = 4,
             strokeWidth = 0.8,
             maxWidthS = 51,
@@ -13,8 +13,8 @@
                 progress: 5
             },
 
-            sinusoidWidth = $d3.scale.linear().range([36, maxWidthS]),
-            inlineWidth = $d3.scale.linear().range([51, 135]),
+            sinusoidWidth = d3.scale.linear().range([36, maxWidthS]),
+            inlineWidth = d3.scale.linear().range([51, 135]),
 
             tooltip = {
                 'popover-border-color': function (d) {
@@ -150,7 +150,7 @@
                 current.exit().remove();
 
                 g = current.enter()
-                    .append('svg:g')
+                    .append('g')
                     .attr({
                         class: 'current ticket',
                         product: function (d) {
@@ -158,7 +158,7 @@
                         }
                     });
 
-                g.append('g:rect')
+                g.append('rect')
                     .attr({
                         rx: radius,
                         width: width - strokeWidth * 2,
@@ -175,7 +175,7 @@
                         }
                     });
 
-                g.append('g:text')
+                g.append('text')
                     .attr({
                         transform: "translate(" + width / 2 + "," + tools.svgHeight / 2 + ")",
                         dy: '.35em'
@@ -204,7 +204,7 @@
                     });
 
                 if (showEmpty && tools.svg.selectAll('rect.empty-current')[0].length === 0) {
-                    tools.svg.append("g:rect")
+                    tools.svg.append("rect")
                         .attr({
                             rx: radius,
                             width: width - strokeWidth * 2,
@@ -434,7 +434,7 @@
                 paths.exit().remove();
 
                 paths.enter()
-                    .append("g:path")
+                    .append("path")
                     .attr({
                         d: function (d) {
                             return d.data;
@@ -533,9 +533,9 @@
 
                 var groups = tickets
                     .enter()
-                    .append('g:g')
+                    .append('g')
                     .attr({
-                        class: 'ticket',
+                        'class': 'ticket',
                         product: function (d) {
                             return d.ProductId;
                         }
@@ -543,24 +543,45 @@
                     .style({
                         opacity: 0
                     })
-                    .tooltip(tooltip)
-                    .each(function () {
-                        $compile(this)(scope.$new());
-                    })
                     .on("mouseover", function (d) {
-                        var ticket = $d3.select(this);
+                        var ticket = d3.select(this);
                         ticket.select('rect').style('fill', getColor(d.ProductId));
                         ticket.select('text').style('fill', '#fff');
+
+                        var parent = $(this).parents('[svg-queue]'),
+                            marginLeft = parseInt(parent.css('margin-left'), 10),
+                            marginTop = parseInt(parent.css('margin-top'), 10),
+                            parentPosition = parent.position(),
+                            position = $(this).position(),
+                            elementRect = this.getBoundingClientRect(),
+                            left = position.left + parentPosition.left + marginLeft + elementRect.width / 2,
+                            top = position.top + parentPosition.top + marginTop + elementRect.height;
+
+                        $rootScope.$broadcast('svgQueue.ticketHovered', {
+                            position: {
+                                top: top,
+                                left: left
+                            },
+                            data: angular.extend(
+                                {},
+                                d,
+                                {
+                                    color: getColor(d.ProductId)
+                                }
+                            )
+                        });
                     })
                     .on("mouseout", function (d) {
-                        var ticket = $d3.select(this);
+                        var ticket = d3.select(this);
                         ticket.select('rect').style('fill', 'transparent');
                         ticket.select('text').style('fill', getColor(d.ProductId));
+
+                        $rootScope.$broadcast('svgQueue.ticketRest', d.Id);
                     });
 
                 groups.fadeIn(200);
 
-                groups.append("g:rect")
+                groups.append("rect")
                     .attr({
                         rx: getRadius(floors),
                         width: function (d) {
@@ -582,7 +603,7 @@
                         'stroke-width': strokeWidth
                     });
 
-                groups.append("g:text")
+                groups.append("text")
                     .attr({
                         x: function (d, i) {
                             return calcX(data, i, floors, true);
@@ -645,11 +666,7 @@
                         return getNumber(d);
                     });
 
-                tickets.exit()
-                    .each(function () {
-                        angular.element(this).scope().$destroy();
-                    })
-                    .remove();
+                tickets.exit().remove();
 
                 drawLines(tools, data, floors);
 
@@ -667,7 +684,7 @@
                 tools.svgWidth = scope.width || 300;
                 tools.svgHeight = scope.height;
 
-                tools.svg = $d3.select(element.context)
+                tools.svg = d3.select(element.context)
                     .append("svg")
                     .attr({
                         width: tools.svgWidth,
@@ -675,16 +692,16 @@
                         class: 'workplace-queue'
                     });
 
-                tools.html = $d3.select(element.context)
+                tools.html = d3.select(element.context)
                     .append('div')
                     .attr({
                         class: 'html'
                     });
 
-                tools.queueGroup = tools.svg.append('svg:g')
+                tools.queueGroup = tools.svg.append('g')
                     .attr("class", "queue");
 
-                tools.queueGroup.lineGroup = tools.svg.append('g:g')
+                tools.queueGroup.lineGroup = tools.svg.append('g')
                     .attr("class", "lines");
 
                 scope.$watch('width', function (width) {

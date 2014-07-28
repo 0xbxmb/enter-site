@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('enter', ['ui.bootstrap.position', 'timer'])
+    angular.module('enter', ['timer'])
         .run(['$rootScope', 'dictionaries', 'workplaces', function ($rootScope, dictionaries, workplaces) {
 
 

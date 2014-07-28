@@ -1117,6 +1117,7 @@ path {
     -moz-border-radius: 2px;
     border-radius: 2px;
     z-index: 1500;
+    display: none;
 }
 
 .no-point-events {
