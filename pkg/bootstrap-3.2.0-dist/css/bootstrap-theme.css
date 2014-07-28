@@ -34,16 +34,13 @@
 }
 
 .navbar-default .navbar-nav > .active > a {
-    /*border-radius: 2px;*/
-    /*border: solid #ff6600 1px;*/
-
     border-bottom: transparent dotted 1px ;
     padding: 5px 0px;
     margin-right: 15px ;
     margin-left: 15px ;
     background: none;
     color: #ff6600 !important;
-
+    background: transparent !important;
 }
 .navbar-default .navbar-nav > .active > a:hover{
     background: transparent;
@@ -64,17 +61,15 @@
 .navbar-inverse .navbar-nav > li > a:hover{
     border-bottom: transparent dotted 1px ;
     color: #ffffff !important;
+    background: transparent !important;
 }
-
 
 .navbar-inverse .navbar-nav > .active > a {
     padding: 5px 0px;
-    /*border-radius: 2px;*/
-    /*border: solid #ffffff 1px;*/
     color: #ffffff !important;
+    background: transparent !important;
 }
 .navbar-inverse .navbar-nav > .active > a:hover{
-    /*border: solid #ffffff 1px;*/
     color: #ffffff !important;
 }
 

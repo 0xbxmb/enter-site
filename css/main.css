@@ -181,6 +181,10 @@ body {
 .owl-theme .owl-controls .owl-page span{
     background: #FFF;
 }
+
+.pages > section{
+    overflow: hidden;
+}
 /*========================================================header=======================================================*/
 .logo{
     background: url("../img/menu-logo.png") center center no-repeat;
@@ -874,7 +878,7 @@ span.rur {
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
     background-size: cover !important;
-    background: url("../img/contacts-bg.png") no-repeat ;
+    /*background: url("../img/contacts-bg.png") no-repeat ;*/
 }
 
 .contacts-caption{
@@ -1063,4 +1067,17 @@ svg.workplace-queue line.line {
     min-height: 250px;
     padding-right: 275px;
     position: relative;
+}
+
+
+
+
+path {
+    stroke: rgba(255, 102, 0, 0.43);
+    stroke-width: 1px;
+}
+
+.city{
+    font-size: 10px;
+    cursor: pointer;
 }
