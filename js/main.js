@@ -210,7 +210,7 @@ $(function () {
         .await(ready);
 
 
-    function ready(error, map, data) {
+    function ready(error, map, offices) {
 
         svg.append("g")
             .attr("class", "region")
@@ -230,11 +230,34 @@ $(function () {
                 .enter()
                 .append("g")
                 .attr("class", "city")
-                .attr("transform", function(d) { return "translate(" + projection([d.lon, d.lat]) + ")"; })
-                .on("click", function(d){
+                .attr("transform", function(d) { return "translate(" + projection([d.lon, d.lat]) + ")"; });
 
-                    alert(data[d.id]);
+            city.on("click", function(d){
+
+                    function getAbsPos (obj){ // obj is svj.js object
+                        var pos = { x: 0, y: 0 };
+                        do {
+                            pos.x += obj.x();
+                            pos.y += obj.y();
+                        } while (obj = obj.parent)
+                        return pos;
+                    }
+
+
+
+                   var officesForTown = offices[d.id];
+                   var elem = this.getAttribute('transform');
+                    var attrs  = /translate\(\s*([^\s,)]+)[ ,]([^\s,)]+)/.exec(elem);
+                    var x = +attrs[1],
+                        y = +attrs[2];
+
+                debugger;
+
+                    $("#offices").css("top", $("#map-wrapper").offset().top + y + "px");
+                    $("#offices").css("left", $(this).width() + x + "px");
+                    $("#offices").show();
                 });
+
 
             city.append("circle")
                 .attr("r", 3)
