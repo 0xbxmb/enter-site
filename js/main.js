@@ -252,6 +252,7 @@ $(function () {
                         y = +attrs[2];
 
                 debugger;
+//                $('.my-class')[0].getBoundingClientRect().width;
 
                     $("#offices").css("top", $("#map-wrapper").offset().top + y + "px");
                     $("#offices").css("left", $(this).width() + x + "px");
