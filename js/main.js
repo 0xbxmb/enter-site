@@ -234,30 +234,19 @@ $(function () {
 
             city.on("click", function(d){
 
-                    function getAbsPos (obj){ // obj is svj.js object
-                        var pos = { x: 0, y: 0 };
-                        do {
-                            pos.x += obj.x();
-                            pos.y += obj.y();
-                        } while (obj = obj.parent)
-                        return pos;
-                    }
+                var officesForTown = offices[d.id];
+                var elem = this.getAttribute('transform');
+                var attrs  = /translate\(\s*([^\s,)]+)[ ,]([^\s,)]+)/.exec(elem);
+                var x = +attrs[1],  y = +attrs[2];
 
-
-
-                   var officesForTown = offices[d.id];
-                   var elem = this.getAttribute('transform');
-                    var attrs  = /translate\(\s*([^\s,)]+)[ ,]([^\s,)]+)/.exec(elem);
-                    var x = +attrs[1],
-                        y = +attrs[2];
-
-                debugger;
-//                $('.my-class')[0].getBoundingClientRect().width;
-
-                    $("#offices").css("top", $("#map-wrapper").offset().top + y + "px");
-                    $("#offices").css("left", $(this).width() + x + "px");
+                $("#offices").css("top", $("#map-wrapper").offset().top - this.getBBox().height + y + "px");
+                    $("#offices").css("left", this.getBBox().width + x + "px");
                     $("#offices").show();
-                });
+
+                var source   = $("#offices-template").html();
+                var template = Handlebars.compile(source);
+                $("#offices-content").html(template(officesForTown));
+            });
 
 
             city.append("circle")

@@ -1112,18 +1112,10 @@
                 <div class="table-row">
                     <div class="table-cell vertical-middle ">
                         <div id="map-wrapper"></div>
-
-
                         <div class="popover right" id="offices">
                             <div class="arrow"></div>
-
-                            <div class="popover-content">
-                                <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                            </div>
+                            <div class="popover-content" id="offices-content"></div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
@@ -1137,6 +1129,33 @@
 </div>
 
 <!-- /container -->
+
+<script id="offices-template" type="text/x-handlebars-template">
+    <div>
+        <ul class="list-unstyled">
+            {{#each .}}
+            <li>
+                <h4>{{officeName}}</h4>
+                <p>
+                    {{#phones}}
+                        <span>{{.}}</span>
+                    {{/phones}}
+                </p>
+                <p>
+                    {{#mails}}
+                    <span>{{.}}</span>
+                    {{/mails}}
+                </p>
+                <p>
+                    {{#addresses}}
+                    <span>{{.}}</span>
+                    {{/addresses}}
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
 
 <script src="pkg/jquery/jquery-2.1.1.min.js"></script>
 <script src="pkg/dreamerslab-jquery-actual/jquery.actual.min.js"></script>
@@ -1154,6 +1173,7 @@
 
 <script src="pkg/angularjs/angular.min.js"></script>
 <script src="pkg/angular-timer/angular-timer.js"></script>
+<script src="pkg/handlebarsjs/handlebars-v1.3.0.js"></script>
 
 <script src="js/app/position.js"></script>
 <script src="js/app/app.js"></script>

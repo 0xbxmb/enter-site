@@ -1069,6 +1069,15 @@ svg.workplace-queue line.line {
     position: relative;
 }
 
+
+#offices{
+    border-radius: 2px;
+}
+
+#offices .arrow{
+    top: 17px;
+}
+
 path {
     stroke: rgba(255, 102, 0, 0.43);
     stroke-width: 1px;
