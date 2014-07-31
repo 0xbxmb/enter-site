@@ -34,6 +34,11 @@ body {
 
 }
 
+
+.m-t-lg2{
+    margin-top: 45px;
+}
+
 .caption,
 .sub-caption{
     color: #030303;
@@ -77,6 +82,14 @@ body {
     opacity:0.5;
 }
 
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .intro-cloud-wrapper{
+        width: 290px;
+        top: 15px; right: -40px; z-index: 45
+    }
+}
+
 .navbar-default .navbar-nav > .marker {
     width: 0px;
     height: 0px;
@@ -87,6 +100,7 @@ body {
     background: transparent;
     transition: left 0.5s, width 0.5s, height 0.5s;
 }
+
 
 .navbar-default .navbar-nav > a{
     outline: none;
@@ -124,8 +138,12 @@ body {
     border: solid 1px #fe923b;
     position: absolute;
     transition: left 0.5s, width 0.5s, height 0.5s;
-
 }
+
+
+.nano { width: 270px; max-height: 400px; }
+.nano .nano-pane   { background: #ffffff; width: 8px; }
+.nano > .nano-pane > .nano-slider { background: #bfbfbf; }
 
 .slider-thumbs .marker:before{
     position: absolute;
@@ -185,6 +203,83 @@ body {
 .pages > section{
     overflow: hidden;
 }
+
+
+input[type=checkbox]{
+    display:none;
+}
+
+input[type=checkbox] + label {
+    padding-left:28px;
+    height:19px;
+    display:inline-block;
+    line-height:20px;
+    font-size:15px;
+    font-weight: normal;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked + label {
+    background-position: 0 -19px;
+}
+label{
+    background-image:url("../img/checkbox.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.spinner-control{
+}
+.spinner-control input{
+    padding: 2px 5px;
+    width: 50px;
+    text-align:right;
+    height: 25px;
+}
+.spinner-control .spinner-left-button,
+.spinner-control input,
+.spinner-control .spinner-right-button{
+    display: inline-block;
+}
+
+.spinner-control .spinner-right-button,
+.spinner-control .spinner-left-button{
+    width: 8px;
+    height: 15px;
+    border: 0px;
+    outline: none;
+    vertical-align: middle;
+}
+.spinner-control .spinner-left-button{
+    background: url("../img/spinner-left-arrow.png") center center no-repeat;
+}
+.spinner-control .spinner-left-button.disabled,
+.spinner-control .spinner-left-button:disabled{
+    background: url("../img/spinner-left-arrow-disabled.png") center center no-repeat;
+}
+
+.spinner-control .spinner-right-button{
+    background: url("../img/spinner-right-arrow.png") center center no-repeat;
+}
+.spinner-control .spinner-right-button.disabled,
+.spinner-control .spinner-right-button:disabled{
+    background: url("../img/spinner-right-arrow-disabled.png") center center no-repeat;
+}
+
+
+
+
+
+
 /*========================================================header=======================================================*/
 .logo{
     background: url("../img/menu-logo.png") center center no-repeat;
@@ -839,6 +934,11 @@ body {
     padding-top: 10px;
 }
 
+.cost-option .calculated-result .cost{
+    color: #000000;
+}
+
+.calculated-result,
 .option-footer {
     position: absolute;
     bottom: 20px;
@@ -872,6 +972,46 @@ span.rur {
     font-family: "als_rublregular";
 }
 
+.cost-selected.cost-option{
+    background: #ffe9d5;
+    border: 4px #ff922c solid;
+}
+
+.cost-selected .option-header-details,
+.cost-selected .option-set,
+.cost-selected .option-list,
+.cost-selected .option-footer{
+    display: none;
+}
+
+.option-feature-list,
+.calculated-result{
+    display: none;
+}
+.cost-selected .option-feature-list,
+.cost-selected .calculated-result{
+    display: block;
+}
+
+.cost-selected .option-feature-list .licenses{
+
+}
+
+.option-feature-list > li{
+    border-top: solid #d9c6b5 1px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.option-feature-list > li .option-feature-list-header{
+    position: absolute;
+    font-weight: bold;
+    background: #FFE9D5;
+    top: -12px;
+    padding-right: 5px;
+}
+
 /*================================================8 contacts====================================================*/
 .contacts{
     -webkit-background-size: cover !important;
@@ -893,6 +1033,81 @@ span.rur {
     padding: 5px 10px;
     line-height: 37px;
 }
+
+
+#offices{
+    border-radius: 2px;
+}
+
+#offices .arrow{
+    top: 17px;
+}
+
+path {
+    stroke: rgba(255, 102, 0, 0.43);
+    stroke-width: 1px;
+}
+
+.city{
+    z-index: 500;
+    font-size: 10px;
+    cursor: pointer;
+}
+.city:hover{
+    text-decoration: underline;
+}
+
+#offices{
+    color: #000000;
+    max-width: 300px;
+}
+
+#offices h4{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#offices li{
+    margin-bottom: 30px;
+}
+
+#offices-content{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+#offices  .phones{
+    margin-bottom: 2px;
+    margin-left: -10px;
+}
+#offices  .mails{
+    margin-bottom: 2px;
+}
+#offices  .phones > span{
+    font-size: 16px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+#offices  .mails > a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+#offices  .mails > a:hover{
+    text-decoration: underline;
+}
+#offices  .addresses{
+    font-size: 16px;
+    font-weight: bold;
+}
+#offices .popover-content{
+    padding: 14px 14px 9px;
+}
+
+
 
 /*===================================================angular==========================================================*/
 
@@ -1069,25 +1284,3 @@ svg.workplace-queue line.line {
     position: relative;
 }
 
-
-#offices{
-    border-radius: 2px;
-}
-
-#offices .arrow{
-    top: 17px;
-}
-
-path {
-    stroke: rgba(255, 102, 0, 0.43);
-    stroke-width: 1px;
-}
-
-.city{
-    z-index: 500;
-    font-size: 10px;
-    cursor: pointer;
-}
-.city:hover{
-    text-decoration: underline;
-}

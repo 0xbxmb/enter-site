@@ -17,7 +17,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="pkg/bootstrap-3.2.0-dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="pkg/font-awesome/css/font-awesome.min.css">
@@ -25,11 +24,16 @@
     <link rel="stylesheet" href="pkg/owl.carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="pkg/owl.carousel/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="pkg/owl.carousel/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="pkg/nanoscroller/nanoscroller.css">
 
     <link rel="stylesheet" href="pkg/animate-css/animate.css">
 
-
+    <link rel="stylesheet" href="css/main-phone.css">
+    <link rel="stylesheet" href="css/main-tablet.css">
     <link rel="stylesheet" href="css/main.css">
+
+
+
     <link rel="stylesheet" href="css/utils.css">
 </head>
 
@@ -41,11 +45,10 @@
 <![endif]-->
 
 <header class="navbar-default  navbar navbar-fixed-bottom" role="navigation">
-    <div class="container">
+    <div class="container" id="header-container">
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -62,7 +65,7 @@
                 <li data-link="solutions"><a href="">Решения</a></li>
                 <li data-link="costs"><a href="">Стоимость</a></li>
                 <li data-link="contacts"><a href="">Контакты</a></li>
-                <li class="marker" style="display: none"></li>
+                <li class="marker hidden"></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><span class="phone-number"> +7 (495) 975-91-69</span></li>
@@ -78,50 +81,94 @@
 
 <section data-menu-item-index="-1" id="index">
     <div class="index-wrapper">
-        <div class="container">
+
+
+        <div class="container full-width-small-device">
 
             <div class="intro text-center">
-                <a href="" class="inline main-logo"></a>
-                <span class="inline v-top"> — умная и надёжная электронная очередь</span>
+                <span class="inline v-top"><a href="" class="inline main-logo"></a> — умная и надёжная электронная очередь</span>
             </div>
             <div class="intro-definition text-center">
                 для центров госуслуг, банков, предприятий общепита, больниц и других организаций
             </div>
 
 
+            <div class="hidden-lg hidden-xs m-t-lg2">
+                <div class="row">
+                    <div class="col-sm-3 col-sm-offset-1">
+                        Формируем очередь<br>
+                        и уменьшаем ожидание<br>
+                        <a href="" class="link" data-link="algorithms">умными алгоритмами</a>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        Устанавливаем<br>проверенное оборудование<br>
+                        <a href="" class="link" data-link="devices">или работаем на вашем</a>
+                    </div>
+
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <span>
+                            Монтируем очередь<br>
+                            и обучаем персонал<br>
+                            <a href="" data-link="implementation" class="link">за 2 дня</a>
+                        </span>
+                    </div>
+
+                    <div class="col-sm-3 col-sm-offset-3 m-t-lg2">
+                        <a href="" class="link" data-link="interface">Наглядно показываем<br></a>ситуацию в зале<br>и
+                        управляем ей в реальном времени
+                    </div>
+
+                    <div class="col-sm-3 col-sm-offset-1 m-t-lg2">
+                        Собираем полную<br>
+                        статистику и храним<br>
+                        <a href="" class="link" data-link="technologies">данные в облаке</a>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="intro-images clearfix pos-rlt">
 
                 <div class="intro-tune-menu-wrapper inline fadeInLeft animated v-bottom">
-                    Настраиваем<br><a href="" class="link" data-link="menutuning">меню услуг<br>любой сложности</a>
+                    <span class="visible-lg">Настраиваем<br><a href="" class="link" data-link="menutuning">меню услуг<br>любой сложности</a></span>
                     <div class="intro-tune-menu"></div>
                 </div>
 
                 <div class="intro-interfaces-wrapper inline fadeInLeft animated v-bottom">
                     <div class="inline v-middle">
-                        <a href="" class="link" data-link="interface">Наглядно<br>показываем<br></a>ситуацию в зале<br>и
-                        управляем ей<br>в реальном<br>времени
+                        <div class=" visible-lg">
+                            <a href="" class="link" data-link="interface">Наглядно<br>показываем<br></a>ситуацию в зале<br>и
+                            управляем ей<br>в реальном<br>времени
+                        </div>
                     </div>
                     <div class="intro-interfaces inline v-middle"></div>
                 </div>
 
                 <div class="intro-devices-wrapper inline pos-abt fadeInLeft animated" style="top: 10px; left: 150px">
                     <div class="intro-devices inline v-middle"></div>
-                    <div class="inline v-middle m-l">Устанавливаем<br>проверенное оборудование<br>
-                        <a href="" class="link" data-link="devices">или работаем на вашем</a></div>
+
+                    <div class="inline v-middle m-l">
+                        <span class=" visible-lg">
+                        Устанавливаем<br>проверенное оборудование<br>
+                        <a href="" class="link" data-link="devices">или работаем на вашем</a></span>
+                    </div>
                     <!--devices.terminal-->
                 </div>
 
                 <div class="intro-algorithms-wrapper inline fadeInUp animated">
-                    <div>
-                        Формируем очередь<br>
-                        и уменьшаем ожидание<br>
-                        <a href="" class="link" data-link="algorithms">умными алгоритмами</a>
+                    <div class="visible-lg">
+                        <div>
+                            Формируем очередь<br>
+                            и уменьшаем ожидание<br>
+                            <a href="" class="link" data-link="algorithms">умными алгоритмами</a>
+                        </div>
+                        <div class="intro-algorithms m-t"></div>
                     </div>
-                    <div class="intro-algorithms m-t"></div>
                 </div>
 
-                <div class="intro-cloud-wrapper clearfix pos-abt fadeInRight animated" style="top: 15px; right: -40px; z-index: 45">
-                    <div class="pull-left">
+                <div class="intro-cloud-wrapper clearfix pos-abt fadeInRight animated" >
+                    <div class="pull-left  visible-lg">
                         Собираем полную<br>
                         статистику и храним<br>
                         <a href="" class="link" data-link="technologies">данные в облаке</a>
@@ -133,7 +180,7 @@
 
                 <div class="intro-survey-wrapper pos-rlt v-bottom inline  fadeInRight animated" style="width: 450px; margin-bottom: -30px;">
 
-                    <div class="v-top pos-abt" style="top: 85px; left: -20px">
+                    <div class="v-top pos-abt visible-lg " style="top: 85px; left: -20px">
                         Собираем<br>
                         <a href="" class="link" data-link="devices">подробные отзывы</a><br> <!--devices.survey-->
                         о качестве услуг<br>
@@ -142,10 +189,14 @@
                     <div class="intro-survey"></div>
 
                     <div class="pos-abt" style="top: 150px; right: -25px">
-                        Устанавливаем<br>
-                        оборудование<br>
-                        и обучаем персонал<br>
-                        <a href="" data-link="implementation" class="link">за 2 дня</a>
+                        <span class=" visible-lg">
+                            Устанавливаем<br>
+                            оборудование<br>
+                            и обучаем персонал<br>
+                                                    <a href="" data-link="implementation" class="link">за 2 дня</a>
+                        </span>
+
+
                     </div>
 
                 </div>
@@ -231,12 +282,12 @@
 
 </section>
 <section data-menu-item-index="0" id="interface-1">
-    <div class="container">
+    <div class="container full-width-small-device">
 
         <h2 class="caption">Настройка</h2>
 
         <div class="sub-caption">
-            удобное и гибкое управление очередью<br>в процессе эксплуатации
+            <div class=" hidden-sm hidden-xs">удобное и гибкое управление очередью<br>в процессе эксплуатации</div>
         </div>
 
         <div class="row m-t-lg">
@@ -418,11 +469,11 @@
     </div>
 </section>
 <section data-menu-item-index="1" id="devices">
-<div class="container">
+<div class="container full-width-small-device">
 
 <h2 class="caption">Оборудование</h2>
 
-<div class="sub-caption">
+<div class="sub-caption hidden-xs">
     установим собственное, от проверенных поставщиков,<br>или запустим очередь на вашем существующем
 </div>
 
@@ -825,7 +876,7 @@
     </div>
 </section>
 <section data-menu-item-index="4" id="solutions">
-    <div class="container">
+    <div class="container full-width-small-device">
 
         <div class="table">
             <div class="table-row">
@@ -839,7 +890,7 @@
 
                     <div class="row m-t-lg">
 
-                        <div class="col-sm-4 solution-item">
+                        <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="left-wrapping solutions-mfc">
                                 <h6 class="solution-item-caption">МФЦ и госуслуги</h6>
                                 <span class="spacer"></span>Интеграция<br>
@@ -851,7 +902,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4 solution-item">
+                        <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="left-wrapping solutions-banks">
                                 <h6 class="solution-item-caption">Банки</h6>
                                 <span class="spacer"></span>Разделение окон <br>
@@ -863,7 +914,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4 solution-item">
+                        <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="left-wrapping solutions-public-catering">
                                 <h6 class="solution-item-caption">Общепит</h6>
 
@@ -874,7 +925,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4 solution-item">
+                        <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="right-wrapping solutions-clinics">
                                 <div>
                                     <h6 class="solution-item-caption">Больницы и клиники</h6>
@@ -891,7 +942,7 @@
                         </div>
 
 
-                        <div class="col-sm-4 solution-item">
+                        <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="right-wrapping solutions-logistics">
                                 <h6 class="solution-item-caption">Транспорт и логистика</h6>
 
@@ -902,7 +953,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4 solution-item">
+                        <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="right-wrapping solutions-other-solutions">
                                 <h6 class="solution-item-caption">И другие решения</h6>
 
@@ -972,14 +1023,20 @@
             готовых комплектов и расчет<br>индивидуальной комплектации
         </div>
 
-        <div class="row m-t-lg">
+     <div class="row m-t-lg">
+
             <div class="col-sm-4">
-                <div class="cost-option">
+
+                <div class="cost-option cost-selected">
+
                     <div class="option-header">
                         <h3>Старт</h3>
-                        необходимый минимум <br/>
-                        для маленькой компании
+                        <span class="option-header-details">
+                            необходимый минимум <br/>
+                            для маленькой компании
+                        </span>
                     </div>
+
                     <div class="option-set">
                         <div class="parts">
                             <div class="set-part">
@@ -1005,8 +1062,55 @@
                         <div class="cost">от 68 000 <span class="rur">a</span></div>
                         <div class="cost-desc"></div>
                     </div>
+
+                    <ul class="option-feature-list list-unstyled">
+                        <li>
+                            <div class="option-feature-list-header">Лицензии</div>
+                            <div class="clearfix">
+                                <div class="pull-left">Рабочие места</div>
+                                <div class="spinner-control pull-right">
+                                    <button class="spinner-left-button" disabled></button>
+                                    <input type="text" class="form-control" value="0">
+                                    <button class="spinner-right-button"></button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix m-t-xs">
+                                <div class="pull-left">Терминал</div>
+                                <div class="spinner-control pull-right">
+                                    <button class="spinner-left-button" disabled></button>
+                                    <input type="text" class="form-control" value="0">
+                                    <button class="spinner-right-button"></button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option-feature-list-header">Оборудывание</div>
+                            <div>
+                                <input type="checkbox" name="checkbox1" id="checkbox1" ><label for="checkbox1">Пульты</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="checkbox2" id="checkbox2" ><label for="checkbox2">Терминалы</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="checkbox3" id="checkbox3" ><label for="checkbox3">Табло</label>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="checkbox4" id="checkbox4" ><label for="checkbox4">Монтажные и пуско-наладочные работы</label>
+                        </li>
+                    </ul>
+                    <div class="calculated-result">
+                        <div class="cost">68 000 <span class="rur">a</span></div>
+                    </div>
+
+
+
                 </div>
             </div>
+
             <div class="col-sm-4">
                 <div class="cost-option">
                     <div class="option-header">
@@ -1107,14 +1211,18 @@
     <div class="tech-item contacts">
         <div class="container full-height  pos-rlt">
             <h2 class="caption pos-abt">Контакты</h2>
-
            <div class="m-l-n table full-height">
                 <div class="table-row">
                     <div class="table-cell vertical-middle ">
                         <div id="map-wrapper"></div>
                         <div class="popover right" id="offices">
                             <div class="arrow"></div>
-                            <div class="popover-content" id="offices-content"></div>
+                            <div class="popover-content" >
+                                <div class="nano">
+                                    <div class="nano-content" id="offices-content">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1123,9 +1231,7 @@
         </div>
     </div>
 </section>
-
 </div>
-
 </div>
 
 <!-- /container -->
@@ -1134,19 +1240,19 @@
     <div>
         <ul class="list-unstyled">
             {{#each .}}
-            <li>
+            <li class="m-b">
                 <h4>{{officeName}}</h4>
-                <p>
+                <p class="phones">
                     {{#phones}}
                         <span>{{.}}</span>
                     {{/phones}}
                 </p>
-                <p>
+                <p class="mails">
                     {{#mails}}
-                    <span>{{.}}</span>
+                    <a href="mailto:{{.}}">{{.}}</a>
                     {{/mails}}
                 </p>
-                <p>
+                <p class="addresses">
                     {{#addresses}}
                     <span>{{.}}</span>
                     {{/addresses}}
@@ -1161,20 +1267,17 @@
 <script src="pkg/dreamerslab-jquery-actual/jquery.actual.min.js"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 <!--<script>window.jQuery || document.write('<script src="pkg/jquery/jquery-2.1.1.min.js"><\/script>')</script>-->
-
 <script src="pkg/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 <script src="pkg/onpage-scroll-master/jquery.onepage-scroll.js"></script>
 <script src="pkg/viewport-checker/viewportchecker.js"></script>
 <script src="pkg/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
-
 <script src="pkg/d3js/d3.min.js"></script>
 <script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
 <script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
-
 <script src="pkg/angularjs/angular.min.js"></script>
 <script src="pkg/angular-timer/angular-timer.js"></script>
 <script src="pkg/handlebarsjs/handlebars-v1.3.0.js"></script>
-
+<script src="pkg/nanoscroller/jquery.nanoscroller.min.js"></script>
 <script src="js/app/position.js"></script>
 <script src="js/app/app.js"></script>
 <script src="js/app/tickets.js"></script>
@@ -1187,6 +1290,5 @@
 <script src="js/app/svgQueue.js"></script>
 <script src="js/app/currentQueueInfo.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>

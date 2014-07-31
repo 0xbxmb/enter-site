@@ -11,10 +11,8 @@ $(function () {
             menutuning: 3,
             devices: 4,
             technologies: 5,
-
 //            algorithms: 10,
             implementation: 6,
-
 
             solutions: 7,
             costs: 8,
@@ -65,11 +63,12 @@ $(function () {
                     parent.find(".active").removeClass("active");
                     element.addClass("active");
 
-                    marker.show().css("left", element.position().left+"px")
+                    marker.removeClass("hidden").css("left", element.position().left+"px")
+                        .css("top", element.position().top+"px")
                         .width(element.outerWidth())
                         .height( element.outerHeight());
                 }else{
-                    marker.hide();
+                    marker.removeClass("addClass");
                     parent.find(".active").removeClass("active");
                 }
 
@@ -122,6 +121,7 @@ $(function () {
          height: element.outerHeight()
          }, 700);*/
         marker.css("left", element.position().left+"px")
+            .css("top", element.position().top+"px")
             .width(element.width())
             .height( element.height());
     };
@@ -147,6 +147,7 @@ $(function () {
 
             element.addClass("active");
             marker.css("left", element.position().left+"px")
+                .css("top", element.position().top+"px")
                 .width(element.outerWidth())
                 .height( element.outerHeight());
         }
@@ -168,7 +169,8 @@ $(function () {
         paginationSpeed : 400,
         singleItem:true,
         pagination: true,
-        items : 1
+        items : 1,
+        responsiveFallback: true
 
         // "singleItem:true" is a shortcut for:
         // ,
@@ -183,12 +185,8 @@ $(function () {
         $(".owl-carousel").data('owlCarousel').next();
     });
 
-
-
-
-
     var width = 960,
-        height = 500;
+        height = 800;
 
     var svg = d3.select("#map-wrapper").append("svg")
         .attr("width", width)
@@ -234,18 +232,19 @@ $(function () {
 
             city.on("click", function(d){
 
-                var officesForTown = offices[d.id];
-                var elem = this.getAttribute('transform');
-                var attrs  = /translate\(\s*([^\s,)]+)[ ,]([^\s,)]+)/.exec(elem);
-                var x = +attrs[1],  y = +attrs[2];
+                var attrs  = /translate\(\s*([^\s,)]+)[ ,]([^\s,)]+)/.exec(this.getAttribute('transform'));
+                var x = +attrs[1],
+                    y = +attrs[2];
 
-                $("#offices").css("top", $("#map-wrapper").offset().top - this.getBBox().height + y + "px");
-                    $("#offices").css("left", this.getBBox().width + x + "px");
-                    $("#offices").show();
+                $("#offices").css("top", $("#map-wrapper").offset().top - this.getBBox().height + y + "px")
+                             .css("left", this.getBBox().width + x + "px")
+                             .show();
 
                 var source   = $("#offices-template").html();
                 var template = Handlebars.compile(source);
-                $("#offices-content").html(template(officesForTown));
+                $("#offices-content").html(template(offices[d.id]));
+                $(".nano").nanoScroller();
+
             });
 
 
@@ -261,4 +260,10 @@ $(function () {
 
     };
 
+    $("body").click(function(e){
+        if(!$(e.target).parents(".city").length &&
+           !$(e.target).parents("#offices").length ){
+            $("#offices").hide()
+        }
+    });
 });
