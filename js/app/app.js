@@ -1,13 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('enter', ['ui.bootstrap.position', 'timer'])
-        .run(['$rootScope', 'dictionaries', 'workplaces', function ($rootScope, dictionaries, workplaces) {
+    angular.module('enter', ['timer']);
 
-
-        }]);
-
-    angular.module('enter').controller('test', ['$scope', 'dictionaries', 'workplaces', function ($scope, dictionaries, workplaces) {
+    angular.module('enter').controller('main', ['$scope', 'dictionaries', 'workplaces', function ($scope, dictionaries, workplaces) {
         $scope.items = workplaces.items;
         $scope.products = dictionaries.products;
         $scope.over = function (id) {
@@ -16,6 +12,14 @@
         $scope.leave = function () {
             $scope.$broadcast("svg-queue.clear-highlighting");
         };
+
+        $scope.$on('svgQueue.ticketHovered', function ($e, data) {
+            $scope.$broadcast('ticketPopoverPopup.show', data);
+        });
+
+        $scope.$on('svgQueue.ticketRest', function ($e, data) {
+            $scope.$broadcast('ticketPopoverPopup.hide', data);
+        });
 
         workplaces.simulateWork();
     }]);

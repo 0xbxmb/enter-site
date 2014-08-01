@@ -1126,6 +1126,8 @@ path {
     -moz-border-radius: 2px;
     border-radius: 2px;
     z-index: 1500;
+    display: none;
+    width: 280px;
 }
 
 .no-point-events {
@@ -1201,7 +1203,7 @@ svg.workplace-queue line.line {
 }
 
 [svg-queue] {
-    max-height: 98px;
+    height: 98px;
 }
 
 *[svg-queue] {
