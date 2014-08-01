@@ -39,6 +39,10 @@ body {
     margin-top: 45px;
 }
 
+.n-p-l{
+    padding-left: 0px;
+}
+
 .caption,
 .sub-caption{
     color: #030303;
@@ -696,6 +700,10 @@ label{
     margin-bottom: 40px;
 }
 
+.implementation-features-bottom{
+    position: absolute; bottom: 40px
+}
+
 /*================================================6 solutions=========================================================*/
 
 #solutions{
@@ -928,6 +936,7 @@ label{
 
 .option-list {
     padding-top: 5px;
+    margin-bottom: 70px;
 }
 
 .option-list li{

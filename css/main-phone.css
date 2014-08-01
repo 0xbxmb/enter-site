@@ -10,11 +10,9 @@
 @media all and (min-width: 480px) and (max-width: 768px) {
 
 
-
-    .navbar-default .navbar-nav > .marker{
-        display: none;
+    .hardware-main-content{
+        margin-left: 0px !important;
     }
-
 
 
 }
