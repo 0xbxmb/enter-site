@@ -13,6 +13,14 @@
             $scope.$broadcast("svg-queue.clear-highlighting");
         };
 
+        $scope.$on('svgQueue.ticketHovered', function ($e, data) {
+            $scope.$broadcast('ticketPopoverPopup.show', data);
+        });
+
+        $scope.$on('svgQueue.ticketRest', function ($e, data) {
+            $scope.$broadcast('ticketPopoverPopup.hide', data);
+        });
+
         workplaces.simulateWork();
     }]);
 })();
