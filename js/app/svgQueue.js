@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('enter').directive('svgQueue', function ($compile, $rootScope, dictionaries) {
+    angular.module('enter').directive('svgQueue', function ($compile, $rootScope, $timeout, dictionaries) {
         var radius = 4,
             strokeWidth = 0.8,
             maxWidthS = 51,
@@ -526,7 +526,7 @@
                 var data = scope.model.Future || [],
                     floors = getFloors(tools, data),
                     height = getRectHeight(floors),
-                    tickets;
+                    tickets, timeout;
 
                 tickets = tools.queueGroup.selectAll('g.ticket')
                     .data(data, key);
@@ -544,25 +544,28 @@
                         opacity: 0
                     })
                     .on("mouseover", function (d) {
+                        if (timeout) {
+                            $timeout.cancel(timeout);
+                        }
+                        tools.stopRender = true;
+                        scope.$broadcast('timer-stop');
+
                         var ticket = d3.select(this);
                         ticket.select('rect').style('fill', getColor(d.ProductId));
                         ticket.select('text').style('fill', '#fff');
 
-                        var parent = $(this).parents('[svg-queue]'),
-                            marginLeft = parseInt(parent.css('margin-left'), 10),
-                            marginTop = parseInt(parent.css('margin-top'), 10),
-                            parentPosition = parent.position(),
+                        var parentPosition = tools.element.position(),
                             position = $(this).position(),
                             elementRect = this.getBoundingClientRect(),
-                            left = position.left + parentPosition.left + marginLeft + elementRect.width / 2,
-                            top = position.top + parentPosition.top + marginTop + elementRect.height;
+                            left = position.left + parentPosition.left + tools.marginLeft + elementRect.width / 2,
+                            top = position.top + parentPosition.top + tools.marginTop + elementRect.height;
 
                         $rootScope.$broadcast('svgQueue.ticketHovered', {
                             position: {
                                 top: top,
                                 left: left
                             },
-                            data: angular.extend(
+                            content: angular.extend(
                                 {},
                                 d,
                                 {
@@ -577,6 +580,12 @@
                         ticket.select('text').style('fill', getColor(d.ProductId));
 
                         $rootScope.$broadcast('svgQueue.ticketRest', d.Id);
+
+                        timeout = $timeout(function () {
+                            tools.stopRender = false;
+                            scope.$broadcast('timer-resume');
+                            tools.render();
+                        }, 100);
                     });
 
                 groups.fadeIn(200);
@@ -681,6 +690,10 @@
                 sinusoidWidth.domain([min, max]);
                 inlineWidth.domain([min, max]);
 
+                tools.element = element;
+                tools.marginLeft = parseInt(element.css('margin-left'), 10);
+                tools.marginTop = parseInt(element.css('margin-top'), 10);
+
                 tools.svgWidth = scope.width || 300;
                 tools.svgHeight = scope.height;
 
@@ -704,6 +717,11 @@
                 tools.queueGroup.lineGroup = tools.svg.append('g')
                     .attr("class", "lines");
 
+                tools.render = function () {
+                    drawCurrent(tools, scope);
+                    drawQueue(tools, scope);
+                };
+
                 scope.$watch('width', function (width) {
                     tools.svgWidth = width;
                     tools.svg.attr('width', width);
@@ -713,9 +731,8 @@
                 });
 
                 scope.$watch('model', function (model) {
-                    if (model) {
-                        drawCurrent(tools, scope);
-                        drawQueue(tools, scope);
+                    if (model && !tools.stopRender) {
+                        tools.render();
                     }
                 }, true);
 

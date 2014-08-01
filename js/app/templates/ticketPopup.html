@@ -1,28 +1,28 @@
-<div class="popover ext-popover no-point-events"
-     data-ng-style="{ 'border-color': color }">
+<div class="popover ext-popover no-point-events bottom"
+     data-ng-style="{ 'border-color': content.color }">
     <div class="arrow"
-         data-ng-style="{ 'border-bottom-color': color }"></div>
+         data-ng-style="{ 'border-bottom-color': content.color }"></div>
 
     <div class="popover-inner">
         <div class="popover-content">
             <div class="m-b-sm"
-                 data-ng-style="{ 'color': color }"
+                 data-ng-style="{ 'color': content.color }"
                  data-ng-show="content.IsMulti">
                 Мультиталон
             </div>
             <div class="m-b-lg">
-                <b>{{productName(content.ProductId)}}</b>
+                <b>{{content.productName}}</b>
             </div>
             <div data-ng-hide="content.IsPending">
                 <div>
-                    В очереди {{inQueueTime(content.StartSeconds)}}
+                    В очереди {{content.inQueueTime}}
                 </div>
                 <div>
-                    Обслужат через {{waitingTime(content.Seconds)}}
+                    Обслужат через {{content.waitingTime}}
                 </div>
             </div>
             <div data-ng-show="content.IsPending">
-                Записан на {{dayTime(content.StartSeconds)}}
+                Записан на {{content.dayTime}}
             </div>
         </div>
     </div>

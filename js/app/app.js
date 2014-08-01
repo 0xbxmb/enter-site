@@ -1,13 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('enter', ['timer'])
-        .run(['$rootScope', 'dictionaries', 'workplaces', function ($rootScope, dictionaries, workplaces) {
+    angular.module('enter', ['timer']);
 
-
-        }]);
-
-    angular.module('enter').controller('test', ['$scope', 'dictionaries', 'workplaces', function ($scope, dictionaries, workplaces) {
+    angular.module('enter').controller('main', ['$scope', 'dictionaries', 'workplaces', function ($scope, dictionaries, workplaces) {
         $scope.items = workplaces.items;
         $scope.products = dictionaries.products;
         $scope.over = function (id) {
