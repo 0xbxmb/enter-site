@@ -1,18 +1,11 @@
 @media all and (max-width: 480px) {
-
     .navbar-default .navbar-nav > .active > a{
         border-bottom: #000 dotted 1px;
     }
-
-
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
-
-
     .hardware-main-content{
         margin-left: 0px !important;
     }
-
-
 }

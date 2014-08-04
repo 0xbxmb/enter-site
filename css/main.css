@@ -131,7 +131,7 @@ body {
 .slider-thumbs{
     position: relative;
 }
-.slider-thumbs li{cursor: pointer; vertical-align: top; margin-right: 35px; padding: 10px}
+.slider-thumbs li{cursor: pointer; vertical-align: top; margin-right: 30px; padding: 10px}
 .slider-thumbs a{ font-size: 15px; color: #000000; font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif;}
 .slider-thumbs a:hover{ text-decoration: none;}
 
@@ -142,6 +142,9 @@ body {
     border: solid 1px #fe923b;
     position: absolute;
     transition: left 0.5s, width 0.5s, height 0.5s;
+}
+.slider-thumbs li:last-child{
+    margin-right: 0px;
 }
 
 
@@ -387,7 +390,7 @@ label{
 }
 
 .intro-survey-wrapper{
-    width: 520px;
+    width: 450px; margin-bottom: -30px;
 }
 .intro-survey{
     width: 329px;
@@ -501,6 +504,12 @@ label{
 .detailed-statistics-diagram{
     background: url("../img/detailed-statistics-diagram-img.png") left top no-repeat;
 }
+
+.settings-carousel-item{
+    height: 300px;
+}
+
+
 /*================================================2 hardware===========================================================*/
 
 .hardware-main-content{
@@ -563,6 +572,10 @@ label{
 }
 .survey-panel-thumbnail{
     background: url("../img/survey-panel-img.png") bottom left no-repeat;
+}
+
+.hardware-carousel-item{
+    height: 340px;
 }
 
 /*================================================3 settings===========================================================*/

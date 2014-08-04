@@ -73,3 +73,6 @@
     color: #ffffff !important;
 }
 
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
