@@ -76,3 +76,15 @@
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
+
+.carousel-indicators{
+    display: none;
+    background: red;
+}
+.carousel-indicators li{
+    background: #666;
+}
+
+.carousel-indicators .active{
+    background: #000;
+}

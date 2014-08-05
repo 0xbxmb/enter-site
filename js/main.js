@@ -166,18 +166,18 @@ $(function () {
         selectSliderItem($(item));
     });
 
-
-    $("#owl-demo").owlCarousel({
+    $("#tech-carousel, #costs-carousel, #solutions-carousel").owlCarousel({
         slideSpeed : 300,
         paginationSpeed : 400,
         singleItem:true,
         pagination: true,
-        items : 1,
         responsiveFallback: true
     });
 
+
+
     $(".owl-item").click(function(){
-        $(".owl-carousel").data('owlCarousel').next();
+        $(this).parents(".owl-carousel").data('owlCarousel').next();
     });
 
     var width = 960,

@@ -195,7 +195,12 @@ body {
 .owl-item{
     cursor: pointer;
 }
-.owl-theme .owl-controls{
+
+#tech-carousel .owl-controls .owl-page span{
+    background: #FFF;
+}
+
+#tech-carousel  .owl-controls{
     bottom: 50px;
     position: absolute;
     margin: 0 auto;
@@ -203,9 +208,12 @@ body {
     left: 0;
     right: 0;
 }
-.owl-theme .owl-controls .owl-page span{
-    background: #FFF;
-}
+
+
+
+
+
+
 
 .pages > section{
     overflow: hidden;
@@ -514,6 +522,7 @@ label{
 
 .hardware-main-content{
     margin-left: 90px;
+    display: inline-block;
 }
 
 .hardware-caption-info{
@@ -725,6 +734,7 @@ label{
 
 .solution-item{
     font-size: 15px;
+    height: 200px;
 }
 
 .solutions-mfc{
@@ -856,6 +866,35 @@ label{
     width: 114px;
     height: 26px;
 }
+
+#solutions-carousel  .owl-controls .owl-page span{
+    background: #000000;
+}
+
+#solutions-carousel  .owl-controls{
+    bottom: -50px;
+    position: absolute;
+    margin: 0 auto;
+    max-width: 200px;
+    left: 0;
+    right: 0;
+}
+
+#solutions-carousel .owl-item{
+    text-align: center;
+}
+#solutions-carousel .owl-item p{
+    margin-bottom: 45px;
+}
+
+#solutions-carousel .owl-item p,
+#solutions-carousel .owl-item h6{
+    text-align: left;
+}
+#solutions-carousel .owl-item img{
+    display: inline-block;
+}
+
 
 /*==================================================7 costs===========================================================*/
 

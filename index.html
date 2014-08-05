@@ -216,8 +216,11 @@
 
         <div class="m-t-lg clearfix" data-ng-app="enter">
             <div class="queue-container" ng-controller="main">
-                <current-queue-info active-workplaces="items"></current-queue-info>
-                <div class="popular-products-list-panel">
+                <current-queue-info active-workplaces="items" class="hidden-xs hidden-sm"></current-queue-info>
+                <div class="visible-sm visible-xs">
+                    <img src="img/queue-img.png" class="img-responsive">
+                </div>
+                <div class="popular-products-list-panel hidden-xs hidden-sm">
                     <div class="panel">
                         <div class="wrapper">
                             <h5>Популярные услуги</h5>
@@ -248,7 +251,7 @@
         </div>-->
 
 
-    <div class="container bounceInUp arrow hidden m-t-lg">
+    <div class="container bounceInUp full-width-small-device arrow hidden m-t-lg">
         <div class="row">
             <div class="col-sm-3 col-xs-6">
                 <div class="interface-details-item on-map">
@@ -483,18 +486,32 @@
 
 <!-- main slider carousel -->
 <div class="row m-t-lg">
+
+<ol class="carousel-indicators">
+    <li data-target="#devices-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#devices-carousel" data-slide-to="1"></li>
+    <li data-target="#devices-carousel" data-slide-to="2"></li>
+    <li data-target="#devices-carousel" data-slide-to="3"></li>
+    <li data-target="#devices-carousel" data-slide-to="4"></li>
+    <li data-target="#devices-carousel" data-slide-to="5"></li>
+</ol>
+
 <div class="col-md-12" id="slider">
 
 <div class="col-md-12" >
     <div id="devices-carousel" class="carousel slide carousel-fade ">
         <!-- main slider carousel items -->
+
+
+
+
         <div class="carousel-inner">
             <div class="active item" data-slide-number="0">
-                <div class="hardware-carousel-item">
+                <div class="hardware-carousel-item" data-target="#devices-carousel" data-slide-to="1">
 
                     <img src="img/terminal-big-img.png" class="img-responsive inline v-bottom">
 
-                    <div class="v-top inline hardware-main-content">
+                    <div class="v-top hardware-main-content">
                         <h3 class="hardware-caption-info">Терминал выдачи талонов</h3>
 
                         <div class="hardware-main-info">
@@ -530,13 +547,13 @@
                     </div>
                 </div>
             </div>
-            <div class="item" data-slide-number="1">
+            <div class="item" data-slide-number="1" data-target="#devices-carousel" data-slide-to="2">
 
                 <div  class="hardware-carousel-item">
 
                     <img src="img/indication-panel-big-img.png" class="img-responsive inline v-bottom">
 
-                    <div class="v-top inline hardware-main-content">
+                    <div class="v-top hardware-main-content">
                         <h3 class="hardware-caption-info">Табло и звуковое оповещение</h3>
 
                         <div class="hardware-main-info">
@@ -556,12 +573,12 @@
                     </div>
                 </div>
             </div>
-            <div class=" item" data-slide-number="2">
+            <div class=" item" data-slide-number="2" data-target="#devices-carousel" data-slide-to="3">
                 <div  class="hardware-carousel-item">
 
                     <img src="img/personal-panel-big-img.png" class="img-responsive inline v-bottom">
 
-                    <div class="v-top inline hardware-main-content">
+                    <div class="v-top hardware-main-content">
                         <h3 class="hardware-caption-info">Персональные табло оператора</h3>
 
                         <div class="hardware-main-info">
@@ -581,12 +598,12 @@
 
                 </div>
             </div>
-            <div class=" item" data-slide-number="3">
+            <div class=" item" data-slide-number="3" data-target="#devices-carousel" data-slide-to="4">
                 <div  class="hardware-carousel-item">
 
                     <img src="img/operator-panel-big-img.png" class="img-responsive inline v-bottom">
 
-                    <div class="v-top inline hardware-main-content">
+                    <div class="v-top hardware-main-content">
                         <h3 class="hardware-caption-info">Пульт оператора</h3>
 
                         <div class="hardware-main-info">
@@ -611,12 +628,12 @@
 
                 </div>
             </div>
-            <div class=" item" data-slide-number="4">
+            <div class=" item" data-slide-number="4" data-target="#devices-carousel" data-slide-to="5">
                 <div  class="hardware-carousel-item">
 
                     <img src="img/admin-panel-big-img.png" class="img-responsive inline v-bottom">
 
-                    <div class="v-top inline hardware-main-content">
+                    <div class="v-top hardware-main-content">
                         <h3 class="hardware-caption-info">Пульт администратора</h3>
 
                         <div class="hardware-main-info">
@@ -638,13 +655,13 @@
 
                 </div>
             </div>
-            <div class=" item" data-slide-number="5">
+            <div class=" item" data-slide-number="5" data-target="#devices-carousel" data-slide-to="0">
 
                 <div  class="hardware-carousel-item">
 
                     <img src="img/survey-panel-big-img.png" class="img-responsive inline v-bottom">
 
-                    <div class="v-top inline hardware-main-content">
+                    <div class="v-top hardware-main-content">
                         <h3 class="hardware-caption-info">Опросник для сбора отзывов</h3>
 
                         <div class="hardware-main-info">
@@ -734,7 +751,7 @@
         <h2 class="grey-block tech-caption">Технологии</h2>
     </div>
 
-    <div id="owl-demo" class="owl-carousel">
+    <div id="tech-carousel" class="owl-carousel">
 
             <div class="tech-item cloud">
                 <div class="container full-height  pos-rlt">
@@ -896,15 +913,15 @@
 
         <div class="table">
             <div class="table-row">
-                <div class="table-cell">
+                <div class="table-cell" style="max-width: 100%">
 
                     <h2 class="caption">Решения</h2>
 
                     <div class="sub-caption">
-                        готовые для распространённых задач<br>и специализированные для узких отраслей
+                        <div class=" hidden-sm hidden-xs">готовые для распространённых задач<br>и специализированные для узких отраслей</div>
                     </div>
 
-                    <div class="row m-t-lg">
+                    <div class="hidden-xs row m-t-lg">
 
                         <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="left-wrapping solutions-mfc">
@@ -956,8 +973,6 @@
 
                             </div>
                         </div>
-
-
                         <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="right-wrapping solutions-logistics">
                                 <h6 class="solution-item-caption">Транспорт и логистика</h6>
@@ -968,7 +983,6 @@
                                 времени ожидания<br>
                             </div>
                         </div>
-
                         <div class="col-sm-6 col-lg-4 solution-item">
                             <div class="right-wrapping solutions-other-solutions">
                                 <h6 class="solution-item-caption">И другие решения</h6>
@@ -979,13 +993,43 @@
                                 услуг
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <div id="solutions-carousel" class=" visible-xs owl-controls" >
+            <div class="solutions-carousel-item">
+                <h6 class="solution-item-caption">МФЦ и госуслуги Интеграция</h6>
+                <p>Интеграция с порталом госуслуг и внутренним ПО организации</p>
+                <img src="/img/mfc-big-img.png" class="img-responsive">
+            </div>
+            <div>
+                <h6 class="solution-item-caption">Банки</h6>
+                <p>Разделение окон по услугам и возможностям(консультант, кассир,администратор)</p>
+                <img src="/img/banks-big-img.png" class="img-responsive">
+            </div>
+            <div>
+                <h6 class="solution-item-caption">Общепит</h6>
+                <p>Контроль за нормативами и качеством обслуживания</p>
+                <img src="/img/public-catering-big-img.png" class="img-responsive">
+            </div>
+            <div>
+                <h6 class="solution-item-caption">Больницы и клиники</h6>
+                <p class="m-b">Запись по интернету, подтверждение визита, посещение нескольких врачей</p>
+                <img src="/img/clinics-big-img.png" class="img-responsive">
+            </div>
+            <div>
+                <h6 class="solution-item-caption">Транспорт и логистика</h6>
+                <p>Вызов по номеру транспортного средства, прогноз времени ожидания</p>
+                <img src="/img/transport-and-logistics-big-img.png" class="img-responsive">
+            </div>
+            <div>
+                <h6 class="solution-item-caption">И другие решения</h6>
+                <p>для производств, розничной продажи, сферы услуг</p>
+                <img src="/img/other-solutions-big-img.png" class="img-responsive">
+            </div>
+        </div>
     </div>
 
     <div class="solutions-footer hidden">
@@ -1039,11 +1083,10 @@
             <div class=" hidden-sm hidden-xs">готовых комплектов и расчет<br>индивидуальной комплектации</div>
         </div>
 
-     <div class="row m-t-lg">
+        <div class="row m-t-lg hidden-sm hidden-xs">
 
             <div class="col-sm-4">
-
-                <div class="cost-option cost-selected">
+                <div class="cost-option">
 
                     <div class="option-header">
                         <h3>Старт</h3>
@@ -1210,12 +1253,183 @@
                 </div>
             </div>
         </div>
+
+        <div id="costs-carousel" class=" visible-xs visible-sm owl-controls">
+            <div>
+                <div class="cost-option">
+                    <div class="option-header">
+                        <h3>Старт</h3>
+                        <span class="option-header-details">
+                            необходимый минимум <br/>
+                            для маленькой компании
+                        </span>
+                    </div>
+
+                    <div class="option-set">
+                        <div class="parts">
+                            <div class="set-part">
+                                <strong>5</strong> <img src="../img/workplace.png"> <br/>
+                                рабочих мест
+                            </div>
+                            <div class="set-part">
+                                <strong>1</strong> <img src="../img/terminal.png"> <br/>
+                                терминал
+                            </div>
+                            <div class="set-part">
+                                Звуковое <img class="v-middle bell" src="../img/bell.png"> <br/>
+                                оповещение
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="option-list list-unstyled">
+                        <li>Фиксированные настройки</li>
+                        <li>Без дополнительных функций</li>
+                        <li>Без монтажа и оборудования</li>
+                    </ul>
+                    <div class="option-footer">
+                        <div class="cost">от 68 000 <span class="rur">a</span></div>
+                        <div class="cost-desc"></div>
+                    </div>
+
+                    <ul class="option-feature-list list-unstyled">
+                        <li>
+                            <div class="option-feature-list-header">Лицензии</div>
+                            <div class="clearfix">
+                                <div class="pull-left">Рабочие места</div>
+                                <div class="spinner-control pull-right">
+                                    <button class="spinner-left-button" disabled></button>
+                                    <input type="text" class="form-control" value="0">
+                                    <button class="spinner-right-button"></button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix m-t-xs">
+                                <div class="pull-left">Терминал</div>
+                                <div class="spinner-control pull-right">
+                                    <button class="spinner-left-button" disabled></button>
+                                    <input type="text" class="form-control" value="0">
+                                    <button class="spinner-right-button"></button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option-feature-list-header">Оборудывание</div>
+                            <div>
+                                <input type="checkbox" name="checkbox1" id="checkbox1" ><label for="checkbox1">Пульты</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="checkbox2" id="checkbox2" ><label for="checkbox2">Терминалы</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="checkbox3" id="checkbox3" ><label for="checkbox3">Табло</label>
+                            </div>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" name="checkbox4" id="checkbox4" ><label for="checkbox4">Монтажные и пуско-наладочные работы</label>
+                        </li>
+                    </ul>
+                    <div class="calculated-result">
+                        <div class="cost">68 000 <span class="rur">a</span></div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div>
+                <div class="cost-option">
+                    <div class="option-header">
+                        <h3>Основа</h3>
+                        оптимальное решение <br/>
+                        для отдельностоящего офиса
+                    </div>
+                    <div class="option-set">
+                        <div class="parts">
+                            <div class="set-part">
+                                <strong>10</strong> <img src="../img/workplace.png"> <br/>
+                                рабочих мест
+                            </div>
+                            <div class="set-part">
+                                <strong>1</strong> <img src="../img/terminal.png"> <br/>
+                                терминал
+                            </div>
+                            <div class="set-part">
+                                Голосовое <img class="v-middle" src="../img/mic.png"> <br/>
+                                оповещение
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="option-list list-unstyled">
+                        <li>Гибкие настройки</li>
+                        <li>
+                            Поиск услуг в терминале, расширенная
+                            отчётность, персональная очередь,
+                            предварительная запись
+                        </li>
+                    </ul>
+                    <div class="option-footer">
+                        <div class="cost">от 180 000 <span class="rur">a</span></div>
+                        <div class="cost-desc">
+                            включая монтаж <br/>
+                            и оборудование
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="cost-option">
+                    <div class="option-header">
+                        <h3>Центр</h3>
+                        полная функциональность <br/>
+                        для филиальной сети
+                    </div>
+                    <div class="option-set">
+                        <div class="parts">
+                            <div class="set-part">
+                                <span class="infinity">∞</span> <img class="v-bottom" src="../img/workplace.png"> <br/>
+                                рабочих мест
+                            </div>
+                            <div class="set-part">
+                                <span class="infinity">∞</span> <img class="v-bottom" src="../img/terminal.png"> <br/>
+                                терминал
+                            </div>
+                            <div class="set-part">
+                                Голосовое <img class="v-middle" src="../img/mic.png"> <br/>
+                                оповещение
+                            </div>
+                        </div>
+                        <div class="cloud-option">
+                            Центральный сервер с облаком <img class="v-middle" src="../img/cloud.png">
+                        </div>
+                    </div>
+                    <ul class="option-list list-unstyled">
+                        <li>Индивидуальная конфигурация</li>
+                        <li>
+                            Предварительная запись, поиск услуг в терминале, расширенная отчётность,опросы для
+                            клиентов, реклама и инфо и другие модули
+                        </li>
+                    </ul>
+                    <div class="option-footer">
+                        <div class="cost">от 500 000 <span class="rur">a</span></div>
+                        <div class="cost-desc">
+                            включая монтаж <br/>
+                            и оборудование
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
     <div class="solutions-footer">
         <div class="cost-contact">
             <div class="cost-contact-info">
-                Все расчеты приблизительные. Чтобы получить точную стоимость <br/>
+                Все расчеты приблизительные. Чтобы получить точную стоимость <br class="hidden-xs"/>
                 и узнать о спецпредложениях, свяжитесь с менеджером
             </div>
             <div class="cost-contact-number">+7 (495) 975-91-69</div>
