@@ -32,8 +32,6 @@
     <link rel="stylesheet" href="css/main-tablet.css">
     <link rel="stylesheet" href="css/main.css">
 
-
-
     <link rel="stylesheet" href="css/utils.css">
 </head>
 
@@ -214,13 +212,17 @@
             <div class=" hidden-sm hidden-xs">наглядно показывает ситуацию в зале<br>и позволяет управлять ей в реальном времени</div>
         </div>
 
-        <div class="m-t-lg clearfix" data-ng-app="enter">
+        <div class="visible-sm visible-xs m-t-lg  pos-rlt">
+            <img src="img/queue-img.png" class="img-responsive pull-left">
+            <img src="img/popular-services-img.png" class="img-responsive hidden-xs pull-right popular-services-img">
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="m-t-lg  hidden-xs hidden-sm clearfix" data-ng-app="enter">
             <div class="queue-container" ng-controller="main">
-                <current-queue-info active-workplaces="items" class="hidden-xs hidden-sm"></current-queue-info>
-                <div class="visible-sm visible-xs">
-                    <img src="img/queue-img.png" class="img-responsive">
-                </div>
-                <div class="popular-products-list-panel hidden-xs hidden-sm">
+                <current-queue-info active-workplaces="items" ></current-queue-info>
+
+                <div class="popular-products-list-panel">
                     <div class="panel">
                         <div class="wrapper">
                             <h5>Популярные услуги</h5>
@@ -516,9 +518,9 @@
 
                         <div class="hardware-main-info">
                             <p>
-                                В терминал интегрируются считыватели магнитных<br>
-                                карт, карт УЭК, сканеры штрих-кодов. Для небольших<br>
-                                учреждений возможно установить локальный<br>
+                                В терминал интегрируются считыватели магнитных
+                                карт, карт УЭК, сканеры штрих-кодов. Для небольших
+                                учреждений возможно установить локальный
                                 сервер системы в терминал.
                             </p>
 
@@ -558,15 +560,15 @@
 
                         <div class="hardware-main-info">
                             <p>
-                                В небольших операционных залах в качестве<br>
-                                системы звукового или голосового оповещения<br>
+                                В небольших операционных залах в качестве
+                                системы звукового или голосового оповещения
                                 используются динамики главного табло.
                             </p>
 
                             <p>
-                                Для крупных филиалов мы разворачиваем<br>
-                                собственную систему звукового оповещения,<br>
-                                либо подключаемся к имеющейся системе<br>
+                                Для крупных филиалов мы разворачиваем
+                                собственную систему звукового оповещения,
+                                либо подключаемся к имеющейся системе
                                 пожарного оповещения.
                             </p>
                         </div>
@@ -583,14 +585,14 @@
 
                         <div class="hardware-main-info">
                             <p>
-                                Мы используем компактные широкоформатные<br>
-                                телевизоры в связке с микрокомпьютерами<br>
+                                Мы используем компактные широкоформатные
+                                телевизоры в связке с микрокомпьютерами
                                 Raspberry PI.
                             </p>
 
                             <p>
-                                Микрокомпьютер позволяет отображать<br>
-                                информацию для клиентов: номера<br>
+                                Микрокомпьютер позволяет отображать
+                                информацию для клиентов: номера
                                 вызываемых талонов и служебные сообщения.
                             </p>
                         </div>
@@ -608,19 +610,19 @@
 
                         <div class="hardware-main-info">
                             <p>
-                                С его помощью оператор приглашает,<br>
-                                перенаправляет клиентов, меняет порядок<br>
+                                С его помощью оператор приглашает,
+                                перенаправляет клиентов, меняет порядок
                                 очереди в нестандартных ситуациях.
                             </p>
 
                             <p>
-                                Интерфейс всегда отображает только<br>
-                                необходимую информацию и не меняется<br>
+                                Интерфейс всегда отображает только
+                                необходимую информацию и не меняется
                                 на разных устройствах.
                             </p>
 
                             <p>
-                                Пульт оператора запускается на планшете,<br>
+                                Пульт оператора запускается на планшете,
                                 в браузере или интегрирован с ПО клиента.
                             </p>
                         </div>
@@ -638,16 +640,16 @@
 
                         <div class="hardware-main-info">
                             <p>
-                                Единая точка мониторинга и управления<br>
-                                ситуацией в зале. Позволяет оперативно<br>
-                                управлять очередью в нестандартных ситуациях:<br>
-                                пропускать инвалидов без очереди, «подменять»<br>
-                                заболевших операторов.<br>
+                                Единая точка мониторинга и управления
+                                ситуацией в зале. Позволяет оперативно
+                                управлять очередью в нестандартных ситуациях:
+                                пропускать инвалидов без очереди, «подменять»
+                                заболевших операторов.
                             </p>
 
                             <p>
                                 Запускается на рабочем месте администратора<br>
-                                или на любом планшете.<br>
+                                или на любом планшете.
                             </p>
                         </div>
                     </div>
@@ -666,21 +668,21 @@
 
                         <div class="hardware-main-info">
                             <p>
-                                Система позволяет загружать вопрос<br>
-                                с разными типами ответов: выбором одного<br>
-                                или нескольких вариантов, да/нет, шкалой<br>
-                                заполнения или свободным ответом.<br>
+                                Система позволяет загружать вопрос
+                                с разными типами ответов: выбором одного
+                                или нескольких вариантов, да/нет, шкалой
+                                заполнения или свободным ответом.
                             </p>
 
                             <p>
-                                Разные опросники могут быть показаны<br>
-                                в зависимости от выбранной услуги, окна<br>
-                                или времени дня.<br>
+                                Разные опросники могут быть показаны
+                                в зависимости от выбранной услуги, окна
+                                или времени дня.
                             </p>
 
                             <p>
-                                Опрос запускается на любом дисплее<br>
-                                с сенсорным управлением: планшете, терминале.<br>
+                                Опрос запускается на любом дисплее
+                                с сенсорным управлением: планшете, терминале.
                             </p>
                         </div>
                     </div>
@@ -1316,18 +1318,18 @@
                         <li>
                             <div class="option-feature-list-header">Оборудывание</div>
                             <div>
-                                <input type="checkbox" name="checkbox1" id="checkbox1" ><label for="checkbox1">Пульты</label>
+                                <input type="checkbox" name="checkbox1" id="checkbox1c" ><label for="checkbox1c">Пульты</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="checkbox2" id="checkbox2" ><label for="checkbox2">Терминалы</label>
+                                <input type="checkbox" name="checkbox2" id="checkbox2c" ><label for="checkbox2c">Терминалы</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="checkbox3" id="checkbox3" ><label for="checkbox3">Табло</label>
+                                <input type="checkbox" name="checkbox3" id="checkbox3c" ><label for="checkbox3c">Табло</label>
                             </div>
                         </li>
 
                         <li>
-                            <input type="checkbox" name="checkbox4" id="checkbox4" ><label for="checkbox4">Монтажные и пуско-наладочные работы</label>
+                            <input type="checkbox" name="checkbox4" id="checkbox4c" ><label for="checkbox4c">Монтажные и пуско-наладочные работы</label>
                         </li>
                     </ul>
                     <div class="calculated-result">
@@ -1438,7 +1440,7 @@
 </section>
 
 <section data-menu-item-index="6" id="contacts">
-    <div class="tech-item contacts">
+    <div class="tech-item contacts  full-width-small-device">
         <div class="container full-height  pos-rlt">
            <h2 class="caption pos-abt">Контакты</h2>
            <div class="m-l-n table full-height hidden-xs">
@@ -1457,6 +1459,10 @@
                     </div>
                 </div>
             </div>
+           <div class="m-l-n visible-xs">
+                <div></div>
+                <div id="small"></div>
+           </div>
 
         </div>
     </div>

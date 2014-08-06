@@ -13,7 +13,6 @@ $(function () {
             technologies: 5,
 //            algorithms: 10,
             implementation: 6,
-
             solutions: 7,
             costs: 8,
             contacts: 9
@@ -174,10 +173,11 @@ $(function () {
         responsiveFallback: true
     });
 
-
-
     $(".owl-item").click(function(){
-        $(this).parents(".owl-carousel").data('owlCarousel').next();
+        $(this)
+            .parents(".owl-carousel")
+            .data('owlCarousel')
+            .next();
     });
 
     var width = 960,

@@ -147,7 +147,6 @@ body {
     margin-right: 0px;
 }
 
-
 .nano { width: 270px; max-height: 400px; }
 .nano .nano-pane   { background: #ffffff; width: 8px; }
 .nano > .nano-pane > .nano-slider { background: #bfbfbf; }
@@ -208,12 +207,6 @@ body {
     left: 0;
     right: 0;
 }
-
-
-
-
-
-
 
 .pages > section{
     overflow: hidden;
@@ -289,11 +282,6 @@ label{
 .spinner-control .spinner-right-button:disabled{
     background: url("../img/spinner-right-arrow-disabled.png") center center no-repeat;
 }
-
-
-
-
-
 
 /*========================================================header=======================================================*/
 .logo{
@@ -517,6 +505,12 @@ label{
     height: 300px;
 }
 
+.popular-services-img{
+    top: 63px;
+    position: absolute;
+    right: 0px;
+}
+
 
 /*================================================2 hardware===========================================================*/
 
@@ -537,6 +531,7 @@ label{
 
 .hardware-main-info p{
     margin-bottom: 15px;
+    width: 400px;
 }
 
 .hardware-additional-info{
@@ -549,6 +544,10 @@ label{
     margin-right: 30px;
     display: inline-block;
     vertical-align: bottom;
+}
+
+.terminal-types li:last-child{
+    margin-right: 0px;
 }
 
 .terminal-thumbnail,
@@ -584,7 +583,7 @@ label{
 }
 
 .hardware-carousel-item{
-    height: 340px;
+    height: 360px;
 }
 
 /*================================================3 settings===========================================================*/

@@ -131,6 +131,7 @@
     .hardware-carousel-item  p,
     .terminal-types {
         text-align: left;
+        font-size: 15px;
     }
     .carousel-inner .item{
         cursor: pointer;
@@ -139,6 +140,10 @@
     .cost-option{
         margin: 0 auto;
         max-width: 420px;
+    }
+    .hardware-main-info p{
+        width: 100% !important;
+        font-size: 15px;
     }
 }
 
