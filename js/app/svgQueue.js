@@ -555,10 +555,10 @@
                         ticket.select('text').style('fill', '#fff');
 
                         var parentPosition = tools.element.position(),
-                            position = $(this).position(),
+                            bbox = this.getBBox(),
                             elementRect = this.getBoundingClientRect(),
-                            left = position.left + parentPosition.left + tools.marginLeft + elementRect.width / 2,
-                            top = position.top + parentPosition.top + tools.marginTop + elementRect.height;
+                            left = bbox.x + parentPosition.left + tools.marginLeft + elementRect.width / 2,
+                            top = bbox.y + parentPosition.top + tools.marginTop + elementRect.height;
 
                         $rootScope.$broadcast('svgQueue.ticketHovered', {
                             position: {
