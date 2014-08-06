@@ -574,7 +574,7 @@
                             )
                         });
                     })
-                    .on("mouseout", function (d) {
+                    .on("mouseleave", function (d) {
                         var ticket = d3.select(this);
                         ticket.select('rect').style('fill', 'transparent');
                         ticket.select('text').style('fill', getColor(d.ProductId));
@@ -585,7 +585,7 @@
                             tools.stopRender = false;
                             scope.$broadcast('timer-resume');
                             tools.render();
-                        }, 100);
+                        }, 300);
                     });
 
                 groups.fadeIn(200);
@@ -648,7 +648,13 @@
                         }
                     })
                     .style({
-                        fill: 'transparent',
+                        fill: function (d) {
+                            var fill = this.style.fill;
+                            if (!fill) {
+                                fill = 'transparent';
+                            }
+                            return fill;
+                        },
                         stroke: function (d) {
                             return getColor(d.ProductId);
                         },
@@ -667,7 +673,11 @@
                     })
                     .style({
                         fill: function (d) {
-                            return getColor(d.ProductId);
+                            var fill = this.style.fill;
+                            if (!fill) {
+                                fill = getColor(d.ProductId);
+                            }
+                            return fill;
                         },
                         'font-size': getFontSize(floors)
                     })
