@@ -297,15 +297,27 @@
             <div class=" hidden-sm hidden-xs">удобное и гибкое управление очередью<br>в процессе эксплуатации</div>
         </div>
 
-        <div class="row m-t-lg">
+        <ol class="carousel-indicators">
+            <li data-target="#settings-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#settings-carousel" data-slide-to="1"></li>
+            <li data-target="#settings-carousel" data-slide-to="2"></li>
+            <li data-target="#settings-carousel" data-slide-to="3"></li>
+            <li data-target="#settings-carousel" data-slide-to="4"></li>
+        </ol>
+
+
+        <div class="row">
             <div class="col-md-12" id="slider2">
 
-                <div class="col-md-12" id="carousel-bounding-box">
+                <div class="col-md-12 n-p-l" id="carousel-bounding-box">
                     <div id="settings-carousel" class="carousel slide carousel-fade ">
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item" data-slide-number="0">
-                                <div class="settings-carousel-item pos-rlt">
+                                <div class="settings-carousel-item pos-rlt" data-target="#settings-carousel" data-slide-to="1">
+
+                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Разные расписания для разных режимов работы и смен сотрудников</h3>
+
                                     <img src="img/schedule-big-mg.png" class="img-responsive inline v-bottom">
 
                                     <div class="bounceInUp arrow hidden" style="position: absolute; top: 200px; font-size: 13px; left: 0;">
@@ -332,14 +344,19 @@
                                 </div>
                             </div>
                             <div class="item" data-slide-number="1">
-                                <div class="settings-carousel-item">
+                                <div class="settings-carousel-item" data-target="#settings-carousel" data-slide-to="2">
+
+                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Календарь выходных и праздников задает короткие и выходные дни</h3>
+
                                     <img src="img/holiday-schedule-big-img.png" class="img-responsive inline v-bottom">
                                 </div>
                             </div>
                             <div class="item" data-slide-number="2">
-                                <div class="pos-rlt settings-carousel-item">
-                                    <img src="img/terminal-menu-big-img.png" class="img-responsive inline v-bottom">
+                                <div class="pos-rlt settings-carousel-item" data-target="#settings-carousel" data-slide-to="1">
 
+                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Меню терминала при настройке выглядит так же как в терминале</h3>
+
+                                    <img src="img/terminal-menu-big-img.png" class="img-responsive inline v-bottom">
 
                                     <div class="bounceInUp arrow hidden m-l-lg" style="position: absolute; top: 230px; left: 730px; font-size: 13px">
                                         <div class="inline grouping-menu-item-arrow"></div>
@@ -364,7 +381,10 @@
                                 </div>
                             </div>
                             <div class="item" data-slide-number="3">
-                                <div class="pos-rlt settings-carousel-item">
+                                <div class="pos-rlt settings-carousel-item" data-target="#settings-carousel" data-slide-to="4">
+
+                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Меню терминала при настройке выглядит так же как в терминале</h3>
+
                                     <img src="img/services-menu-big-img.png" class="img-responsive inline v-bottom">
                                     <div class="inline v-top m-l animated bounceInDown" style="font-size: 13px">
                                         Все действия<br>
@@ -375,7 +395,9 @@
                                 </div>
                             </div>
                             <div class="item" data-slide-number="4">
-                                <div class="settings-carousel-item pos-rlt">
+                                <div class="settings-carousel-item pos-rlt" data-target="#settings-carousel" data-slide-to="0">
+                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Меню терминала при настройке выглядит так же как в терминале</h3>
+
                                     <img src="img/device-managment-big-img.png" class="img-responsive inline v-bottom">
 
                                     <div class="bounceInDown arrow hidden" style="position: absolute; left: 730px; top: 0px">
@@ -399,13 +421,9 @@
                                 </div>
 
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -500,7 +518,7 @@
 
 <div class="col-md-12" id="slider">
 
-<div class="col-md-12" >
+<div class="col-md-12  n-p-l" >
     <div id="devices-carousel" class="carousel slide carousel-fade ">
         <!-- main slider carousel items -->
 
@@ -710,7 +728,7 @@
 <div class="col-md-12 hidden-xs m-t-xs">
 
     <!-- thumb navigation carousel items -->
-    <ul class="list-inline slider-thumbs">
+    <ul class="list-inline devices-slider-thumbs slider-thumbs">
         <li class="marker"></li>
         <li id="devices-carousel-selector-0" class="selected">
             <a>
@@ -894,7 +912,7 @@
 
 
             <div class="visible-sm visible-xs row implementation-features-bottom">
-                <div class="col-sm-3 col-xs-4 n-p-l">
+                <div class="col-sm-3 col-xs-5 n-p-l">
                     <div class="grey-block">Установка и настройка электронной очереди квалифицированными инженерами</div>
                 </div>
                 <div class="col-sm-3 hidden-xs">
@@ -1515,7 +1533,6 @@
 <script src="pkg/angular-timer/angular-timer.js"></script>
 <script src="pkg/handlebarsjs/handlebars-v1.3.0.js"></script>
 <script src="pkg/nanoscroller/jquery.nanoscroller.min.js"></script>
-<script src="js/app/position.js"></script>
 <script src="js/app/app.js"></script>
 <script src="js/app/tickets.js"></script>
 <script src="js/app/workplaces.js"></script>

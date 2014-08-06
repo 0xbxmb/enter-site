@@ -43,7 +43,12 @@
         padding-top: 0 !important;
         padding-left: 120px !important;
     }
-
+    .devices-slider-thumbs li{
+        margin-right: 20px !important;
+    }
+    .devices-slider-thumbs li:last-child{
+        margin-right: 0px !important;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -90,7 +95,7 @@
     }
     .navbar-nav {
         float: none!important;
-        margin-top: 7.5px;
+        margin-top: 7px;
     }
     .navbar-nav>li {
         float: none;
@@ -145,16 +150,27 @@
         width: 100% !important;
         font-size: 15px;
     }
+    .cost-contact-number{
+        display: block !important;
+        margin-left: 0px !important;
+        text-align: center  !important;
+        margin-top: 20px !important;
+    }
+
+    .settings-carousel-item{
+        margin-top: 0px !important;
+    }
 }
 
 @media (max-width: 1000px){
-    /**/
+/**/
     .intro-interfaces-wrapper{
         margin-left: 30px !important;
     }
 
     .intro-survey-wrapper{
         width: 340px !important;
+
     }
 
 

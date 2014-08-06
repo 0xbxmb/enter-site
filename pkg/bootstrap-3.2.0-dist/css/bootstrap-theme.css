@@ -47,6 +47,9 @@
     background: transparent;
 }
 
+.navbar-collapse{
+    overflow: hidden!important;
+}
 
 .navbar-inverse {
     background: rgba( 0, 0, 0, 0.4);

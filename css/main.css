@@ -34,7 +34,6 @@ body {
 
 }
 
-
 .m-t-lg2{
     margin-top: 45px;
 }
@@ -503,6 +502,7 @@ label{
 
 .settings-carousel-item{
     height: 300px;
+    margin-top: 30px;
 }
 
 .popular-services-img{
@@ -612,6 +612,8 @@ label{
     background: url("../img/device-management-img.png") top left no-repeat;
     padding-right: 10px;
 }
+
+
 
 /*================================================4 technology=========================================================*/
 
@@ -783,7 +785,6 @@ label{
 }
 
 .solutions-footer{
-    position: absolute;
     bottom: 10px;
     left: 0;
     right: 0;
