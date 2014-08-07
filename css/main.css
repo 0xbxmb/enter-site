@@ -399,6 +399,7 @@ label{
 
 .main-logo{
     width: 123px;
+    vertical-align: bottom;
     height: 46px;
     background: url("../img/main-logo.png") no-repeat;
 }
