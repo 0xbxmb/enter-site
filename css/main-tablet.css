@@ -16,6 +16,10 @@
         width: 100%;
     }
 
+    .full-height-small-device{
+        height: 100%;
+    }
+
     .intro-cloud-wrapper{
         top: 50px;
         right: 40px;
@@ -127,11 +131,17 @@
     .intro-images{
         margin-top: 20px !important;
     }
-    .settings-carousel-item,
+
     .hardware-carousel-item{
         height: auto !important;
         text-align: center;
     }
+
+    .settings-carousel-item{
+        height: auto !important;
+        text-align: left !important;
+    }
+
     .hardware-carousel-item  h3,
     .hardware-carousel-item  p,
     .terminal-types {
@@ -159,6 +169,10 @@
 
     .settings-carousel-item{
         margin-top: 0px !important;
+    }
+
+    .settings-carousel-caption{
+        display: inline-block !important;
     }
 }
 

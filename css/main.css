@@ -10,7 +10,6 @@
     src: url('../fonts/HelveticaNeueCyr-LightItalic.otf');
 }
 
-
 @font-face {
     font-family: 'HelveticaNeueBold';
     src: url('../fonts/HelveticaNeueCyr-Heavy.otf');
@@ -36,6 +35,10 @@ body {
 
 .m-t-lg2{
     margin-top: 45px;
+}
+
+.m-r-lg2{
+    margin-right: 45px;
 }
 
 .n-p-l{
@@ -613,6 +616,9 @@ label{
     padding-right: 10px;
 }
 
+.settings-carousel-caption{
+    display: none;
+}
 
 
 /*================================================4 technology=========================================================*/

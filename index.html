@@ -123,6 +123,17 @@
             </div>
             <div class="hidden-xs intro-images clearfix pos-rlt">
 
+                <div class="intro-devices-wrapper pos-abt fadeInLeft animated" style="top: 10px; left: 150px">
+                    <div class="intro-devices inline v-middle"></div>
+
+                    <div class="inline v-middle m-l">
+                        <span class=" visible-lg">
+                        Устанавливаем<br>проверенное оборудование<br>
+                        <a href="" class="link" data-link="devices">или работаем на вашем</a></span>
+                    </div>
+                    <!--devices.terminal-->
+                </div>
+
                 <div class="intro-tune-menu-wrapper inline fadeInLeft animated v-bottom">
                     <span class="visible-lg">Настраиваем<br><a href="" class="link" data-link="menutuning">меню услуг<br>любой сложности</a></span>
                     <div class="intro-tune-menu"></div>
@@ -138,16 +149,7 @@
                     <div class="intro-interfaces inline v-middle"></div>
                 </div>
 
-                <div class="intro-devices-wrapper inline pos-abt fadeInLeft animated" style="top: 10px; left: 150px">
-                    <div class="intro-devices inline v-middle"></div>
 
-                    <div class="inline v-middle m-l">
-                        <span class=" visible-lg">
-                        Устанавливаем<br>проверенное оборудование<br>
-                        <a href="" class="link" data-link="devices">или работаем на вашем</a></span>
-                    </div>
-                    <!--devices.terminal-->
-                </div>
 
                 <div class="intro-algorithms-wrapper inline fadeInUp animated">
                     <div class="visible-lg">
@@ -289,7 +291,7 @@
 
 </section>
 <section data-menu-item-index="0" id="interface-1">
-    <div class="container full-width-small-device">
+    <div class="container full-width-small-device full-height">
 
         <h2 class="caption">Настройка</h2>
 
@@ -306,17 +308,18 @@
         </ol>
 
 
-        <div class="row">
-            <div class="col-md-12" id="slider2">
+        <div class="row full-height-small-device">
+            <div class="col-md-12 full-height" id="slider2">
 
-                <div class="col-md-12 n-p-l" id="carousel-bounding-box">
-                    <div id="settings-carousel" class="carousel slide carousel-fade ">
+                <div class="col-md-12 n-p-l full-height" id="carousel-bounding-box">
+                    <div id="settings-carousel" class="carousel slide carousel-fade full-height">
                         <!-- main slider carousel items -->
-                        <div class="carousel-inner">
+                        <div class="carousel-inner full-height">
                             <div class="active item" data-slide-number="0">
-                                <div class="settings-carousel-item pos-rlt" data-target="#settings-carousel" data-slide-to="1">
 
-                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Разные расписания для разных режимов работы и смен сотрудников</h3>
+                                <div class="settings-carousel-item pos-rlt text-left" data-target="#settings-carousel" data-slide-to="1">
+
+                                    <h3 class="text-left m-b-lg m-t-sm  settings-carousel-caption">Разные расписания для разных режимов работы и смен сотрудников</h3>
 
                                     <img src="img/schedule-big-mg.png" class="img-responsive inline v-bottom">
 
@@ -329,9 +332,7 @@
                                                 задаются в 2 клика
                                             </div>
                                         </div>
-
                                     </div>
-
 
                                     <div class="bounceInRight arrow hidden" style="position: absolute; top: 0px; font-size: 13px; left: 690px;">
                                         <div class="inline days-combinations-arrow"></div>
@@ -346,17 +347,27 @@
                             <div class="item" data-slide-number="1">
                                 <div class="settings-carousel-item" data-target="#settings-carousel" data-slide-to="2">
 
-                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Календарь выходных и праздников задает короткие и выходные дни</h3>
+                                    <h3 class="text-left m-b-lg m-t-sm  settings-carousel-caption">Календарь выходных и праздников задает короткие и выходные дни</h3>
 
-                                    <img src="img/holiday-schedule-big-img.png" class="img-responsive inline v-bottom">
+
+                                    <div class="inline v-bottom">
+                                        <img src="img/holiday-schedule1-big-img.png" class="img-responsive inline v-top m-r-lg2 m-t-sm">
+                                        <img src="img/holiday-schedule2-big-img.png" class="img-responsive inline v-top m-r-lg2 m-t-sm">
+                                        <img src="img/holiday-schedule3-big-img.png" class="img-responsive inline v-top m-r-lg2 m-t-sm">
+                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="item" data-slide-number="2">
-                                <div class="pos-rlt settings-carousel-item" data-target="#settings-carousel" data-slide-to="1">
+                                <div class="pos-rlt settings-carousel-item" data-target="#settings-carousel" data-slide-to="3">
 
-                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Меню терминала при настройке выглядит так же как в терминале</h3>
+                                    <h3 class="text-left m-b-lg m-t-sm  settings-carousel-caption">Меню терминала при настройке выглядит так же как в терминале</h3>
 
-                                    <img src="img/terminal-menu-big-img.png" class="img-responsive inline v-bottom">
+                                    <div class="inline v-bottom">
+                                        <img src="img/terminal-menu1-big-img.png" class="img-responsive inline v-top m-r-sm m-t-sm">
+                                        <img src="img/terminal-menu2-big-img.png" class="img-responsive inline v-top  m-t-sm">
+                                    </div>
 
                                     <div class="bounceInUp arrow hidden m-l-lg" style="position: absolute; top: 230px; left: 730px; font-size: 13px">
                                         <div class="inline grouping-menu-item-arrow"></div>
@@ -366,7 +377,6 @@
                                             в группы
                                         </div>
                                     </div>
-
 
                                     <div class="bounceInRight arrow hidden m-l-lg" style="position: absolute;top: 0px; left: 760px; font-size: 13px">
                                         <div class="inline style-menu-item-arrow"></div>
@@ -383,20 +393,22 @@
                             <div class="item" data-slide-number="3">
                                 <div class="pos-rlt settings-carousel-item" data-target="#settings-carousel" data-slide-to="4">
 
-                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Меню терминала при настройке выглядит так же как в терминале</h3>
-
-                                    <img src="img/services-menu-big-img.png" class="img-responsive inline v-bottom">
-                                    <div class="inline v-top m-l animated bounceInDown" style="font-size: 13px">
-                                        Все действия<br>
-                                        с услугами<br>
-                                        производятся<br>
-                                        в один клик
+                                    <h3 class="text-left m-b-lg m-t-sm  settings-carousel-caption">Структура услуг настраивается максимально просто и наглядно</h3>
+                                    <div class="inline v-bottom">
+                                        <img src="img/services-menu1-big-img.png" class="img-responsive inline v-top m-r-lg m-t">
+                                        <img src="img/services-menu2-big-img.png" class="img-responsive inline v-top m-r-lg m-t">
+                                        <img src="img/services-menu3-big-img.png" class="img-responsive inline v-top m-r-lg m-t hidden-xs">
+                                        <div class="inline v-top hidden-sm hidden-xs m-l m-t animated bounceInDown" style="font-size: 13px">
+                                            Все действия<br>с услугами<br>производятся<br>в один клик
+                                        </div>
                                     </div>
+
+
                                 </div>
                             </div>
                             <div class="item" data-slide-number="4">
                                 <div class="settings-carousel-item pos-rlt" data-target="#settings-carousel" data-slide-to="0">
-                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Меню терминала при настройке выглядит так же как в терминале</h3>
+                                    <h3 class="text-left m-b-lg m-t-sm  visible-xs">Управление всеми устройствами на одном экране</h3>
 
                                     <img src="img/device-managment-big-img.png" class="img-responsive inline v-bottom">
 
