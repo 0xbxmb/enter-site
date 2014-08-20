@@ -201,7 +201,7 @@ body {
     background: #FFF;
 }
 
-#tech-carousel  .owl-controls{
+#tech-carousel  .owl-pagination{
     bottom: 50px;
     position: absolute;
     margin: 0 auto;
@@ -209,6 +209,38 @@ body {
     left: 0;
     right: 0;
 }
+
+
+.owl-controls .owl-buttons > div {
+    width: 32px !important;
+    padding: 0px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    text-align: center!important;
+    color: #FFF!important;
+    position: absolute!important;
+    top: 50%!important;
+    font-size: 15px!important;
+    margin-top: -15px!important;
+    opacity: 1!important;
+    background: rgba(0, 0, 0, 0.4)!important;
+
+}
+
+.owl-next {
+    right: 20px!important;
+}
+.owl-next:after{
+    content: "→";
+}
+
+.owl-prev {
+    left: 20px!important;
+}
+.owl-prev:after {
+    content: "←";
+}
+
 
 .pages > section{
     overflow: hidden;
@@ -636,7 +668,7 @@ label{
     position: absolute;
     font-size: 48px;
     left: 0px;
-    z-index: 900;
+    z-index: 1000000;
 }
 
 .section-tech-caption{
@@ -713,6 +745,7 @@ label{
 #implementation-video {
     background: #000 url("../img/implementation-poster.png") no-repeat;
     background-size: cover;
+    position: absolute;
 }
 
 .implementation-features {
@@ -879,8 +912,6 @@ label{
 }
 
 #solutions-carousel  .owl-controls{
-    bottom: -50px;
-    position: absolute;
     margin: 0 auto;
     max-width: 200px;
     left: 0;

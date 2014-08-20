@@ -34,7 +34,8 @@ $(function () {
                     }
                 });
                 if (pageIndex == pages.implementation) {
-                    video.play();
+
+                        video.play();
                 }
             },
 
@@ -104,10 +105,6 @@ $(function () {
     initCarousel($("#settings-carousel"));
     initCarousel($("#devices-carousel"));
 
-    video.addEventListener('error', function() {
-    /*    video.style.width = '100%';
-        video.style.height = '100%';*/
-    });
 
 
     $('.navbar-collapse a').click(function (e) {
@@ -170,7 +167,9 @@ $(function () {
         paginationSpeed : 400,
         singleItem:true,
         pagination: true,
-        responsiveFallback: true
+        responsiveFallback: true,
+        navigation : true,
+        navigationText : false
     });
 
     $(".owl-item").click(function(){
@@ -265,5 +264,11 @@ $(function () {
     $(window).resize(function(){
 
     });
+
+    video.addEventListener('error', function() {
+        video.style.width = '100%';
+        video.style.height = '100%';
+    });
+
 
 });
