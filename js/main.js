@@ -199,12 +199,13 @@ $(function () {
     queue()
         .defer(d3.json, "map/russian-map.json")
         .defer(d3.json, "map/offices.json")
+        .defer(d3.json, "map/mapData.json")
         .await(ready);
 
 
-    function ready(error, map, offices) {
+    function ready(error, map, offices, mapData) {
 
-        svg.append("g")
+        /*svg.append("g")
             .attr("class", "region")
             .selectAll("path")
             .data(topojson.object(map, map.objects.russia).geometries)
@@ -212,7 +213,14 @@ $(function () {
             .enter().append("path")
             .attr("d", path)
             .style("fill", "#FFF")
-            .style("opacity", 0.8)
+            .style("opacity", 0.8)*/
+
+        //svg.attr('viewBox', '0 0 2040 1230');
+        svg.append('path')
+            .attr('stroke', '#000000')
+            .attr('d', mapData.d)
+            .attr('fill', 'none')
+            //.attr('transform', 'scale(0.3)');
 
 
         d3.tsv("map/cities.tsv", function(error, data) {
@@ -222,7 +230,7 @@ $(function () {
                 .enter()
                 .append("g")
                 .attr("class", "city")
-                .attr("transform", function(d) { return "translate(" + projection([d.lon, d.lat]) + ")"; });
+                .attr("transform", function(d) { return "translate(" + d.lon + ',' + d.lat + ")"; });
 
             city.on("click", function(d){
 
@@ -236,7 +244,7 @@ $(function () {
 
                 var source   = $("#offices-template").html();
                 var template = Handlebars.compile(source);
-                $("#offices-content").html(template(offices[d.id]));
+                $("#offices-content").html(template(offices[d.City]));
                 $(".nano").nanoScroller();
 
             });
@@ -249,6 +257,7 @@ $(function () {
 
             city.append("text")
                 .attr("x", 5)
+                .attr('font-size', '15px')
                 .text(function(d) { return d.City; });
         });
 
